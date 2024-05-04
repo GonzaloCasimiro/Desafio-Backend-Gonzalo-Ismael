@@ -1,0 +1,82 @@
+<h1>{{{products.[1].title}}}</h1>
+<div id="cardConteiner" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+  {{#each products}}
+    <div class="card relative overflow-hidden border rounded-lg shadow-lg">
+      <img src="{{thumbnail}}" alt="{{title}}" class="w-full h-64 object-cover">
+      <div class="card-body p-4">
+        <h5 class="card-title font-bold text-xl mb-2">{{title}}</h5>
+        <p class="card-description text-gray-700 mb-2">{{description}}</p>
+        <p class="card-price font-bold text-gray-900 mb-2">${{price}}</p>
+        <p class="card-code text-sm text-gray-600 mb-2">Code: {{code}}</p>
+        <p class="card-category text-sm text-gray-600 mb-2">Category: {{category}}</p>
+        <button class="add-to-cart absolute bottom-4 right-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md" data-product-id="{{_id}}">Add to Cart</button>
+      </div>
+    </div>
+  {{/each}}
+</div>
+
+<section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+ 
+  <form id="myForm" class="max-w-md mx-auto mt-8 p-8 bg-white rounded shadow-md">
+    <h2 class="text-xl font-semibold mb-4">AGREGAR PRODUCTO</h2>
+    <label for="title" class="block mb-2">Título:</label>
+    <input type="text" id="title" name="title" class="w-full py-2 px-4 mb-4 border rounded-md" required>
+    
+    <label for="description" class="block mb-2">Descripción:</label>
+    <textarea id="description" name="description" rows="4" class="w-full py-2 px-4 mb-4 border rounded-md" required></textarea>
+    
+    <label for="price" class="block mb-2">Precio:</label>
+    <input type="number" id="price" name="price" class="w-full py-2 px-4 mb-4 border rounded-md" required>
+    
+    <label for="thumbnail" class="block mb-2">Thumbnail:</label>
+    <input type="file" id="thumbnail" name="thumbnail" class="w-full py-2 px-4 mb-4 border rounded-md">
+    
+    <label for="code" class="block mb-2">Código:</label>
+    <input type="text" id="code" name="code" class="w-full py-2 px-4 mb-4 border rounded-md" required>
+    
+    <label for="stock" class="block mb-2">Stock:</label>
+    <input type="number" id="stock" name="stock" class="w-full py-2 px-4 mb-4 border rounded-md" required>
+    
+    <label for="category" class="block mb-2">Categoría:</label>
+    <input type="text" id="category" name="category" class="w-full py-2 px-4 mb-4 border rounded-md" required>
+    
+    <input type="submit" value="Submit" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md cursor-pointer">
+</form>  
+
+<form id="deleteProduct" action="/views/products/{{ pid }}" method="DELETE" class="max-w-md mx-auto mt-8 p-8 bg-white rounded shadow-md" style="margin-left: 20px;">
+    <h2 class="text-xl font-semibold mb-4">ELIMINAR PRODUCTO</h2>
+    <label for="pid" class="block mb-2">Id Del Producto</label>
+    <input type="text" id="pid" name="pid" class="w-full py-2 px-4 mb-4 border rounded-md" required>
+    <input type="submit" value="Eliminar Producto" class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-md cursor-pointer">
+</form>
+<form id="updateProductForm" class="max-w-md mx-auto mt-8 p-8 bg-white rounded shadow-md">
+    <h2 class="text-xl font-semibold mb-4">Actualizar Producto</h2>
+    
+    <label for="productId" class="block mb-2">ID del Producto:</label>
+    <input type="text" id="productId" name="productId" class="w-full py-2 px-4 mb-4 border rounded-md focus:outline-none focus:border-blue-500" required>
+    
+    <label for="title" class="block mb-2">Título:</label>
+    <input type="text" id="titleup" name="title" class="w-full py-2 px-4 mb-4 border rounded-md focus:outline-none focus:border-blue-500" >
+    
+    <label for="description" class="block mb-2">Descripción:</label>
+    <textarea id="descriptionup" name="description" rows="4" class="w-full py-2 px-4 mb-4 border rounded-md focus:outline-none focus:border-blue-500" ></textarea>
+    
+    <label for="price" class="block mb-2">Precio:</label>
+    <input type="number" id="priceup" name="price" class="w-full py-2 px-4 mb-4 border rounded-md focus:outline-none focus:border-blue-500" >
+    
+    <label for="code" class="block mb-2">Código:</label>
+    <input type="text" id="codeup" name="code" class="w-full py-2 px-4 mb-4 border rounded-md focus:outline-none focus:border-blue-500" >
+    
+    <label for="category" class="block mb-2">Categoría:</label>
+    <input type="text" id="categoryup" name="category" class="w-full py-2 px-4 mb-4 border rounded-md focus:outline-none focus:border-blue-500" >
+    
+    <label for="thumbnail" class="block mb-2">Thumbnail:</label>
+    <input type="file" id="thumbnailup" name="thumbnail" class="w-full py-2 px-4 mb-4 border rounded-md focus:outline-none focus:border-blue-500">
+    
+    <input type="submit" value="Actualizar Producto" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md cursor-pointer">
+</form>
+
+</section>
+<script>const products="{{{products.[1]}}}" </script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/products.js"></script>

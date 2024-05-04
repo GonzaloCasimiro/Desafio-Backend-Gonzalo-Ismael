@@ -1,0 +1,15 @@
+<div>
+    <h1>HOLA CODERS</h1>
+
+    <h1>Productos</h1>
+    {{#each products}}
+        <div class="card">
+            <div class="card-title">{{title}}</div>
+            <div class="card-description">{{description}}</div>
+            <div class="card-price">$ {{price}}</div>
+            <div class="card-stock">Stock: {{stock}}</div>
+            <div class="card-category">Categoría: {{category}}</div>
+        </div>
+    {{/each}}
+    
+</div>

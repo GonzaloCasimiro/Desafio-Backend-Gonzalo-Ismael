@@ -1,0 +1,101 @@
+[
+	{
+		"id": 1,
+		"title": "Impresora multifunción",
+		"description": "Impresión, escaneo y copia",
+		"price": 4000,
+		"thumbnail": "url",
+		"code": 100,
+		"stock": 8,
+		"status": true,
+		"category": "Oficina"
+	},
+	{
+		"id": 2,
+		"title": "Teclado mecánico RGB",
+		"description": "Teclado mecánico con retroiluminación RGB",
+		"price": 1500,
+		"thumbnail": "url",
+		"code": 101,
+		"stock": 15,
+		"status": true,
+		"category": "Informática"
+	},
+	{
+		"id": 3,
+		"title": "Silla de oficina ergonómica",
+		"description": "Silla de oficina con ajuste de altura y respaldo",
+		"price": 2500,
+		"thumbnail": "url",
+		"code": 102,
+		"stock": 10,
+		"status": true,
+		"category": "Oficina"
+	},
+	{
+		"id": 4,
+		"title": "Monitor LED 24 pulgadas",
+		"description": "Monitor LED Full HD de 24 pulgadas",
+		"price": 1200,
+		"thumbnail": "url",
+		"code": 103,
+		"stock": 20,
+		"status": true,
+		"category": "Informática"
+	},
+	{
+		"id": 6,
+		"title": "Mouse inalámbrico",
+		"description": "Mouse óptico inalámbrico con receptor USB",
+		"price": 500,
+		"thumbnail": "#",
+		"code": 105,
+		"stock": 18,
+		"status": true,
+		"category": "Informática"
+	},
+	{
+		"id": 7,
+		"title": "Calculadora científica",
+		"description": "Calculadora científica con funciones avanzadas",
+		"price": 300,
+		"thumbnail": "#",
+		"code": 106,
+		"stock": 25,
+		"status": true,
+		"category": "Oficina"
+	},
+	{
+		"id": 8,
+		"title": "Baterías AA",
+		"description": "Paquete de 4 baterías alcalinas AA",
+		"price": 50,
+		"thumbnail": "#",
+		"code": 107,
+		"stock": 30,
+		"status": true,
+		"category": "Electrónica"
+	},
+	{
+		"id": 10,
+		"title": "Osito",
+		"description": "Paralalalalalalla",
+		"price": 5000,
+		"thumbnail": "#",
+		"code": 119,
+		"stock": 15,
+		"status": true,
+		"category": "Gamer"
+	},
+	{
+		"id": 11,
+		"title": "Mouse inalámbrico",
+		"description": "Mouse óptico inalámbrico con receptor USB",
+		"price": 500,
+		"thumbnail": "#",
+		"code": 2343,
+		"stock": 20,
+		"status": true,
+		"category": "Gamer"
+	}
+]
