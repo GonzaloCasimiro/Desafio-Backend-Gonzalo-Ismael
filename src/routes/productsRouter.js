@@ -6,16 +6,24 @@ const { Product } = require("../dao/models/productSchema.js");
 
 productRouter.get('/', async (req, res) => {
     try {
-        const { limits } = req.query;
-        if (!limits) {
-            const products = await nuevoProductManager.getProducts();
-            res.render('index', { products: products });
-        } else {
-            const products=await nuevoProductManager.getlimitsProducts(parseInt(limits))
+        const { limits,pageNumber,sort,category,stock } = req.query;
+        const data={}
+        if(stock){data.stock=parseInt(stock)}
+        if(sort && (sort>0 || sort<0)){data.sort=parseInt(sort)}
+        if(limits){data.limits=parseInt(limits)}
+        if(pageNumber){data.page=parseInt(pageNumber)}
+        if(category){
+            const products=await nuevoProductManager.getProductsByCategory(data.limits,data.page,data.sort,category,data.stock)
+            const{docs,hasPrevPage,hasNextPage,prevPage,nextPage,page}=products
+            res.render('index', { products:docs,hasPrevPage,hasNextPage,prevPage,nextPage,page });
+        }else{
+            const products=await nuevoProductManager.getProducts(data.limits,data.page,data.sort,stock);
             console.log(products)
-            res.render('index', { products: products });
+            const{docs,hasPrevPage,hasNextPage,prevPage,nextPage,page}=products
+            
+            res.render('index', { products:docs,hasPrevPage,hasNextPage,prevPage,nextPage,page });  
         }
-    } catch (error) {
+    }catch (error) {
         res.send(error);
     }
 });

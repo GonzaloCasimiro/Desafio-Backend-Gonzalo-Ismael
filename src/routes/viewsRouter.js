@@ -7,21 +7,29 @@ const productSocket = require('../controllers/utils/productsSocket.js');
 const express=require('express')
 const nuevoChatManger=new ChatManger();
 const nuevoProductManager = new ProductManager('productos.json');
+const CartManager = require("../controllers/CartsManager.js");
+const cartManager = new CartManager("carts.json");
 //viewRouter.use(productSocket())
-viewRouter.get('/', async (req, res) => {
-    try {
-        const products = await nuevoProductManager.getProducts();
-        res.render('home', { products: products });
-    } catch (error) {
-        res.send(error);
-    }
-});
-
 viewRouter.get('/products', async (req, res) => {
     try {
-        const products = await nuevoProductManager.getProducts()
-        res.render('realTimeProducts', { products: products });
-    } catch (error) {
+        const { limits,pageNumber,sort,category,stock } = req.query;
+        const data={}
+        if(stock){data.stock=parseInt(stock)}
+        if(sort && (sort>0 || sort<0)){data.sort=parseInt(sort)}
+        if(limits){data.limits=parseInt(limits)}
+        if(pageNumber){data.page=parseInt(pageNumber)}
+        if(category){
+            const products=await nuevoProductManager.getProductsByCategory(data.limits,data.page,data.sort,category,data.stock)
+            const{docs,hasPrevPage,hasNextPage,prevPage,nextPage,page}=products
+            res.render('index', { products:docs,hasPrevPage,hasNextPage,prevPage,nextPage,page });
+        }else{
+            const products=await nuevoProductManager.getProducts(data.limits,data.page,data.sort,stock);
+            console.log(products)
+            const{docs,hasPrevPage,hasNextPage,prevPage,nextPage,page}=products
+            
+            res.render('index', { products:docs,hasPrevPage,hasNextPage,prevPage,nextPage,page });  
+        }
+    }catch (error) {
         res.send(error);
     }
 });
@@ -44,6 +52,7 @@ viewRouter.post('/products', async (req,res) => {
         res.send(`${error}`);
     }
 });
+
 
 viewRouter.delete('/products/:pid', async (req, res) => {
     try {
@@ -86,5 +95,18 @@ viewRouter.post("/message",async(req,res)=>{
         res.send(error)
     }
 })
+//cart
+viewRouter.put('/:cid/product/:pid', async (req, res) => {
+    try {
+        const { cid, pid } = req.params;
+        console.log(cid,pid)
+        const results = await cartManager.removeProduct(cid,pid);
+        console.log(results);
+        res.send(results);
+    } catch (error) {
+        console.log(error)
+        res.send(error);
+    }
+});
 
 module.exports = viewRouter;

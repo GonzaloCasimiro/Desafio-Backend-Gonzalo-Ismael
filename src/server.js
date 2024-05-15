@@ -9,12 +9,15 @@ const viewRouter = require("./routes/viewsRouter.js");
 const { Server } = require('socket.io');
 const productsSocket = require("./utils/productSocket.js");
 const connectDB = require("./controllers/utils/db.js");
+const cookieParser=require('cookie-parser');
+
+const userRouter = require("./routes/userRouter.js");
 
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.use(cookieParser());
 const htppServer = app.listen(8080, error => {
     console.log('Escuchando servidor en puerto 8080');
 }).on("error", function (err) {
@@ -63,8 +66,9 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'handlebars');
 
 app.use('/products', productRouter);
-app.use('/carts', cartRouter);
-app.use('/views', viewRouter);
+app.use('/api/carts', cartRouter);
+app.use('/api/views', viewRouter);
+app.use("/user",userRouter)
 
 connectDB();
 

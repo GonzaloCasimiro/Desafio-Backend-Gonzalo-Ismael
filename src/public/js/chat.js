@@ -25,6 +25,8 @@ enviarMensaje.addEventListener("submit",e=>{
     .then(data => {
         if(data.message){
             alert(data.message)
+            data=data.info
+            console.log(data)
             socket.emit("nuevoMensaje",data)
         }
         else{
@@ -42,11 +44,14 @@ enviarMensaje.addEventListener("submit",e=>{
 const messagesList=document.getElementById("messagesList");
 
 socket.on("AgregarMensaje",data=>{
+    console.log(data)
+    const lastChild=messagesList.lastElementChild;
     const nuevoDiv=document.createElement("DIV");
     nuevoDiv.classList.add("flex", "items-start", "mb-4")
     nuevoDiv.innerHTML=`<img src="" alt="" class="w-10 h-10 rounded-full mr-4">
     <div class="bg-gray-200 p-4 rounded-lg">
       <p class="font-semibold">${data.user}</p>
       <p class="text-gray-700">${data.message}</p>`
-    messagesList.appendChild(nuevoDiv)
+    messagesList.insertBefore(nuevoDiv,lastChild)
+
 })

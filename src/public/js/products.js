@@ -199,3 +199,34 @@ function editarCard(producto,div){
       
     `;
 }
+
+//ADD TO CART
+function addToCart(event){
+    event.preventDefault();
+    const button=event.target;
+
+    const data ={
+      pid:button.getAttribute('pid'),
+    }
+    console.log(data)
+    fetch(`/api/carts/6642b553d21b6fdab90b1581/product/${data.pid}`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error('No se pudo registrar el producto');
+        }
+    })
+    .then(data => {
+        alert(data.message)
+    })
+    .catch(error => {
+      alert(error)
+    });
+}

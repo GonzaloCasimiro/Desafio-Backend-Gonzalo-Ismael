@@ -69,19 +69,32 @@ class ProductManager {
         }
     }
 
-    async getProducts() {
+    async getProducts(limits=5,numberPage=1,sort=-1,stock=0) {
         try {
-            const products = await Product.find();
-            if (products.length === 0) {
-                const data = {
-                    message: "NO EXISTEN PRODUCTOS EN ESTA LISTA",
-                    status: false
-                };
-                return data;
-            } else {
-                const productsB=products.map(product=>product.toObject())
-                return productsB;
+            console.log(stock)
+            if(stock>0){
+                const products=await Product.paginate({stock:{$gt : 0}},{limit:limits,page:numberPage,lean:true,sort:{price:sort}})
+                return products
+            }else{
+                const products = await Product.paginate({},{limit:limits,page:numberPage,lean:true,sort:{price:sort}})
+                return products
+            }    
+        } catch (error) {
+            return error;
+        }
+    }
+    async getProductsByCategory(limits=5,numberPage=1,sort=-1,category,stock=0) {
+        try {
+            console.log(stock)
+            if(stock>0){
+                const products = await Product.paginate({category:category,stock:{$gt:0}},{limit:limits,page:numberPage,lean:true,sort:{price:sort}})
+                return products
             }
+            else{
+                const products = await Product.paginate({category:category},{limit:limits,page:numberPage,lean:true,sort:{price:sort}})
+                return products
+            }
+                
         } catch (error) {
             return error;
         }

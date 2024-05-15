@@ -21,6 +21,7 @@ class messagesManager{
             }
             const result=Message.create(newMessage);
             const data={
+                info:newMessage,
                 status:"succes",
                 message:"Mensaje enviado con exito"
             }

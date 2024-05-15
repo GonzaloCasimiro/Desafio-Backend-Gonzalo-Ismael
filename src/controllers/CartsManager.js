@@ -1,34 +1,13 @@
 const fs = require("fs");
 //const { __dirname } = require("../utils.js");
+const Product=require("../dao/models/productSchema.js")
 const Cart=require("../dao/models/cartSchema.js")
 const { Model, default: mongoose } = require("mongoose");
+const {ObjectId}=require("mongoose")
 class CartManager {
     constructor(path) {
         this.path = path;
     }
-
-    async readFile() {
-        try {
-            const cars = await fs.promises.readFile(this.path, "utf-8");
-            return JSON.parse(cars);
-        } catch (error) {
-            if (error.code === "ENOENT") {
-                return [];
-            } else {
-                console.log(error);
-            }
-        }
-    }
-
-    async getNextId() {
-        let cars = await this.readFile();
-        if (cars === "ENOENT" || cars.length === 0) {
-            return 1;
-        } else {
-            return cars[cars.length - 1].id + 1;
-        }
-    }
-
     async addProduct(cid, pid) {
         try {
 
@@ -46,7 +25,7 @@ class CartManager {
                 if(product){
                     product.quantity++
                     const data ={
-                        message:"Producto agregado al cart,2",
+                        message:`Producto agregado al cart,cantidad: ${product.quantity}`,
                         status:"true"
                     }
                     await cart.save()
@@ -123,32 +102,61 @@ class CartManager {
             return data
         }
     }
-
+    
 
     async getCart(cid) {
-        try {
-            const cart=await Cart.findById(cid);
+        try {    
+            let cart=await Cart.findOne({_id:cid})
             if(cart){
-                return cart.products
+                
+                for(let i=0;i<cart.products.length;i++){
+                    const item=cart.products[i];
+                    const productData=await Product.findById(item._id);
+                    if(productData){
+                        cart.products[i].product=productData
+                    }
+                }
+                return cart.toJSON()
             }else{
                 const data={
                     message:"No existe cart con ese id",
                     status:false
                 }
-            }
+            } 
         } catch (error) {
-            return error;
+            console.error("Error",error)
+            throw error
         }
     }
-
+    async update(cid,pid){
+        const result=await Cart.findOneAndUpdate(
+            {_id:cid ,"products:product":pid},
+            {$inc: {"products.$.quantity":1}},
+            {new:true}
+        )
+        if(result) return result
+        const newProduct=await Cart.findByIdAndUpdate(
+            {_id:cid},
+            {$push:{products:{product:pid,quantity:1}}},
+            {new:true}
+        )
+    }
     async createCart() {
         try {
-            const result = await Cart.create(undefined)
+            const result = await Cart.create({products:[]})
             console.log(result)
             return result
         } catch (error) {
             return error;
         }
+    }
+    async clear(cid){
+        const result=await Cart.findByIdAndUpdate(
+            {_id:cid},
+            {$set: {products:[]}},
+            {new:true}
+        )
+        return result
     }
 }
 
