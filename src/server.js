@@ -10,14 +10,22 @@ const { Server } = require('socket.io');
 const productsSocket = require("./utils/productSocket.js");
 const connectDB = require("./controllers/utils/db.js");
 const cookieParser=require('cookie-parser');
-
+const session =require('express-session');
 const userRouter = require("./routes/userRouter.js");
+const pruebasRouter = require("./routes/pruebas.Router.js");
+const sessionRouter = require("./routes/sessionRouter.js");
 
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cookieParser());
+//app.use(cookieParser());
+app.use(cookieParser("f1rm4s3cr3t4"))    // firma "secreta de cookie" (luego la oculatermos con .env)
+app.use(session({
+    secret:'s3cr3tc0d3r',
+    resave:true,      // session activa aun que este inactiva
+    saveUninitialized:true    //permite almacenar sesiones aunque no tengan valor
+}))
 const htppServer = app.listen(8080, error => {
     console.log('Escuchando servidor en puerto 8080');
 }).on("error", function (err) {
@@ -57,18 +65,28 @@ io.on('connection', (socket) => {
     socket.on('disconnect', () => {
         console.log('Cliente desconectado');
     });
+    //NUEVO PRODUCTO AL CART
+    socket.on("newCartProduct",product=>{
+        io.emit("addCartProduct",product)
+    })
+    //QUITAR PRODUCTO DEL CART
+    socket.on("removerProducto",pid=>{
+        io.emit("remuevanProducto",pid)
+    })
 });
 
-
+//CONFIG HANDLEBARS
 app.use(express.static(__dirname + '/public'));
 app.engine('handlebars', handlebars.engine());
 app.set('views', __dirname + '/views');
 app.set('view engine', 'handlebars');
-
+//rutas
 app.use('/products', productRouter);
 app.use('/api/carts', cartRouter);
 app.use('/api/views', viewRouter);
 app.use("/user",userRouter)
+app.use("/pruebas",pruebasRouter)
+app.use("/api/sessions",sessionRouter)
 
 connectDB();
 

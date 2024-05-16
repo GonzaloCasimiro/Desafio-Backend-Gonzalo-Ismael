@@ -12,7 +12,6 @@ class CartManager {
         try {
 
             const cart=await Cart.findOne({_id:cid})
-            console.log(cart)
             if(!cart){
                 const data={
                     message:"No existe Cart con ese ID",
@@ -21,12 +20,21 @@ class CartManager {
                 return data
             }else{
                 const product=cart.products.find(product=>product._id.toString()===pid)
-                console.log(product)
+                const productData=await Product.findById(pid)
                 if(product){
                     product.quantity++
+                    
                     const data ={
                         message:`Producto agregado al cart,cantidad: ${product.quantity}`,
-                        status:"true"
+                        status:"true",
+                        product:{
+                            thumbnail:productData.thumbnail,
+                            title:productData.title,
+                            price:productData.price,
+                            quantity:1,
+                            id:product._id
+                        }
+
                     }
                     await cart.save()
                     return data
@@ -34,7 +42,13 @@ class CartManager {
                     cart.products.push({_id:pid,quantity:1})
                     const data ={
                         message:"Producto agregado al cart",
-                        status:"true"
+                        status:"true",
+                        product:{
+                            thumbnail:productData.thumbnail,
+                            title:productData.title,
+                            price:productData.price,
+                            id:pid
+                        }
                     }
                     await cart.save()
                     return data
@@ -44,6 +58,7 @@ class CartManager {
         } catch (error) {
             console.log(error)
             const data={
+                status:"false",
                 message:error.message,
                 code:error.code
             }
@@ -63,13 +78,13 @@ class CartManager {
                 return data
             }else{
                 const product=cart.products.find(product=>product._id.toString()===pid)
-                console.log(product)
                 if(product){
                     product.quantity--
                     if(product.quantity>0){
                         const data ={
                         message:`Se ha quitado un producto,quedan ${product.quantity} `,
-                        status:"succes"
+                        status:"succes",
+                        id:pid
                     }
                     await cart.save()
                     return data
@@ -78,7 +93,8 @@ class CartManager {
                         await cart.save()
                         const data={
                             message:"Producto Eliminado con Exito",
-                            status:"succes"
+                            status:"succes",
+                            id:pid
                         }
                         return data
                     }
@@ -156,7 +172,11 @@ class CartManager {
             {$set: {products:[]}},
             {new:true}
         )
-        return result
+        const data={
+            status:"succes",
+            message:"Tu carrito se encuentra vacio"
+        }
+        return data
     }
 }
 

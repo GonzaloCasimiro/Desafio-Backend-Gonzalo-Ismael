@@ -19,7 +19,6 @@ function createProductCard(producto) {
   }
 //AGREGAR PRODUCTO EN TIEMPO REAL
 socket.on("nuevoProductoParaTodos",nuevoProducto=>{
-    console.log(typeof nuevoProducto)
     const nuevoDiv=document.createElement("div")
 
     nuevoDiv.innerHTML=createProductCard(nuevoProducto)
@@ -224,7 +223,11 @@ function addToCart(event){
         }
     })
     .then(data => {
-        alert(data.message)
+        alert(data.message)    
+        if(data.status==='true'){
+            const product=data.product
+            socket.emit("newCartProduct",product)
+        }
     })
     .catch(error => {
       alert(error)
