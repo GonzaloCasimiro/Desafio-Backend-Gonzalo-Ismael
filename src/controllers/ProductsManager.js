@@ -71,8 +71,7 @@ class ProductManager {
 
     async getProducts(limits=5,numberPage=1,sort=-1,stock=0) {
         try {
-            console.log(stock)
-            if(stock>0){
+            if(stock===1){
                 const products=await Product.paginate({stock:{$gt : 0}},{limit:limits,page:numberPage,lean:true,sort:{price:sort}})
                 return products
             }else{

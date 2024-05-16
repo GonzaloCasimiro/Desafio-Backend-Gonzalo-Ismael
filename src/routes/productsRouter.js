@@ -9,7 +9,7 @@ productRouter.get('/', async (req, res) => {
         const { limits,pageNumber,sort,category,stock } = req.query;
         const data={}
         if(stock){data.stock=parseInt(stock)}
-        if(sort && (sort>0 || sort<0)){data.sort=parseInt(sort)}
+        if(sort && (sort===1 || sort===-1)){data.sort=parseInt(sort)}
         if(limits){data.limits=parseInt(limits)}
         if(pageNumber){data.page=parseInt(pageNumber)}
         if(category){

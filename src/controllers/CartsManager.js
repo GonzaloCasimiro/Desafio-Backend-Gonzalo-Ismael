@@ -144,19 +144,33 @@ class CartManager {
             throw error
         }
     }
-    async update(cid,pid){
-        const result=await Cart.findOneAndUpdate(
-            {_id:cid ,"products:product":pid},
-            {$inc: {"products.$.quantity":1}},
-            {new:true}
-        )
-        if(result) return result
-        const newProduct=await Cart.findByIdAndUpdate(
-            {_id:cid},
-            {$push:{products:{product:pid,quantity:1}}},
-            {new:true}
-        )
+    async update(cid, pid, quantity) {
+        const cart=await Cart.findById(cid);
+        const product=cart.products.find(product=>product._id.toString()===pid)
+        product.quantity=product.quantity+quantity;
+        console.log(product.quantity)
+        if(product.quantity===0){
+            cart.products.pull({_id:pid})
+            const data={
+                status:"succes",
+                message:"se ha quitado el producto",
+                pid:pid,
+                quantity:product.quantity
+            }
+            cart.save()
+            return data
+        }else{
+            const data={
+                status:"succes",
+                message:"se ha cambiado la cantidad del producto",
+                pid:pid,
+                quantity:product.quantity
+            }
+            cart.save()
+            return data
+        }
     }
+    
     async createCart() {
         try {
             const result = await Cart.create({products:[]})

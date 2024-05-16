@@ -55,7 +55,7 @@
     }
     console.log(data)
     fetch(`/api/carts/${cid}/product/${data.pid}`, {
-        method: 'PUT',
+        method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'
         },
