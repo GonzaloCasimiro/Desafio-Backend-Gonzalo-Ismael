@@ -1,5 +1,23 @@
-{{>header}}
-{{>products}}
+{{>adminHeader}}
+<div id="cardContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+  {{#each products}}
+    <div class="card border rounded-lg shadow-lg overflow-hidden">
+      <img src="{{thumbnail}}" alt="{{title}}" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h5 class="font-bold text-lg mb-2">{{title}}</h5>
+        <p class="text-gray-700 text-sm mb-2">{{description}}</p>
+        <p class="font-bold text-gray-900 text-sm mb-2">${{price}}</p>
+        <p class="text-sm text-gray-600 mb-2">Code: {{code}}</p>
+        <p class="text-sm text-gray-600 mb-2">Category: {{category}}</p>
+        <div class="flex justify-end space-x-2">
+          <button class="edit-product bg-yellow-500 hover:bg-yellow-600 text-white py-1 px-3 rounded-md" data-product-id="{{_id}}">Editar</button>
+          <button class="delete-product bg-red-500 hover:bg-red-600 text-white py-1 px-3 rounded-md" data-product-id="{{_id}}">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
+
 
 <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
  
@@ -61,14 +79,6 @@
     
     <input type="submit" value="Actualizar Producto" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md cursor-pointer">
 </form>
-
 </section>
-<script>
-  const cartId="{{user.cid}}"
-  const products="{{{products.[1]}}}" </script>
 <script src="/socket.io/socket.io.js"></script>
-<script>
-  window.socket=io();
-</script>
-<script src="/js/products.js"></script>
-<script src="/js/cart.js"></script>
+<script src="/js/realTimeProducts.js"></script>

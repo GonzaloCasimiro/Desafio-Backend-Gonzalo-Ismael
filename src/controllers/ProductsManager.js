@@ -84,7 +84,6 @@ class ProductManager {
     }
     async getProductsByCategory(limits=5,numberPage=1,sort=-1,category,stock=0) {
         try {
-            console.log(stock)
             if(stock>0){
                 const products = await Product.paginate({category:category,stock:{$gt:0}},{limit:limits,page:numberPage,lean:true,sort:{price:sort}})
                 return products
@@ -100,7 +99,6 @@ class ProductManager {
     }
     async getlimitsProducts(limit){
         try {
-            console.log(limit)
             const products=await Product.find().limit(limit)
             const productsB=products.map(product=>product.toObject())
             return productsB;
@@ -121,15 +119,7 @@ class ProductManager {
                 const productB=product.toObject();
                 return productB
             }
-            
-            //const products = await this.readFile();
-            //const productByID = products.find(item => item.id === id);
-            /*if (productByID !== undefined) {
-                console.log(`Objeto encontrado su id es :${productByID.id},su titulo:${productByID.title},su descripcion: ${productByID.description},su img: ${productByID.thumbnail},su code es ${productByID.code} y su stock es de : ${productByID.stock},su categoria: ${productByID.category},su status: ${productByID.status}`);
-                return productByID;
-            } else {
-                return null;
-            }*/
+        
         } catch (error) {
             return error;
         }
@@ -137,9 +127,9 @@ class ProductManager {
 
     async updateProduct(id, objeto) {
         try {
-            console.log(id)
+
             const pid=new mongoose.Types.ObjectId(id)
-            console.log(pid)
+
             const product=await Product.findOne({_id:pid});
             if(!product){
                 const data={

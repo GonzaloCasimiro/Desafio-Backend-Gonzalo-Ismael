@@ -128,6 +128,7 @@ class CartManager {
                 for(let i=0;i<cart.products.length;i++){
                     const item=cart.products[i];
                     const productData=await Product.findById(item._id);
+                    console.log(productData, i)
                     if(productData){
                         cart.products[i].product=productData
                     }
@@ -174,7 +175,6 @@ class CartManager {
     async createCart() {
         try {
             const result = await Cart.create({products:[]})
-            console.log(result)
             return result
         } catch (error) {
             return error;
@@ -188,7 +188,7 @@ class CartManager {
         )
         const data={
             status:"succes",
-            message:"Tu carrito se encuentra vacio"
+            message:"Se ha vaciado el carrito"
         }
         return data
     }

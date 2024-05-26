@@ -8,8 +8,10 @@ const express=require('express')
 const nuevoChatManger=new ChatManger();
 const nuevoProductManager = new ProductManager('productos.json');
 const CartManager = require("../controllers/CartsManager.js");
+const { auth } = require('../middlewares/auth.middleware.js');
 const cartManager = new CartManager("carts.json");
 //viewRouter.use(productSocket())
+
 viewRouter.get('/products', async (req, res) => {
     try {
         const { limits,pageNumber,sort,category,stock } = req.query;
@@ -18,16 +20,29 @@ viewRouter.get('/products', async (req, res) => {
         if(sort && (sort===1 || sort===-1)){data.sort=parseInt(sort)}
         if(limits){data.limits=parseInt(limits)}
         if(pageNumber){data.page=parseInt(pageNumber)}
-        if(category){
-            const products=await nuevoProductManager.getProductsByCategory(data.limits,data.page,data.sort,category,data.stock)
-            const{docs,hasPrevPage,hasNextPage,prevPage,nextPage,page}=products
-            res.render('index', { products:docs,hasPrevPage,hasNextPage,prevPage,nextPage,page });
+        if(req.session.user){
+            const user=req.session.user
+            const cart=await cartManager.getCart(user.cid);
+            const cartProducts=cart.products
+            if(category){
+                const products=await nuevoProductManager.getProductsByCategory(data.limits,data.page,data.sort,category,data.stock)
+                const{docs,hasPrevPage,hasNextPage,prevPage,nextPage,page}=products
+                res.render('index', { products:docs,hasPrevPage,hasNextPage,prevPage,nextPage,page,user:user,cartProducts });
+            }else{
+                const products=await nuevoProductManager.getProducts(data.limits,data.page,data.sort,stock);
+                const{docs,hasPrevPage,hasNextPage,prevPage,nextPage,page}=products           
+                res.render('index', { products:docs,hasPrevPage,hasNextPage,prevPage,nextPage,page,user:user,cartProducts });  
+            }
         }else{
-            const products=await nuevoProductManager.getProducts(data.limits,data.page,data.sort,stock);
-            console.log(products)
-            const{docs,hasPrevPage,hasNextPage,prevPage,nextPage,page}=products
-            
-            res.render('index', { products:docs,hasPrevPage,hasNextPage,prevPage,nextPage,page });  
+            if(category){
+                const products=await nuevoProductManager.getProductsByCategory(data.limits,data.page,data.sort,category,data.stock)
+                const{docs,hasPrevPage,hasNextPage,prevPage,nextPage,page}=products
+                res.render('index', { products:docs,hasPrevPage,hasNextPage,prevPage,nextPage,page });
+            }else{
+                const products=await nuevoProductManager.getProducts(data.limits,data.page,data.sort,stock);
+                const{docs,hasPrevPage,hasNextPage,prevPage,nextPage,page}=products           
+                res.render('index', { products:docs,hasPrevPage,hasNextPage,prevPage,nextPage,page });  
+            }
         }
     }catch (error) {
         res.send(error);
@@ -108,5 +123,13 @@ viewRouter.put('/:cid/product/:pid', async (req, res) => {
         res.send(error);
     }
 });
-
+viewRouter.get('/admin',auth ,async(req,res)=>{
+    try {
+        const products=await nuevoProductManager.getProducts()
+        console.log(products)
+        res.render('adminMenu',{products:products.docs})
+    } catch (error) {
+        res.send(error)
+    }
+})
 module.exports = viewRouter;

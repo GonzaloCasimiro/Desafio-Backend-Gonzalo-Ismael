@@ -1,22 +1,31 @@
 const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema({
-    first_name:{
+    name:{
         type:String,
         required:true,
         index:true          
     },
-    last_name:{
+    lastname:{
         type:String,
         required:true
     },
-    gender:{
+    password:{
         type:String,
         required:true
     },
     email:{
         type:String,
-        required:true
+        required:true,
+        unique:true
+    },
+    cid:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'Cart'
+    },
+    role:{
+        type:String,
+        default:'user'
     }
 });
 

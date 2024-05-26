@@ -1,0 +1,71 @@
+{{#if user}}
+<div class="container mx-auto px-4 py-8">
+  <div id="cardConteiner" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    {{#each products}}
+      <div class="card relative overflow-hidden border rounded-lg shadow-lg">
+        <img src="{{thumbnail}}" alt="{{title}}" class="w-full h-64 object-cover">
+        <div class="card-body p-4">
+          <h5 class="card-title font-bold text-xl mb-2">{{title}}</h5>
+          <p class="card-description text-gray-700 mb-2">{{description}}</p>
+          <p class="card-price font-bold text-gray-900 mb-2">${{price}}</p>
+          <p class="card-code text-sm text-gray-600 mb-2">Code: {{code}}</p>
+          <button pid ={{id}} class="add-to-cart absolute bottom-4 right-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md" onClick="addToCart(event)">Add to Cart</button>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+<div class="ml-4">
+      <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
+        {{#if hasPrevPage}}
+          <a href="/products?pageNumber={{prevPage}}&limits=5" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">Prev Page</a>
+        {{/if}}
+        <a class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">{{page}}</a>
+        {{#if hasNextPage}}
+          <a href="/products?pageNumber={{nextPage}}&limits=5" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">Next Page</a>
+        {{/if}}
+
+      </nav>
+    </div>
+  </div>
+ 
+</div>
+{{else}}
+<div class="container mx-auto px-4 py-8">
+  <div id="cardConteiner" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    {{#each products}}
+      <div class="card relative overflow-hidden border rounded-lg shadow-lg">
+        <img src="{{thumbnail}}" alt="{{title}}" class="w-full h-64 object-cover">
+        <div class="card-body p-4">
+          <h5 class="card-title font-bold text-xl mb-2">{{title}}</h5>
+          <p class="card-description text-gray-700 mb-2">{{description}}</p>
+          <p class="card-price font-bold text-gray-900 mb-2">${{price}}</p>
+          <p class="card-code text-sm text-gray-600 mb-2">Code: {{code}}</p>
+          <button id="alertLogin"pid ={{id}} class="add-to-cart absolute bottom-4 right-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md" onClick="addToCart(event)">Add to Cart</button>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+<div class="ml-4">
+      <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
+        {{#if hasPrevPage}}
+          <a href="/products?pageNumber={{prevPage}}&limits=5" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">Prev Page</a>
+        {{/if}}
+        <a class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">{{page}}</a>
+        {{#if hasNextPage}}
+          <a href="/products?pageNumber={{nextPage}}&limits=5" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">Next Page</a>
+        {{/if}}
+
+      </nav>
+    </div>
+  </div>
+ 
+</div>
+{{/if}}
+<script>
+    const alertLogin=document.getElementById('alertLogin')
+    if(alertLogin){
+        alertLogin.addEventListener('click',e=>{
+            alert('Debes iniciar sesion para agregar productos ')
+        })
+    }
+</script>

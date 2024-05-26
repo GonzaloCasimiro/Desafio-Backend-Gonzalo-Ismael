@@ -21,6 +21,7 @@ const productSchema = new mongoose.Schema({
     },
     category: {
         type: String,
+        enum:['samsung','motorola','apple','xiaomi','tcl'],
         required: true
     },
     thumbnail: {
@@ -29,6 +30,10 @@ const productSchema = new mongoose.Schema({
     },
     stock:{
         type:Number,
+        required:true
+    },
+    brand:{
+        type:String,
         required:true
     }
 });

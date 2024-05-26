@@ -1,7 +1,5 @@
 const socket = io();
-console.log(socket)
 const listProducts=document.getElementById("cardConteiner");
-
 function createProductCard(producto) {
     return `
       <div class="card relative overflow-hidden border rounded-lg shadow-lg">
@@ -208,7 +206,7 @@ function addToCart(event){
       pid:button.getAttribute('pid'),
     }
     console.log(data)
-    fetch(`/api/carts/6642b553d21b6fdab90b1581/product/${data.pid}`, {
+    fetch(`/api/carts/${cartId}/product/${data.pid}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
