@@ -14,15 +14,11 @@ const session =require('express-session');
 const userRouter = require("./routes/userRouter.js");
 const pruebasRouter = require("./routes/pruebas.Router.js");
 const sessionRouter = require("./routes/sessionRouter.js");
-//PASSPORT
-const passport = require('passport')
-const { initializePassport } = require("./config/passport.config.js");
 //session file storage => persistencia en archivo
 //const FileStore = require('session-file-store')
 //session db storage => persistencia en mongo
 const MongoStore =require("connect-mongo");
 const { isLog } = require("./middlewares/auth.middleware.js");
-
 const app = express();
 
 app.use(express.json());
@@ -30,6 +26,7 @@ app.use(express.urlencoded({ extended: true }));
 //app.use(cookieParser());
 app.use(cookieParser("f1rm4s3cr3t4"))    // firma "secreta de cookie" (luego la oculatermos con .env)
 //session con mongo
+
 app.use(session({
     store:MongoStore.create({
         mongoUrl:'mongodb://127.0.0.1:27017/ecommerce',
@@ -48,10 +45,6 @@ app.use(session({
         httpOnly: true
     }
 }))
-//passport
-initializePassport()// llamar funcion de passport config
-app.use(passport.initialize())// documentacion
-app.use(passport.session())//documentacion
 /*
 const fileStorage=FileStore(session) //A
 app.use(session({
@@ -139,3 +132,6 @@ app.get('/', isLog ,(req, res) => {
 });
 
 //path - ttl - retires    => argumentos del storage => storage alamacenara las sessiones
+
+
+console.log(__dirname)

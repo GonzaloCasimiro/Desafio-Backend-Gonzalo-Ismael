@@ -1,89 +1,57 @@
+/*
 const passport = require('passport')
 const local = require('passport-local')
-const UserManager = require('../controllers/UserManager')
-const { createHash, isValid } = require('../utils')
-const CartManager = require('../controllers/CartsManager')
-const cartManager=new CartManager()
-const LocalStrategy= local.Strategy
-const userManager=new UserManager()
-const GithubStrategy = require('passport-github2')
+const UserManager = require('../controllers/UserManager.js')
+const isValidPassword = require('../utils/bcrypt')
+const createHash = require('../utils/bcrypt')
+const { init } = require('../dao/models/userSchema')
 
+const newUserManager=new UserManager()
 
-const initializePassport=()=>{
+const LocalStrategy=local.Strategy
+const initPassport=()=>{
     passport.use('register',new LocalStrategy({
-        passReqToCallback:true, // LINEA PARA PODER OBTENER LOS DATOS DEL BODY
-        usernameField:'email'//SETEAR A EMAIL
+        passReqToCallback:true,// req => body => passport => accede a obj request
+        usernameField:'email'
     },async(req,username,password,done)=>{
-        const {name,lastname,role}=req.body
+        const{name,lastname}=req.body
         try {
-            let user=await userManager.getUser(username)
-            if(user){
+            //verificar si existe el usuario
+            let userFound=await userService.getUserBy({email:username})
+            if(userFound){
                 console.log('el usuario ya existe')
                 return done(null,false)
             }
-            //crear usuario
-            const email=username;
-            const hashPassword=createHash(password)
-            const cart=await cartManager.createCart()
-            const cid=cart._id;
-            const result=await userManager.newUser(name,lastname,hashPassword,email,cid,role)
+            let newUser={
+                name,
+                lastname,
+                email,
+                password:createHash(password)
+            }
+            let result=await newUserManager.createUser(newUser)
             return done(null,result)
         } catch (error) {
             return done('error al registrar el usuario'+error)
         }
     }))
     passport.use('login',new LocalStrategy({
-        usernameField:'email',
-
-    },async(username,password,done)=>{
+        usernameField:'email'
+    },async(email,password=>{
         try {
-            const user=await userManager.getUser(username)
+            const user =await newUserManager.validateEmail(email)
             if(!user){
-                console.log('usuario no encontrado')
+                console.log('email no resgitrado');
                 return done(null,false)
             }
-            console.log(isValid(user,password)) 
-            if(!isValid(user,password))return done(null,false)
-            return done(null,user)        
+            const validate=await newUserManager.validateUser(email,password)
+            if(validate) return done(null,validate)
         } catch (error) {
-            return done('error al iniciar usuario'+error) 
+            return done('error al ingresar'+error)
         }
     }))
-    passport.serializeUser((user,done)=>{
-        done(null,user._id)
-    }) // guarda el id en session
-    passport.deserializeUser(async(id,done)=>{
-        try {
-            let user=await userManager.getUserById(id)
-            done(null,user)
-        } catch (error) {
-            done(error)
-        }
-    })// extrae el usuario del session
-    passport.use('github',new GithubStrategy({
-        clientID:'Ov23liP4TlAmI1gV8uED',
-        clientSecret:'4719b7a9e3a27f7fd8acbf70ae9987bc6fda9c39',
-        callbackURL:'http://localhost:8080/api/sessions/githubcallback'
-    },async(accesToken,refreshToken,profile,done)=>{
-        try {
-            console.log(profile,"A profile")
-            const email=profile._json.email
-            const user=await userManager.getUser(email)
-            if(!user){
-                const role=""
-                const name=profile._json.name
-                const lastname=profile._json.name;
-                const password=''
-                const cart=await cartManager.createCart()
-                const cid=cart._id;
-                const result=await userManager.newUser(name,lastname,password,email,cid,role)
-                done(null,result)
-            }else{
-                done(null,user)
-            }
-        } catch (error) {
-            return done(error)
-        }
-    }))
+    passport.serializeUser()
+    passport.deserialaizeUser()
 }
-module.exports={initializePassport}
+module.exports =initPassport
+
+*/
