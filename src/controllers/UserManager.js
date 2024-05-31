@@ -14,6 +14,14 @@ class UserManager{
         }
         
     }
+    async getUser(email){
+        const user=await User.findOne({email:email})
+        return user
+    }
+    async getUserById(id){
+        const user=await User.findOne({_id:id})
+        return user
+    }
     async validateUser(email,password){
         const validate=await User.findOne({email,password});
         return validate

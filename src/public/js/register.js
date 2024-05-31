@@ -16,11 +16,13 @@ register.addEventListener('submit',e=>{
         },
         body:JSON.stringify(data)
     }).then(response=>{
+        console.log(response)
     if(!response.ok){
         throw new Error('FAILED REQUEST')
     }
     return response.json()
 }).then(data=>{
+    console.log("DATA",data)
     if(data.status==='succes'){
         alert(data.message)
         window.location.href='/api/sessions/login'
@@ -28,6 +30,6 @@ register.addEventListener('submit',e=>{
         alert(data.message)
     }
 }).catch(error=>{
-    console.error('Error',error)
+    console.log(error)
 })
 })

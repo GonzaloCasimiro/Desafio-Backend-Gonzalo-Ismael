@@ -20,7 +20,7 @@ viewRouter.get('/products', async (req, res) => {
         if(sort && (sort===1 || sort===-1)){data.sort=parseInt(sort)}
         if(limits){data.limits=parseInt(limits)}
         if(pageNumber){data.page=parseInt(pageNumber)}
-        if(req.session.user){
+        if(req.session.user){       
             const user=req.session.user
             const cart=await cartManager.getCart(user.cid);
             const cartProducts=cart.products

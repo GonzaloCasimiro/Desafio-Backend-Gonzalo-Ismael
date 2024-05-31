@@ -6,7 +6,7 @@ console.log(cartId)
     const button=event.target;
 
     const data ={
-      pid:button.getAttribute('pid'),
+      pid:button.getAttribute('cpid'),
       cid:cartId
     }
     console.log(data)
@@ -65,7 +65,7 @@ console.log(cartId)
     cartList.appendChild(p)
   })
   .catch(error=>{
-    alert(data.message)
+    alert(error)
   })
  })
  }
@@ -79,7 +79,7 @@ function crearCard(producto){
             <p class="text-sm text-red-700">Precio:${producto.price}</p>
             <p class="text-sm text-red-700">Cantidad: 1</p>
           </div>
-          <button pid=${producto.id} class="bg-red-500 text-white px-2 py-1 rounded-full text-sm hover:bg-red-600 focus:outline-none" onclick="remove(event)">
+          <button cpid=${producto.id} class="bg-red-500 text-white px-2 py-1 rounded-full text-sm hover:bg-red-600 focus:outline-none" onclick="remove(event)">
             Quitar
           </button>`
  }
@@ -122,7 +122,7 @@ function crearCard(producto){
 //IO QUITAR PRODUCTO
 
  socket.on("remuevanProducto",pid=>{
-    const producto=document.querySelector(`[pid="${pid}"]`);
+    const producto=document.querySelector(`[cpid="${pid}"]`);
     if(producto){
         let contenedor=producto.closest('.product-item');
         let cantidad=contenedor.querySelectorAll('p')[2];
