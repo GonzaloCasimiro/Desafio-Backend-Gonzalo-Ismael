@@ -9,19 +9,22 @@ const nuevoChatManger=new ChatManger();
 const nuevoProductManager = new ProductManager('productos.json');
 const CartManager = require("../controllers/CartsManager.js");
 const { auth } = require('../middlewares/auth.middleware.js');
+const { passportCall } = require('../middlewares/passportCall.middelware.js');
+const { authorization } = require('../middlewares/authorization.middleware.js');
 const cartManager = new CartManager("carts.json");
 //viewRouter.use(productSocket())
 
-viewRouter.get('/products', async (req, res) => {
+viewRouter.get('/products', passportCall('jwt'), async (req, res) => {
     try {
+        if(req.session.user)req.user=req.session.user
         const { limits,pageNumber,sort,category,stock } = req.query;
         const data={}
         if(stock){data.stock=parseInt(stock)}
         if(sort && (sort===1 || sort===-1)){data.sort=parseInt(sort)}
         if(limits){data.limits=parseInt(limits)}
         if(pageNumber){data.page=parseInt(pageNumber)}
-        if(req.session.user){       
-            const user=req.session.user
+        if(req.user){
+            const user=req.user
             const cart=await cartManager.getCart(user.cid);
             const cartProducts=cart.products
             if(category){
@@ -123,7 +126,7 @@ viewRouter.put('/:cid/product/:pid', async (req, res) => {
         res.send(error);
     }
 });
-viewRouter.get('/admin',auth ,async(req,res)=>{
+viewRouter.get('/admin',passportCall('jwt'),authorization('admin') ,async(req,res)=>{
     try {
         const products=await nuevoProductManager.getProducts()
         console.log(products)

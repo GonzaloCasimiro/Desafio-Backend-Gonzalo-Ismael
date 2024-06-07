@@ -15,15 +15,14 @@ form.addEventListener("submit",e=>{
     }).then(response=>{
         return response.json()
 }).then(data=>{
+
     if(data.status==='succes'&& data.role==="user"){
         window.location.href=`/api/views/products`
     }else if(data.status==='succes'&& data.role==="admin"){
         window.location.href='/api/views/admin'
     }else{
         alert(data.message)
-    }
-    
-    
+    }     
 }).catch(error=>{
     console.error('Error',error)
 })

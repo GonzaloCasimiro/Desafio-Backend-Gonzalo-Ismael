@@ -1,5 +1,4 @@
 
-console.log(cartId)
   //REMOVER PRODUCTO DEL CARRITO
   function remove(event){
     event.preventDefault()

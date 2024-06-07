@@ -8,7 +8,7 @@ function auth(req,res,next){
 function isLog(req,res,next){
     if(!req.session.user){
         return next()
-    }else if(req.session.user.role==="admin"){
+    }else if(req.cookies.user.role==="admin"){
 
         return res.redirect('/api/views/admin')
     }else{

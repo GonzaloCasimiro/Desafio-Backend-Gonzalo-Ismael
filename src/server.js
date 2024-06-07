@@ -22,14 +22,16 @@ const { initializePassport } = require("./config/passport.config.js");
 //session db storage => persistencia en mongo
 const MongoStore =require("connect-mongo");
 const { isLog } = require("./middlewares/auth.middleware.js");
+const { passportCall } = require("./middlewares/passportCall.middelware.js");
 
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 //app.use(cookieParser());
-app.use(cookieParser("f1rm4s3cr3t4"))    // firma "secreta de cookie" (luego la oculatermos con .env)
+app.use(cookieParser())    // firma "secreta de cookie" (luego la oculatermos con .env)
 //session con mongo
+
 app.use(session({
     store:MongoStore.create({
         mongoUrl:'mongodb://127.0.0.1:27017/ecommerce',
@@ -134,8 +136,16 @@ app.use("/api/sessions",sessionRouter)
 
 connectDB();
 
-app.get('/', isLog ,(req, res) => {
-    res.render('login');
+app.get('/', passportCall('jwt'),(req, res) => {
+    if(req.session.user){
+        if(req.session.user.role==="admin") res.redirect('/api/views/admin')
+        if(req.session.user.role==="user") res.redirect('/api/views/products')
+    }else if(req.user){
+        if(req.user.role==="admin") res.redirect('/api/views/admin')
+        if(req.user.role==="user") res.redirect('/api/views/products')
+    }else{
+        res.render('login')
+    }
 });
 
 //path - ttl - retires    => argumentos del storage => storage alamacenara las sessiones

@@ -8,18 +8,69 @@ const { createHash, isValid } = require("../utils.js");
 const { initializePassport } = require("../config/passport.config.js");
 const passport = require("passport");
 const { generateToken, authToken } = require("../utils/jsonwebtoken.js");
+const { passportCall } = require("../middlewares/passportCall.middelware.js");
+const { authorization } = require("../middlewares/authorization.middleware.js");
 const cartManager = new CartManager("carts.json");
 
 //session => login-register-logout
 sessionRouter.get('/login',(req,res)=>{
-    const {email,password}=req.body
     res.render('login')
 })
 sessionRouter.get('/register',(req,res)=>{
     res.render('register')
 })
+sessionRouter.post('/register',async(req,res)=>{
+    const {name,lastname,password,email,role}=req.body
+    if(!password ||!email||!name||!lastname)return res.status(401).send({status:'error',message:"Debe llenar todos los campos"})
+    //usuario existe ?
+    const validateEmail=await newUserManager.validateEmail(email)
+    if(validateEmail){
+        res.status(401).send({status:'error',message:"Email ya registrado"})
+    }else{
+        const newCart = await cartManager.createCart();
+        const cid=newCart._id
+        const hashPassword=createHash(password)
+        const newUser=await newUserManager.newUser(name,lastname,hashPassword,email,cid,role)
+        const token=generateToken({
+            id:newUser._id,
+            cid,
+            role:newUser.role,
+            email,
+            name:newUser.name,
+            lastname:newUser.lastname
+        })
+        res.cookie('token',token,{
+            maxAge:60*60*1000*24,
+            httpOnly:true
+        }).send({status:'succes',message:'usuario registrado',role:newUser.role})
+    }
+})
+sessionRouter.post('/login',async(req,res)=>{
+    const {password,email}=req.body
+    if(!password ||!email)return res.status(401).send({status:'error',message:"Debe llenar todos los campos"})
+    const user=await newUserManager.validateEmail(email)
+    if(!user){
+        res.status(401).send({status:'error',message:"Credenciales invalidas"})
+    }else{
+        if(!isValid(user,password))return res.status(401).send({status:'error',message:"Password incorrecto"})
+        
+        const token=generateToken({
+            id:user._id,
+            cid:user.cid,
+            role:user.role,
+            email,
+            name:user.name,
+            lastname:user.lastname
+        })
+        res.cookie('token',token,{
+            maxAge:60*60*1000*24,
+            httpOnly:true
+        }).send({status:'succes',message:`Bienvenido ${user.name} ${user.lastname}`,role:user.role})
+    }
+})
 //sessionRouter.post('/register',passport)
 /*
+// session con token en header
 sessionRouter.post('/register',async(req,res)=>{
     try {
         const {name,lastname,password,email,role}=req.body;
@@ -89,18 +140,14 @@ sessionRouter.post('/login',async (req,res)=>{
                 lastname:user.lastname,
                 role:user.role
                 }
-                const token=generateToken({
+                const token=generateToken({         // CREO EL TOKEN
                     id:user._id,
                     email
                 })
-                const data={
-                status:'succes',
-                message:`Bienvenido/a ${user.name} ${user.lastname}`,
-                uid:user._id,
-                role:user.role,
-                token
-                }
-                res.send(data)
+                res.cookie('token',token,{   //ALMACENO EN COOKIE
+                    maxAge:60*60*1000*24,
+                    httpOnly:true     //SOLO SE PUEDE EXTRAER MEDIANTE CONSULTA HTPP EN EL SERVIDORD
+                }).send({status:'succes'})      
             }else{
                 const data={
                     status:'error',
@@ -112,10 +159,10 @@ sessionRouter.post('/login',async (req,res)=>{
             
         }
     }   
-})
-*/
-//RUTAS CON PASSPORT
+})*/
 
+//RUTAS CON PASSPORT + SESSIONS MONGODB
+/*
 sessionRouter.post('/register',passport.authenticate('register',{failureRedirect:'/api/sessions/failRegister'}) ,async(req,res)=>{
     res.send({status:'succes',message:'usuario registrado exitosamente'})
 })
@@ -161,6 +208,7 @@ sessionRouter.get('/faillogin',(req,res)=>{
     } 
     res.send(data)
 })
+*/
 //localhost:8080/api/sessions/github
 sessionRouter.get('/github',passport.authenticate('github',{scope:'user:email'}),async(req,res)=>{
 
@@ -170,17 +218,33 @@ sessionRouter.get('/githubcallback',passport.authenticate('github',{failureRedir
     res.redirect('/')
 })
 
+sessionRouter.get("/logout",(req,res)=>{
+    if(req.session.user){
+        req.session.destroy(err=>{
+            if(!err)return res.redirect('/')
+            else return res.send({status:"error",error:err})
+        })
+    }else{
+        res.clearCookie("token").redirect("/")
+    }
+    
+})
 
-//logout
+//logout con sessions 
+/*
 sessionRouter.get("/logout",(req,res)=>{
     req.session.destroy(err=>{
         if(!err)return res.redirect('/')
         else return res.send({status:"error",error:err})
     })
-})
+})*/
 //ESTE ENDPOINT SOLO LO PUEDE VER UN ADMINISTRADOR
+sessionRouter.get("/current",passportCall('jwt'),authorization('admin'),(req,res)=>{
+    res.send("datos solo para admins")
+})/*
 sessionRouter.get("/current",authToken,(req,res)=>{
     res.send("datos solo para admins")
-})
+})*/
+
 
 module.exports =sessionRouter

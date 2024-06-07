@@ -139,7 +139,6 @@ updateProduct.addEventListener("submit",e=>{
             delete data[key]
         }
     }
-    console.log(data)
     fetch('/products/'+data.pid,{
         method: 'PUT',
         headers: {

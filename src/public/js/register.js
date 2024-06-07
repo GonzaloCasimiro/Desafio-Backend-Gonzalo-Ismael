@@ -22,13 +22,15 @@ register.addEventListener('submit',e=>{
     }
     return response.json()
 }).then(data=>{
-    console.log("DATA",data)
-    if(data.status==='succes'){
+    if(data.status==='succes'&& data.role==="user"){
         alert(data.message)
-        window.location.href='/api/sessions/login'
+        window.location.href=`/api/views/products`
+    }else if(data.status==='succes'&& data.role==="admin"){
+        alert(data.message)
+        window.location.href='/api/views/admin'
     }else{
         alert(data.message)
-    }
+    }     
 }).catch(error=>{
     console.log(error)
 })
