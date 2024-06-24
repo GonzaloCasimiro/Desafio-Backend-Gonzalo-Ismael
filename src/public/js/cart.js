@@ -8,7 +8,6 @@
       pid:button.getAttribute('cpid'),
       cid:cartId
     }
-    console.log(data)
     fetch(`/api/carts/${cartId}/product/${data.pid}`, {
         method: 'DELETE',
         headers: {
@@ -25,7 +24,7 @@
     })
     .then(data => {
         alert(data.message)
-        const pid=data.id;
+        const pid=data.pid;
         socket.emit("removerProducto",pid)
     })
     .catch(error => {
@@ -108,7 +107,6 @@ function crearCard(producto){
         let cantidadNueva=cantidadActual+1
         cantidad.textContent='Cantidad: '+cantidadNueva
       }else{
-        console.log("AAAA")
         const nuevoDiv=document.createElement("div");
         nuevoDiv.classList.add("product-item", "mb-4", "p-2", "bg-gray-100", "rounded-lg", "shadow-inner", "flex", "justify-between", "items-center");
         nuevoDiv.innerHTML=crearCard(producto)

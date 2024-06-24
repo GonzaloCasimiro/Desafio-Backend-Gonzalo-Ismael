@@ -1,7 +1,7 @@
 const Message = require("../dao/models/messageSchema.js")
 const { Model, default: mongoose } = require("mongoose");
 
-class messagesManager{
+class MessagesManager{
     constructor(){
     }
     async getAllMessages(cid){
@@ -35,4 +35,4 @@ class messagesManager{
 
 
 
-module.exports = messagesManager
+module.exports = MessagesManager

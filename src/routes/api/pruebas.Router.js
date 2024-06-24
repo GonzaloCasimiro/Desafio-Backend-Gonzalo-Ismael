@@ -1,5 +1,5 @@
 const {Router} =require("express");
-const {auth} = require("../middlewares/auth.middleware.js");
+const {auth} = require("../../middlewares/auth.middleware.js");
 const pruebasRouter=Router();
 
 

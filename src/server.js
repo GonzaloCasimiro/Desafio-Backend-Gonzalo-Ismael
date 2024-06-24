@@ -1,19 +1,13 @@
 const express = require("express");
 //const { __dirname } = require("./utils.js");
 const handlebars = require('express-handlebars');
-const ProductManager = require("./controllers/ProductsManager.js");
-const CartManager = require("./controllers/CartsManager.js");
-const productRouter = require("./routes/productsRouter.js");
-const cartRouter = require("./routes/cartsRouter.js");
-const viewRouter = require("./routes/viewsRouter.js");
 const { Server } = require('socket.io');
 const productsSocket = require("./utils/productSocket.js");
 const connectDB = require("./controllers/utils/db.js");
 const cookieParser=require('cookie-parser');
 const session =require('express-session');
-const userRouter = require("./routes/userRouter.js");
-const pruebasRouter = require("./routes/pruebas.Router.js");
-const sessionRouter = require("./routes/sessionRouter.js");
+
+const router=require('./routes/index.js')
 //PASSPORT
 const passport = require('passport')
 const { initializePassport } = require("./config/passport.config.js");
@@ -23,6 +17,7 @@ const { initializePassport } = require("./config/passport.config.js");
 const MongoStore =require("connect-mongo");
 const { isLog } = require("./middlewares/auth.middleware.js");
 const { passportCall } = require("./middlewares/passportCall.middelware.js");
+const { port, mongoUrl } = require("./config/config.js");
 
 const app = express();
 
@@ -31,10 +26,9 @@ app.use(express.urlencoded({ extended: true }));
 //app.use(cookieParser());
 app.use(cookieParser())    // firma "secreta de cookie" (luego la oculatermos con .env)
 //session con mongo
-
 app.use(session({
     store:MongoStore.create({
-        mongoUrl:'mongodb://127.0.0.1:27017/ecommerce',
+        mongoUrl:`${mongoUrl}`,
         mongoOptions:{
             useNewUrlParser:true,
             useUnifiedTopology:true,
@@ -72,8 +66,8 @@ app.use(session({
     resave:true,      // session activa aun que este inactiva
     saveUninitialized:true    //permite almacenar sesiones aunque no tengan valor
 }))*/
-const htppServer = app.listen(8080, error => {
-    console.log('Escuchando servidor en puerto 8080');
+const htppServer = app.listen(port, error => {
+    console.log(`escuchando servidor ${port}`);
 }).on("error", function (err) {
     process.once("SIGUSR2", function () {
         process.kill(process.pid, "SIGUSR2");
@@ -127,12 +121,7 @@ app.engine('handlebars', handlebars.engine());
 app.set('views', __dirname + '/views');
 app.set('view engine', 'handlebars');
 //rutas
-app.use('/products', productRouter);
-app.use('/api/carts', cartRouter);
-app.use('/api/views', viewRouter);
-app.use("/user",userRouter)
-app.use("/pruebas",pruebasRouter)
-app.use("/api/sessions",sessionRouter)
+app.use(router)
 
 connectDB();
 

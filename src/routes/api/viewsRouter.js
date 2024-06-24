@@ -1,20 +1,21 @@
 const { Router } = require('express');
 const viewRouter = Router();
-const ProductManager = require('../controllers/ProductsManager.js');
-const ChatManger=require("../controllers/ChatManager.js")
-const { Product } = require('../dao/models/productSchema.js');
-const productSocket = require('../controllers/utils/productsSocket.js');
+const ProductManager = require('../../controllers/ProductsManager.js');
+const ChatManger=require("../../controllers/ChatManager.js")
+const { Product } = require('../../dao/models/productSchema.js');
+const productSocket = require('../../controllers/utils/productsSocket.js');
 const express=require('express')
 const nuevoChatManger=new ChatManger();
 const nuevoProductManager = new ProductManager('productos.json');
-const CartManager = require("../controllers/CartsManager.js");
-const { auth } = require('../middlewares/auth.middleware.js');
-const { passportCall } = require('../middlewares/passportCall.middelware.js');
-const { authorization } = require('../middlewares/authorization.middleware.js');
+const CartManager = require("../../controllers/CartsManager.js");
+const { auth } = require('../../middlewares/auth.middleware.js');
+const { passportCall } = require('../../middlewares/passportCall.middelware.js');
+const { authorization } = require('../../middlewares/authorization.middleware.js');
+const viewController = require('../../controllers/view.controller.js');
 const cartManager = new CartManager("carts.json");
 //viewRouter.use(productSocket())
-
-viewRouter.get('/products', passportCall('jwt'), async (req, res) => {
+const{viewProducts,postProduct,deleteProduct,updateProduct,getChats,postMessage,updateCart,admin}=new viewController()
+viewRouter.get('/products', passportCall('jwt'), viewProducts/*async (req, res) => {
     try {
         if(req.session.user)req.user=req.session.user
         const { limits,pageNumber,sort,category,stock } = req.query;
@@ -50,51 +51,71 @@ viewRouter.get('/products', passportCall('jwt'), async (req, res) => {
     }catch (error) {
         res.send(error);
     }
-});
+}*/);
 
-viewRouter.post('/products', async (req,res) => {
+viewRouter.post('/products',postProduct /*async (req,res) => {
     try {
+
         const { title, description, price, thumbnail, code, stock, category } = req.body;
-        const result = await nuevoProductManager.addProduct(title, description, price, code, stock, category, thumbnail);
-        if(result.status){
-            if(result.staus===400){
-                return res.status(400).send({status:"error",message:result.message})
-            }else {
-                return  res.status(409).send({ status: "error", message:result.message})
+        if(!title||!description||!price||!code||!stock||!category){
+            return res.status(403).send({message:"Debes llenar todos los campos",status:"error"})
+        }
+        else{
+            const producto={
+                title,
+                description,
+                price,
+                thumbnail,
+                code,
+                stock,
+                category
             }
-        }else{
-            //req.socketServer.emit("nuevoProducto",result)
-            res.status(200).send({ status: "success", payload: result });
-        }  
+            const result=await nuevoProductManager.addProduct(producto)
+            if(result.status){
+                if(result.staus===400){
+                    return res.status(400).send({status:"error",message:result.message})
+                }else {
+                    return  res.status(409).send({ status: "error", message:result.message})
+                }
+            }else{
+                res.status(200).send({ status: "success", payload: result });
+            }
+        }
     } catch (error) {
-        res.send(`${error}`);
+        res.status(501).send({status:'error',message:error.message});
     }
-});
+}*/);
 
 
-viewRouter.delete('/products/:pid', async (req, res) => {
+viewRouter.delete('/products/:pid', deleteProduct/*async (req, res) => {
     try {
         const { pid } = req.params;
-        console.log(pid)
         const result = await nuevoProductManager.deleteProduct(pid);
-        console.log(result)
-        res.send(result);
+        if(result===null){
+            return res.status(401).send({message:"NO EXISTE PRODUCTO CON ESE ID",status:"error"})
+        }else{
+            return res.send({message:"PRODUCTO ELIMINADO CON EXITO",status:"succes",pid:pid})
+        }
     } catch (error) {
-        res.send(error);
+        res.status(501).send({message:error.message,status:"error"});
     }
-});
-viewRouter.put('/products',async(req,res)=>{
+}*/);
+viewRouter.put('/products', updateProduct/*async(req,res)=>{
     try {
-        const data=req.body
-        const id=data.pid
-        const result=await nuevoProductManager.updateProduct(id,data)
-        console.log(result)
-        res.send(result)
+        const {pid,key,value}=req.body
+
+        const product=await nuevoProductManager.getProductsById(pid);
+        if(!product){
+            return res.status(401).send({status:"error",message:"No existe producto con ese id"})
+        }else{
+            const result= await nuevoProductManager.updateProduct(pid,key,value)
+            return res.send({status:'succes',message:"Producto actualizado con exito",pid,key,value})
+        } 
     } catch (error) {
         res.send(error)
     }
-})
-viewRouter.get("/chats",async(req,res)=>{
+}*/)
+viewRouter.get("/chats", getChats/*async(req,res)=>{
     try {
         const messages=await nuevoChatManger.getAllMessages()
         console.log(messages)
@@ -102,8 +123,8 @@ viewRouter.get("/chats",async(req,res)=>{
     } catch (error) {
         res.send(error)
     }
-})
-viewRouter.post("/message",async(req,res)=>{
+}*/)
+viewRouter.post("/message", postMessage/*async(req,res)=>{
     try {
         const {user,message}=req.body
         const result=await nuevoChatManger.newMessage(message,user)
@@ -112,9 +133,9 @@ viewRouter.post("/message",async(req,res)=>{
     } catch (error) {
         res.send(error)
     }
-})
+}*/)
 //cart
-viewRouter.put('/:cid/product/:pid', async (req, res) => {
+viewRouter.put('/:cid/product/:pid', updateCart/*async (req, res) => {
     try {
         const { cid, pid } = req.params;
         console.log(cid,pid)
@@ -125,8 +146,8 @@ viewRouter.put('/:cid/product/:pid', async (req, res) => {
         console.log(error)
         res.send(error);
     }
-});
-viewRouter.get('/admin',passportCall('jwt'),authorization('admin') ,async(req,res)=>{
+}*/);
+viewRouter.get('/admin',passportCall('jwt'),authorization('admin') ,admin/*async(req,res)=>{
     try {
         const products=await nuevoProductManager.getProducts()
         console.log(products)
@@ -134,5 +155,5 @@ viewRouter.get('/admin',passportCall('jwt'),authorization('admin') ,async(req,re
     } catch (error) {
         res.send(error)
     }
-})
+}*/)
 module.exports = viewRouter;

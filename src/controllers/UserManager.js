@@ -7,7 +7,8 @@ class UserManager{
     }
     async getUsers(){
         try {
-            const users=await User.find({first_name:"Celia"}).explain("executionStats") //=> filta por celia y muestra los stats de cuanto tiempo tarda
+            //const users=await User.find({first_name:"Celia"}).explain("executionStats") //=> filta por celia y muestra los stats de cuanto tiempo tarda
+            const users=await User.find()
             return users
         } catch (error) {
             return error.message
@@ -16,10 +17,6 @@ class UserManager{
     }
     async getUser(email){
         const user=await User.findOne({email:email})
-        return user
-    }
-    async getUserById(id){
-        const user=await User.findOne({_id:id})
         return user
     }
     async validateUser(email,password){
@@ -41,6 +38,14 @@ class UserManager{
         }
         const newUser=await User.create(user)
         return newUser
+    }
+    async updateUser(key,value,email){
+        const result=await User.updateOne({email:email},{[key]:value})
+        return result
+    }
+    async deleteUser(email){
+        const result=await User.deleteOne({email:email})
+        return result 
     }
 }
 

@@ -1,17 +1,18 @@
 const {Router} =require("express");
-const {auth} = require("../middlewares/auth.middleware");
-const UserManager=require("../controllers/UserManager.js");
+//const {auth} = require("../../middlewares/auth.middleware.js");
+const UserManager=require("../../controllers/UserManager.js");
 const newUserManager=new UserManager();
 const sessionRouter=Router();
-const CartManager = require("../controllers/CartsManager.js");
-const { createHash, isValid } = require("../utils.js");
-const { initializePassport } = require("../config/passport.config.js");
+const CartManager = require("../../controllers/CartsManager.js");
+//const { createHash, isValid } = require("../../utils.js");
+//const { initializePassport } = require("../../config/passport.config.js");
 const passport = require("passport");
-const { generateToken, authToken } = require("../utils/jsonwebtoken.js");
-const { passportCall } = require("../middlewares/passportCall.middelware.js");
-const { authorization } = require("../middlewares/authorization.middleware.js");
+//const { generateToken, authToken } = require("../../utils/jsonwebtoken.js");
+const { passportCall } = require("../../middlewares/passportCall.middelware.js");
+const { authorization } = require("../../middlewares/authorization.middleware.js");
+const SessionController = require("../../controllers/session.controller.js");
 const cartManager = new CartManager("carts.json");
-
+const {register,login,logout,github,githubCallback}=new SessionController()
 //session => login-register-logout
 sessionRouter.get('/login',(req,res)=>{
     res.render('login')
@@ -19,7 +20,7 @@ sessionRouter.get('/login',(req,res)=>{
 sessionRouter.get('/register',(req,res)=>{
     res.render('register')
 })
-sessionRouter.post('/register',async(req,res)=>{
+sessionRouter.post('/register',register/*async(req,res)=>{
     const {name,lastname,password,email,role}=req.body
     if(!password ||!email||!name||!lastname)return res.status(401).send({status:'error',message:"Debe llenar todos los campos"})
     //usuario existe ?
@@ -44,8 +45,8 @@ sessionRouter.post('/register',async(req,res)=>{
             httpOnly:true
         }).send({status:'succes',message:'usuario registrado',role:newUser.role})
     }
-})
-sessionRouter.post('/login',async(req,res)=>{
+}*/)
+sessionRouter.post('/login',login/*async(req,res)=>{
     const {password,email}=req.body
     if(!password ||!email)return res.status(401).send({status:'error',message:"Debe llenar todos los campos"})
     const user=await newUserManager.validateEmail(email)
@@ -67,7 +68,7 @@ sessionRouter.post('/login',async(req,res)=>{
             httpOnly:true
         }).send({status:'succes',message:`Bienvenido ${user.name} ${user.lastname}`,role:user.role})
     }
-})
+}*/)
 //sessionRouter.post('/register',passport)
 /*
 // session con token en header
@@ -218,7 +219,7 @@ sessionRouter.get('/githubcallback',passport.authenticate('github',{failureRedir
     res.redirect('/')
 })
 
-sessionRouter.get("/logout",(req,res)=>{
+sessionRouter.get("/logout",logout/*(req,res)=>{
     if(req.session.user){
         req.session.destroy(err=>{
             if(!err)return res.redirect('/')
@@ -228,7 +229,7 @@ sessionRouter.get("/logout",(req,res)=>{
         res.clearCookie("token").redirect("/")
     }
     
-})
+}*/)
 
 //logout con sessions 
 /*

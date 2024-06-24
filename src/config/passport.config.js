@@ -1,5 +1,5 @@
 const passport = require('passport')
-
+const { PRIVATE_KEY } = require('../config/config')
 const local = require('passport-local')
 const UserManager = require('../controllers/UserManager')
 const { createHash, isValid } = require('../utils')
@@ -9,11 +9,8 @@ const LocalStrategy= local.Strategy
 const userManager=new UserManager()
 const GithubStrategy = require('passport-github2')
 const jwt=require('passport-jwt')
-const { PRIVATE_KEY } = require('../utils/jsonwebtoken')
 const JWTStrategy=jwt.Strategy
 const ExtractJWT=jwt.ExtractJwt
-
-
 const initializePassport =()=>{
     //jwt
     const cookieExtractor=req=>{
@@ -38,7 +35,7 @@ const initializePassport =()=>{
     }) // guarda el id en session
     passport.deserializeUser(async(id,done)=>{
         try {
-            let user=await userManager.getUserById(id)
+            let user=await userManager.getUser(id)
             done(null,user)
         } catch (error) {
             done(error)

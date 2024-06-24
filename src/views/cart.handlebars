@@ -70,7 +70,7 @@
     })
     .then(data => {
         alert(data.message)
-        const pid=data.id;
+        const pid=data.pid;
         socket.emit("removerProducto",pid)
     })
     .catch(error => {

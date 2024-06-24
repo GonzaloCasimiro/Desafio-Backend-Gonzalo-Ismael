@@ -213,6 +213,7 @@ function addToCart(event){
         body: JSON.stringify(data)
     })
     .then(response => {
+        console.log(response)
         if (response.ok) {
             return response.json();
         } else {
@@ -221,8 +222,8 @@ function addToCart(event){
     })
     .then(data => {
         alert(data.message)    
-        if(data.status==='true'){
-            const product=data.product
+        if(data.status==='succes'){
+            const product=data.producto
             socket.emit("newCartProduct",product)
         }
     })

@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { mongoUrl } = require("../../config/config");
 /*
 const connectDB = () => {
     mongoose.connect('mongodb://127.0.0.1:27017/ecommerce');
@@ -6,9 +7,8 @@ const connectDB = () => {
 }*/
 
 
-
 const connectDB = () => {
-    const uri = 'mongodb+srv://gonzaloismael:123gonza@cluster0.udpj4jc.mongodb.net/ecommerce?retryWrites=true&w=majority&appName=Cluster0';
+    const uri =mongoUrl
     
     mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
         .then(() => {
