@@ -2,6 +2,7 @@
 <div class="container mx-auto px-4 py-8">
   <div id="cardConteiner" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
     {{#each products}}
+    <a href="/api/views/product/{{id}}">
       <div class="card relative overflow-hidden border rounded-lg shadow-lg">
         <img src="{{thumbnail}}" alt="{{title}}" class="w-full h-64 object-cover">
         <div class="card-body p-4">
@@ -12,6 +13,8 @@
           <button pid ={{id}} class="add-to-cart absolute bottom-4 right-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md" onClick="addToCart(event)">Add to Cart</button>
         </div>
       </div>
+    </a>
+      
     {{/each}}
   </div>
 <div class="ml-4">

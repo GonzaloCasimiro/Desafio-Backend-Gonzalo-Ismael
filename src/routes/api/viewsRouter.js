@@ -1,152 +1,30 @@
 const { Router } = require('express');
 const viewRouter = Router();
-const ProductManager = require('../../controllers/ProductsManager.js');
-const ChatManger=require("../../controllers/ChatManager.js")
-const { Product } = require('../../dao/models/productSchema.js');
-const productSocket = require('../../controllers/utils/productsSocket.js');
-const express=require('express')
-const nuevoChatManger=new ChatManger();
-const nuevoProductManager = new ProductManager('productos.json');
-const CartManager = require("../../controllers/CartsManager.js");
+const { Product } = require('../../models/productSchema.js');
 const { auth } = require('../../middlewares/auth.middleware.js');
 const { passportCall } = require('../../middlewares/passportCall.middelware.js');
 const { authorization } = require('../../middlewares/authorization.middleware.js');
 const viewController = require('../../controllers/view.controller.js');
-const cartManager = new CartManager("carts.json");
+const { productService, cartService, userService } = require('../../service/service.js');
+const MessagesDaoMongo = require('../../dao/MONGO/ChatDao.mongo.js');
+const Message = require('../../models/messageSchema.js');
+const { default: mongoose } = require('mongoose');
+const messages=new MessagesDaoMongo(Message)
 //viewRouter.use(productSocket())
-const{viewProducts,postProduct,deleteProduct,updateProduct,getChats,postMessage,updateCart,admin}=new viewController()
-viewRouter.get('/products', passportCall('jwt'), viewProducts/*async (req, res) => {
-    try {
-        if(req.session.user)req.user=req.session.user
-        const { limits,pageNumber,sort,category,stock } = req.query;
-        const data={}
-        if(stock){data.stock=parseInt(stock)}
-        if(sort && (sort===1 || sort===-1)){data.sort=parseInt(sort)}
-        if(limits){data.limits=parseInt(limits)}
-        if(pageNumber){data.page=parseInt(pageNumber)}
-        if(req.user){
-            const user=req.user
-            const cart=await cartManager.getCart(user.cid);
-            const cartProducts=cart.products
-            if(category){
-                const products=await nuevoProductManager.getProductsByCategory(data.limits,data.page,data.sort,category,data.stock)
-                const{docs,hasPrevPage,hasNextPage,prevPage,nextPage,page}=products
-                res.render('index', { products:docs,hasPrevPage,hasNextPage,prevPage,nextPage,page,user:user,cartProducts });
-            }else{
-                const products=await nuevoProductManager.getProducts(data.limits,data.page,data.sort,stock);
-                const{docs,hasPrevPage,hasNextPage,prevPage,nextPage,page}=products           
-                res.render('index', { products:docs,hasPrevPage,hasNextPage,prevPage,nextPage,page,user:user,cartProducts });  
-            }
-        }else{
-            if(category){
-                const products=await nuevoProductManager.getProductsByCategory(data.limits,data.page,data.sort,category,data.stock)
-                const{docs,hasPrevPage,hasNextPage,prevPage,nextPage,page}=products
-                res.render('index', { products:docs,hasPrevPage,hasNextPage,prevPage,nextPage,page });
-            }else{
-                const products=await nuevoProductManager.getProducts(data.limits,data.page,data.sort,stock);
-                const{docs,hasPrevPage,hasNextPage,prevPage,nextPage,page}=products           
-                res.render('index', { products:docs,hasPrevPage,hasNextPage,prevPage,nextPage,page });  
-            }
-        }
-    }catch (error) {
-        res.send(error);
-    }
-}*/);
+const{viewProducts,postProduct,deleteProduct,updateProduct,getChats,postMessage,updateCart,admin,getProduct}=new viewController()
+viewRouter.get('/products', passportCall('jwt'), viewProducts);
 
-viewRouter.post('/products',postProduct /*async (req,res) => {
-    try {
-
-        const { title, description, price, thumbnail, code, stock, category } = req.body;
-        if(!title||!description||!price||!code||!stock||!category){
-            return res.status(403).send({message:"Debes llenar todos los campos",status:"error"})
-        }
-        else{
-            const producto={
-                title,
-                description,
-                price,
-                thumbnail,
-                code,
-                stock,
-                category
-            }
-            const result=await nuevoProductManager.addProduct(producto)
-            if(result.status){
-                if(result.staus===400){
-                    return res.status(400).send({status:"error",message:result.message})
-                }else {
-                    return  res.status(409).send({ status: "error", message:result.message})
-                }
-            }else{
-                res.status(200).send({ status: "success", payload: result });
-            }
-        }
-    } catch (error) {
-        res.status(501).send({status:'error',message:error.message});
-    }
-}*/);
+viewRouter.post('/products',postProduct );
+viewRouter.get('/product/:pid',passportCall('jwt'),getProduct)
 
 
-viewRouter.delete('/products/:pid', deleteProduct/*async (req, res) => {
-    try {
-        const { pid } = req.params;
-        const result = await nuevoProductManager.deleteProduct(pid);
-        if(result===null){
-            return res.status(401).send({message:"NO EXISTE PRODUCTO CON ESE ID",status:"error"})
-        }else{
-            return res.send({message:"PRODUCTO ELIMINADO CON EXITO",status:"succes",pid:pid})
-        }
-    } catch (error) {
-        res.status(501).send({message:error.message,status:"error"});
-    }
-}*/);
-viewRouter.put('/products', updateProduct/*async(req,res)=>{
-    try {
-        const {pid,key,value}=req.body
-
-        const product=await nuevoProductManager.getProductsById(pid);
-        if(!product){
-            return res.status(401).send({status:"error",message:"No existe producto con ese id"})
-        }else{
-            const result= await nuevoProductManager.updateProduct(pid,key,value)
-            return res.send({status:'succes',message:"Producto actualizado con exito",pid,key,value})
-        } 
-    } catch (error) {
-        res.send(error)
-    }
-}*/)
-viewRouter.get("/chats", getChats/*async(req,res)=>{
-    try {
-        const messages=await nuevoChatManger.getAllMessages()
-        console.log(messages)
-        res.render("chat",{messages:messages})
-    } catch (error) {
-        res.send(error)
-    }
-}*/)
-viewRouter.post("/message", postMessage/*async(req,res)=>{
-    try {
-        const {user,message}=req.body
-        const result=await nuevoChatManger.newMessage(message,user)
-        console.log(result)
-        res.send(result)
-    } catch (error) {
-        res.send(error)
-    }
-}*/)
+viewRouter.delete('/products/:pid', deleteProduct);
+viewRouter.put('/products', updateProduct)
+viewRouter.get("/chats", getChats)
+viewRouter.post("/message", postMessage)
 //cart
-viewRouter.put('/:cid/product/:pid', updateCart/*async (req, res) => {
-    try {
-        const { cid, pid } = req.params;
-        console.log(cid,pid)
-        const results = await cartManager.removeProduct(cid,pid);
-        console.log(results);
-        res.send(results);
-    } catch (error) {
-        console.log(error)
-        res.send(error);
-    }
-}*/);
+viewRouter.put('/:cid/product/:pid', updateCart);
+
 viewRouter.get('/admin',passportCall('jwt'),authorization('admin') ,admin/*async(req,res)=>{
     try {
         const products=await nuevoProductManager.getProducts()
@@ -156,4 +34,56 @@ viewRouter.get('/admin',passportCall('jwt'),authorization('admin') ,admin/*async
         res.send(error)
     }
 }*/)
+
+viewRouter.get('/admin/products',authorization("admin"),async(req,res)=>{
+    try {
+        res.render('adminProducts',{})
+    } catch (error) {
+        res.send('error')
+    }
+})
+viewRouter.get('/update/:pid',authorization("admin"),async(req,res)=>{
+    try {
+        const {pid}=req.params
+        const product=await productService.getProduct(pid);
+        res.render('updateProduct',{product:product})
+    } catch (error) {
+        res.send(error)
+    }
+})
+viewRouter.get('/purchase',passportCall("jwt"),authorization("user"),async(req,res)=>{
+    try {
+        const {cid,email}=req.user
+        let cart=await cartService.getCart(cid);
+        let inStock=[]
+        let outStock=[]
+        let total=0
+        for(let i=0;i<cart.products.length;i++){
+            const item=cart.products[i];
+            const quantity=cart.products[i].quantity
+            const getStock=await productService.getStock(item._id,quantity)
+            let productData=await productService.getProduct(item._id)
+            if(getStock){
+                inStock.push({quantity:quantity,product:productData.toJSON()})
+                total=total+productData.price
+            }else{
+                outStock.push({quantity:quantity,product:productData.toJSON()})
+            }
+        } 
+        console.log(inStock,"Stock")
+        let user=await userService.getUser(email)
+        user=user.toJSON()
+        res.render("purchase",{inStock,outStock,user,total})
+    } catch (error) {
+        res.send(error)
+    }
+})
+viewRouter.get('/purchase',passportCall("jwt",authorization("user"),async(req,res)=>{
+    try {
+        const {name,lastname,email,id,cid}=req.user
+        
+    } catch (error) {
+        
+    }
+}))
 module.exports = viewRouter;

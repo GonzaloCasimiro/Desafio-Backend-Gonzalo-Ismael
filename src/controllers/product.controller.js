@@ -1,8 +1,19 @@
-const ProductManager = require("./ProductsManager");
-const nuevoProductManager = new ProductManager('productos.json');
-
+const ProductDaoMongo = require("../dao/MONGO/ProductDao.mongo");
+const { productService } = require("../service/service");
 class ProductController{
     constructor(){}
+    getByCode=async(req,res)=>{
+        try {
+            const {code}=req.params
+            const result=await productService.getProductByCode(code)
+            console.log(code,"code");
+            console.log(result,"result")
+           if(result) return res.status(200).send({status:"success",message:"Producto encontrado",pid:result._id})
+            res.status(401).send({status:"error",message:`${code}, no es valido`})
+        } catch (error) {
+            res.status(500).send({status:"error",message:error})
+        }
+    }
     getProducts=async (req, res) => {
         try {
             const { limits,pageNumber,sort,category,stock } = req.query;
@@ -12,11 +23,12 @@ class ProductController{
             if(limits){data.limits=parseInt(limits)}
             if(pageNumber){data.page=parseInt(pageNumber)}
             if(category){
-                const products=await nuevoProductManager.getProductsByCategory(data.limits,data.page,data.sort,category,data.stock)
+                const products=await productService.getProductsByCategory(data.limits,data.page,data.sort,category,data.stock)
+                console.log(products)
                 const{docs,hasPrevPage,hasNextPage,prevPage,nextPage,page}=products
                 res.render('index', { products:docs,hasPrevPage,hasNextPage,prevPage,nextPage,page });
             }else{
-                const products=await nuevoProductManager.getProducts(data.limits,data.page,data.sort,stock);
+                const products=await productService.getProducts(data.limits,data.page,data.sort,stock);
                 console.log(products)
                 const{docs,hasPrevPage,hasNextPage,prevPage,nextPage,page}=products
                 
@@ -29,7 +41,7 @@ class ProductController{
     getProduct=async (req, res) => {
         const {pid}=req.params
         try {
-            const product = await nuevoProductManager.getProductsById(pid);
+            const product = await productService.getProduct(pid);
             if(product===null){
                 return res.status(401).send({status:"error",message:"No existe producto con ese pid"})
             }else{
@@ -42,20 +54,20 @@ class ProductController{
     updateProduct=async (req, res) => {
         try {
             const {pid,key,value}=req.body
-            const result=await nuevoProductManager.updateProduct(pid,key,value)
+            const result=await productService.updateProduct(pid,key,value)
             if(!result){
                 return res.send({status:"error",message:"no existe producto con ese id"})
             }else{
-                return res.send({status:'succes',message:"producto actualizado",key,value,pid})
+                return res.send({status:'succes',message:"producto actualizado",updateData:{key,value}})
             }
         } catch (error) {
-            res.send(error)
+            console.error(error)
         }
     }
     addProduct=async (req, res) => {
         try {
             const { title, description, price, thumbnail, code, stock, category } = req.body;
-            const result = await nuevoProductManager.addProduct(title, description, price, code, stock, category, thumbnail);
+            const result = await productService.createProduct(title, description, price, code, stock, category, thumbnail);
             if(result.status){
                 if(result.staus===400){
                     return res.status(400).send({status:"error",message:result.message})
@@ -73,7 +85,7 @@ class ProductController{
     deleteProduct=async (req, res) => {
         try {
             const { pid } = req.body
-            const result = await nuevoProductManager.deleteProduct(pid);
+            const result = await productService.deleteProduct(pid);
             if(!result){
                 return res.status(401).send({message:"id incorrecto",status:"error"})
             }else{

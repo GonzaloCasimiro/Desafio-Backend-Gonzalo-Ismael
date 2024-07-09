@@ -32,9 +32,8 @@ const productSchema = new mongoose.Schema({
         type:Number,
         required:true
     },
-    brand:{
+    mid:{
         type:String,
-        required:true
     }
 });
 productSchema.plugin(mongoosePaginate)

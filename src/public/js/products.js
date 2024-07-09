@@ -213,12 +213,14 @@ function addToCart(event){
         body: JSON.stringify(data)
     })
     .then(response => {
-        console.log(response)
+        return response.json()
+        /*
         if (response.ok) {
             return response.json();
         } else {
+            alert("B")
             throw new Error('No se pudo registrar el producto');
-        }
+        }*/
     })
     .then(data => {
         alert(data.message)    

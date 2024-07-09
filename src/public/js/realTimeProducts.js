@@ -1,5 +1,5 @@
 const socket = io();
-console.log(socket)
+console.log("A")
 const listProducts=document.getElementById("cardConteiner");
 
 function createProductCard(producto) {

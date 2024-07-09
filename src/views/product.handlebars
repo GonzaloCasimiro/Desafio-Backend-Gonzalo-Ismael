@@ -1,0 +1,136 @@
+{{#if admin}}
+{{>adminHeader}}
+{{else}}
+{{>header}}
+{{/if}}
+
+<div class="max-w-4xl mx-auto bg-white shadow-md overflow-hidden md:flex">
+  <!-- Lado izquierdo: Imagen y detalles del producto -->
+  <div class="md:w-1/2 p-4 flex flex-col">
+    <!-- Imagen del producto -->
+    <div class="mb-4">
+      <img src="{{image}}" class="h-48 w-full object-cover" alt="Product Image">
+    </div>
+    <!-- Detalles del producto -->
+    <div class="flex-grow">
+      <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{{product.title}}</div>
+      <p class="mt-1 text-lg leading-tight font-medium text-black">{{product.description}}</p>
+      <p class="mt-2 text-gray-500">Stock: {{product.stock}}</p>
+      <p class="mt-2 text-gray-500">{{product.price}}</p>
+    </div>
+    <!-- Botón de "Add to Cart" -->
+    <button pid="{{pid}}" cid="{{cid}}" class="mt-4 bg-indigo-500 text-white px-4 py-2 rounded" id="addCart">Add to Cart</button>
+  </div>
+
+  <!-- Lado derecho: Caja de comentarios -->
+  <div class="md:w-1/2 p-4 bg-gray-100 flex flex-col">
+    <h2 class="text-xl font-semibold">Comentarios</h2>
+    <div class="flex-grow mt-4 overflow-y-auto">
+      {{#each messages}}
+      <div class="border-b border-gray-200 pb-4 mb-4">
+        <p class="text-sm text-gray-700"><strong>{{user}}</strong> {{message}}</p>
+      </div>
+      {{/each}}
+    </div>
+    <textarea id="message"class="w-full border p-2 mb-2" rows="3" placeholder="Escribe tu comentario"></textarea>
+    <button mid="{{mid}}" username="{{username}}"class="bg-indigo-500 text-white px-4 py-2 rounded"id="sendMessage">Enviar</button>
+  </div>
+</div>
+
+
+<script >
+   //ADD TO CART
+const addToCart=document.getElementById('addCart')
+addToCart.addEventListener('click',e=>{
+    e.preventDefault();
+        const pid=addToCart.getAttribute("pid")
+        const cid=addToCart.getAttribute("cid")
+
+    fetch(`/api/carts/${cid}/product/${pid}`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({pid,cid})
+    })
+    .then(response => {
+        return response.json()
+        
+        if (response.ok) {
+            return response.json();
+        } else {
+            alert("B")
+            throw new Error('No se pudo registrar el producto');
+        }
+    })
+    .then(data => {
+        alert(data.message)    
+        if(data.status==='succes'){
+            const product=data.producto
+            //socket.emit("newCartProduct",product)
+        }
+    })
+    .catch(error => {
+      alert(error)
+    });
+})
+// enviar mensaje
+const sendMessage=document.getElementById('sendMessage')
+sendMessage.addEventListener('click',e=>{
+    e.preventDefault();
+
+        const user=sendMessage.getAttribute("username");
+        const mid=sendMessage.getAttribute('mid');
+        const message=document.getElementById('message').value
+    fetch(`/api/comments`,{
+        method:"Post",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body:JSON.stringify({user,mid,message})
+    }).then(response=>{
+        return response.json()
+    }).then(data=>{
+        if(data.message){
+            alert(data.message)
+        }
+    })
+})
+//vaciar carrito
+const vaciarCarrito=document.getElementById("vaciarCarrito");
+ function vaciar(button){
+    button.addEventListener("click",e=>{
+  e.preventDefault();
+  const data={
+    cid:vaciarCarrito.getAttribute("carritoid")
+  }
+  console.log(data)
+  fetch(`/api/carts/${data.cid}`,{
+    method:"DELETE",
+    headers:{
+      'Content-Type':'application/json'
+    },
+    body:JSON.stringify(data)
+  }).then(response=>{
+    if(response.ok){
+      return response.json()
+    }else{
+      throw new Error("NO SE PUDO VACIAR EL CARRITO")
+    }
+  })
+  .then(data=>{
+    alert(data.message);
+    const cartList=document.getElementById('cart');
+    cartList.innerHTML=""
+    const p=document.createElement('p');
+    p.classList.add('text-sm', 'text-red-900')
+    p.innerText="No hay productos en el carrito"
+    cartList.appendChild(p)
+  })
+  .catch(error=>{
+    alert(error)
+  })
+ })
+ }
+ if(vaciarCarrito) vaciar(vaciarCarrito)
+</script>

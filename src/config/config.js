@@ -11,6 +11,6 @@ dotenv.config({
 module.exports={
     port:process.env.PORT,
     mongoUrl:process.env.MONGO_URL,
-    PRIVATE_KEY:process.env.PRIVATE_KEY
+    PRIVATE_KEY:process.env.PRIVATE_KEY,
+    persistence:process.env.PERSISTENCE
 }
-

@@ -15,5 +15,13 @@ function isLog(req,res,next){
         return res.redirect(`/api/views/products`)
     }
 }
+function cartAuth(req,res,next){
+    if(req.cookie){
+        console.log(req.cookie)
+        return next()
+    }else{
+        return next()
+    }
+}
 
-module.exports= {isLog,auth}
+module.exports= {isLog,auth,cartAuth}

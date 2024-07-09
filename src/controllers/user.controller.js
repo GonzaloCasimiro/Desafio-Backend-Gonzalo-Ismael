@@ -1,13 +1,15 @@
-const CartManager = require("./CartsManager");
-const UserManager = require("./UserManager")
-const newUserManager=new UserManager()
-const cartManager = new CartManager();
+const CartDaoMongo = require("../dao/MONGO/CartDao.mongo");
+const UserDaoMongo = require("../dao/MONGO/UserDao.mongo");
+const { cartService, userService } = require("../service/service");
+UserDaoMongo
+CartDaoMongo
+
 class UserController{
     constructor(){}
     
     getUsers=async(req,res)=>{
         try {
-            const result=await newUserManager.getUsers();
+            const result=await userService.getUsers();
             res.send(result)
         } catch (error) {
             res.send(error)
@@ -16,7 +18,7 @@ class UserController{
     getUser=async(req,res)=>{
         try {
             const {email}=req.body
-            const result=await newUserManager.getUser(email)
+            const result=await userService.getUser(email)
             if(!result){
                 res.status(401).send({status:"error",message:`${email} no se encuentra registrado`})
             }else{
@@ -32,13 +34,13 @@ class UserController{
             if(!name||!lastname||!password||!email){
                 res.send('Debes llenar todos los campos');
             }else{
-                const validateEmail= await newUserManager.validateEmail(email);
+                const validateEmail= await userService.getUser(email);
                 if(validateEmail){
                     res.send('Ese Email ya ha sido registrado');
                 }else{
-                    const newCart = await cartManager.createCart();
+                    const newCart = await cartService.createCart();
                     const cid=newCart._id
-                    const newUser=await newUserManager.newUser(name,lastname,password,email,cid)
+                    const newUser=await userService.createUser({name,lastname,password,email,cid})
                     console.log(newUser)
                     res.send(newUser)
                 }
@@ -50,7 +52,7 @@ class UserController{
     updateUser=async(req,res)=>{
         try {
             const {key,value,email}=req.body;
-            const result=await newUserManager.updateUser(key,value,email)
+            const result=await userService.updateUser({key,value,email})
             const {modifiedCount,matchedCount}=result
             if(matchedCount ===0) return res.status(401).send({status:"error",message:"Email incorrecto"});
             if(modifiedCount ===0) return res.status(403).send({status:"error",message:"Error al Actualizar,contacta un administrador"});
@@ -62,10 +64,10 @@ class UserController{
     deleteUser=async(req,res)=>{
         try {
             const {password,email}=req.body
-            const user=await newUserManager.getUser(email);
+            const user=await userService.getUser(email);
             if(!user) return res.status(401).send({status:"error",message:"Email incorrecto"})
             if(isValid(user,password)){
-                const del=await newUserManager.deleteUser(email);
+                const del=await userService.deleteUser(email);
                 res.send({status:'succes',message:"usuario eliminado"})
             }else{
                 res.status(403).send({status:"error",message:"credenciales incorrectas"})

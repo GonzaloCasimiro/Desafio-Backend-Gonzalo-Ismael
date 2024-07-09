@@ -1,4 +1,5 @@
 const express = require("express");
+const cors=require('cors')
 //const { __dirname } = require("./utils.js");
 const handlebars = require('express-handlebars');
 const { Server } = require('socket.io');
@@ -6,7 +7,6 @@ const productsSocket = require("./utils/productSocket.js");
 const connectDB = require("./controllers/utils/db.js");
 const cookieParser=require('cookie-parser');
 const session =require('express-session');
-
 const router=require('./routes/index.js')
 //PASSPORT
 const passport = require('passport')
@@ -17,10 +17,10 @@ const { initializePassport } = require("./config/passport.config.js");
 const MongoStore =require("connect-mongo");
 const { isLog } = require("./middlewares/auth.middleware.js");
 const { passportCall } = require("./middlewares/passportCall.middelware.js");
-const { port, mongoUrl } = require("./config/config.js");
+const { port, mongoUrl, persistence } = require("./config/config.js");
 
 const app = express();
-
+app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 //app.use(cookieParser());

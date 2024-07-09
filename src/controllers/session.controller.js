@@ -3,26 +3,24 @@ const { authorization } = require("../middlewares/authorization.middleware");
 const { passportCall } = require("../middlewares/passportCall.middelware");
 const { createHash, isValid } = require("../utils");
 const { generateToken, authToken } = require("../utils/jsonwebtoken");
-const CartManager = require("./CartsManager");
-const UserManager = require("./UserManager")
-const newUserManager=new UserManager();
-const cartManager = new CartManager();
-
+const UserDaoMongo = require('../dao/MONGO/UserDao.mongo');
+const { cartService, userService } = require('../service/service');
+const newUserManager=new UserDaoMongo();
 
 class SessionController{
     constructor(){}
     register=async(req,res)=>{
-        const {name,lastname,password,email,role}=req.body
+        let {name,lastname,password,email,role}=req.body
         if(!password ||!email||!name||!lastname)return res.status(401).send({status:'error',message:"Debe llenar todos los campos"})
         //usuario existe ?
-        const validateEmail=await newUserManager.validateEmail(email)
+        const validateEmail=await userService.getUser(email)
         if(validateEmail){  
             return res.status(401).send({status:'error',message:"Email ya registrado"})
         }else{
-            const newCart = await cartManager.createCart();
+            const newCart = await cartService.createCart();
             const cid=newCart._id
-            const hashPassword=createHash(password)
-            const newUser=await newUserManager.newUser(name,lastname,hashPassword,email,cid,role)
+            password=createHash(password)
+            const newUser=await userService.createUser({name,lastname,password,email,cid,role})
             const token=generateToken({
                 id:newUser._id,
                 cid,
@@ -40,7 +38,7 @@ class SessionController{
     login=async(req,res)=>{
         const {password,email}=req.body
         if(!password ||!email)return res.status(401).send({status:'error',message:"Debe llenar todos los campos"})
-        const user=await newUserManager.validateEmail(email)
+        const user=await userService.getUser(email)
         if(!user){
             res.status(401).send({status:'error',message:"Credenciales invalidas"})
         }else{

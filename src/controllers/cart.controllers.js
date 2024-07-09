@@ -1,19 +1,18 @@
-const CartManager = require("./CartsManager");
-const ProductManager = require("./ProductsManager");
-const {default:mongoose}=require('mongoose')
-const cartManager = new CartManager();
-const nuevoProductManager=new ProductManager();
+
+const {default:mongoose}=require('mongoose');
+const { cartService, productService, ticketService } = require("../service/service.js");
+const TicketDaoMongo = require('../dao/MONGO/TicketDao.mongo.js');
+const Ticket = require('../models/ticketModel.js');
 
 class CartController{
     constructor(){}
     addProduct=async (req, res) => {
         try {
+            if(req.user.role==="admin")return res.status(403).send({status:"error",message:"Un administrador no puede cargar productos"})
             const { cid, pid } = req.params;
-            const stock=await nuevoProductManager.getStock(pid);
-            if(!stock){
-                return res.status(404).send({status:'error',message:"Lo siento,no hay stock disponible en este producto"})
-            }else{
-                const result=await cartManager.addProduct(cid,pid);
+            //const stock=await productService.getStock(pid);
+            
+                const result=await cartService.addProduct(cid,pid);
                 if(!result){
                     return res.status(401).send({status:'error',message:'error al agregar producto al carrito'})           
                 }else{
@@ -21,7 +20,7 @@ class CartController{
                     console.log(productID)
                     let product=result.products.find(product=>product._id.equals(productID));
                     let quantity=product.quantity;
-                    let productData=await nuevoProductManager.getProductsById(pid);
+                    let productData=await productService.getProduct(pid);
                     let producto={
                         quantity,
                         thumbnail:productData.thumbnail,
@@ -32,7 +31,6 @@ class CartController{
                     console.log(producto)
                     return res.send({status:"succes",message:"producto agregado al cart",producto})
                 }
-                }
         } catch (error) {
             res.status(500).send({status:'error',message:error.message});
         }
@@ -40,7 +38,7 @@ class CartController{
     removeProduct=async (req, res) => {
         try {
             const { cid, pid } = req.params;
-            const result = await cartManager.removeProduct(cid,pid);
+            const result = await cartService.removeProduct(cid,pid);
             res.send({status:'succes',message:"Producto eliminado con exito",pid});
         } catch (error) {
             res.send(error);
@@ -49,12 +47,15 @@ class CartController{
     getCart= async (req, res) => {
         try {
             const { cid } = req.params;
-            let cart = await cartManager.getCart(cid);
+            const filter={_id:cid}
+            //let cart = await cartManager.getCart(cid);
+            let cart=await cartService.getCart(filter)
             if(cart){
                     
                 for(let i=0;i<cart.products.length;i++){
                     const item=cart.products[i];
-                    const productData=await Product.findById(item._id);
+                    const productData=await productService.getProduct(item._id)
+                    //const productData=await Product.findById(item._id);
                     console.log(productData, i)
                     if(productData){
                         cart.products[i].product=productData
@@ -76,14 +77,14 @@ class CartController{
             const {quantity}=req.body
             const{cid,pid}=req.params;
             //console.log(quantity,cid,pid)
-            const result=await cartManager.update(cid,pid,parseInt(quantity))
+            const result=await cartService.updateCart(cid,pid,parseInt(quantity))
             if(!result){
                 return res.status(401).send({message:"error al actualizar el carrito",status:"error"})
             }else{
                 let productID=new mongoose.Types.ObjectId(pid);
                     let product=result.products.find(product=>product._id.equals(productID));
                     let quantity=product.quantity;
-                    let productData=await nuevoProductManager.getProductsById(pid);
+                    let productData=await productService.getProduct(pid);
                     let producto={
                         quantity,
                         thumbnail:productData.thumbnail,
@@ -100,7 +101,8 @@ class CartController{
     cleanCart=async(req,res)=>{
         try {
             const {cid}=req.params;
-            const result=await cartManager.clear(cid)
+            const result=await cartService.clearCart(cid)
+            //const result=await cartManager.clear(cid)
             if(!result){
                 return res.status(401).send({status:"error",message:"Error al vaciar el carrito"})
             }else{
@@ -110,13 +112,57 @@ class CartController{
             res.status(501).send({status:"error",message:error.message})
         }
     }
+    deleteCart=async (req,res)=>{
+        try {
+            let {cid}=req.params;
+            const result = await cartService.deleteCart(cid)
+            res.send(result)
+        } catch (error) {
+           res.send(error)
+        }
+    }    
     createCart=async (req, res) => {
         try {
-            const results = await cartManager.createCart();
+            let filter={products:[]}
+            const results=await cartService.createCart(filter)
+            //const results = await cartManager.createCart();
             res.send(results);
         } catch (error) {
             res.send(error);
         }
     }
+    createTicket=async(req,res)=>{
+        try {
+            const{name,lastname,email,adress,city}=req.body
+            const{cid}=req.user
+            let cart=await cartService.getCart(cid)
+            let inStock=[]
+            let outStock=[]
+            let total=0
+            for(let i=0;i<cart.products.length;i++){
+                const item=cart.products[i];
+                const quantity=cart.products[i].quantity
+                const getStock=await productService.getStock(item._id,quantity)
+                let productData=await productService.getProduct(item._id)
+                if(getStock){
+                    inStock.push({quantity:quantity,product:productData.title,pid:productData._id.toJSON()})
+                    total=total+productData.price
+                }else{
+                    outStock.push({quantity:quantity,product:productData.toJSON()})
+                }
+            }
+            console.log(inStock)
+            if(inStock.length>0){
+                const TicketManager=new TicketDaoMongo(Ticket)
+                const ticket = await TicketManager.create({name,lastname,city,adress,amount:total,products:inStock,email})
+                console.log(ticket,"ticket")
+            } 
+            res.send({status:"succes",message:`Ticket creado y enviado al email ${email}`})
+        } catch (error) {
+            console.error(error)
+            res.send(error)
+        }
+    }    
 }
+
 module.exports=CartController

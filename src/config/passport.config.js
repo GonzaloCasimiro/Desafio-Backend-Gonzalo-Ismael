@@ -1,14 +1,11 @@
 const passport = require('passport')
 const { PRIVATE_KEY } = require('../config/config')
 const local = require('passport-local')
-const UserManager = require('../controllers/UserManager')
-const { createHash, isValid } = require('../utils')
-const CartManager = require('../controllers/CartsManager')
-const cartManager=new CartManager()
 const LocalStrategy= local.Strategy
-const userManager=new UserManager()
 const GithubStrategy = require('passport-github2')
 const jwt=require('passport-jwt')
+const { cartService, userService } = require('../service/service')
+
 const JWTStrategy=jwt.Strategy
 const ExtractJWT=jwt.ExtractJwt
 const initializePassport =()=>{
@@ -35,7 +32,7 @@ const initializePassport =()=>{
     }) // guarda el id en session
     passport.deserializeUser(async(id,done)=>{
         try {
-            let user=await userManager.getUser(id)
+            let user=await userService.getUser(id)
             done(null,user)
         } catch (error) {
             done(error)
@@ -48,15 +45,15 @@ const initializePassport =()=>{
     },async(accesToken,refreshToken,profile,done)=>{
         try {
             const email=profile._json.email
-            const user=await userManager.getUser(email)
+            const user=await userService.getUser(email)
             if(!user){
                 const role="user"
                 const name=profile._json.name
                 const lastname=""
                 const password=''
-                const cart=await cartManager.createCart()
+                const cart=await cartService.createCart()
                 const cid=cart._id;
-                const result=await userManager.newUser(name,lastname,password,email,cid,role)
+                const result=await userService.createUser({name,lastname,password,email,cid,role})
                 done(null,result)
             }else{
                 done(null,user)

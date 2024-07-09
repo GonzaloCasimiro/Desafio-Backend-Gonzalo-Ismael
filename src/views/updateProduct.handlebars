@@ -1,0 +1,44 @@
+{{>adminHeader}}
+<div class="container mx-auto p-4">
+        <div class="flex flex-wrap -mx-2">
+            <!-- Primera tarjeta -->
+            <div class="w-full md:w-1/2 p-2">
+                <div class="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img class="w-full h-56 object-cover object-center" src="URL_DE_LA_IMAGEN" alt="product image">
+                    <div class="p-4">
+                        <h2 class="text-gray-900 font-bold text-2xl">{{product.title}}</h2>
+                        <p id="description"class="text-gray-700 text-base">Descripcion: {{product.description}}</p>
+                        <p id="price"class="text-gray-900 font-bold text-xl mt-2">Precio: ${{product.price}}</p>
+                        <p id="code"class="text-gray-500 text-sm mt-1">Código: {{product.code}}</p>
+                        <p id="category"class="text-gray-500 text-sm">Categoría: {{product.category}}</p>
+                        <p id="stock"class="text-gray-500 text-sm">Stock: {{product.stock}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Segunda tarjeta -->
+            <div class="w-full md:w-1/2 p-2">
+                <div class="mb-4">
+        <h2 class="text-gray-900 font-bold text-xl mb-2">Editar</h2>
+        <div class="flex items-center mb-2">
+            <label for="edit-select" class="block mr-2">Editar:</label>
+            <select id="edit-select" class="w-full px-2 py-1 border rounded-md">
+                <option value="title">Título</option>
+                <option value="description">Descripción</option>
+                <option value="category">Categoría</option>
+                <option value="price">Precio</option>
+                <option value="code">Código</option>
+                <option value="stock">Stock</option>
+            </select>
+        </div>
+        <div class="flex items-center mb-4">
+            <label for="edit-value" class="block mr-2">Nuevo Valor:</label>
+            <input type="text" id="edit-value" class="w-full px-2 py-1 border rounded-md">
+        </div>
+        <button id="edit-submit" data-product-id="{{product._id}}"class="bg-blue-500 hover:bg-blue-600 text-white py-1 px-3 rounded-md">Enviar</button>
+    </div>
+            </div>
+        </div>
+    </div>
+
+<script src="/js/admin/editProduct.js"></script>

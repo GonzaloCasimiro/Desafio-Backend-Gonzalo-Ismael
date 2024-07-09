@@ -1,14 +1,54 @@
 
 const { passportCall } = require('../middlewares/passportCall.middelware.js');
 const { authorization } = require('../middlewares/authorization.middleware.js');
-const CartManager = require('./CartsManager.js');
-const ProductManager = require('./ProductsManager.js');
-const MessagesManager = require('./ChatManager.js');
-const nuevoChatManger=new MessagesManager();
-const nuevoProductManager = new ProductManager();
-const cartManager = new CartManager();
+const Message = require('../models/messageSchema.js');
+const MessagesDaoMongo = require('../dao/MONGO/ChatDao.mongo.js');
+const messages=new MessagesDaoMongo(Message)
+const { cartService, productService } = require('../service/service.js');
+
+const nuevoChatManger=new MessagesDaoMongo();
 class viewController{
     constructor(){};
+    getProduct=async(req,res)=>{
+        try {
+            const {pid}=req.params;
+            let product=await productService.getProduct(pid);
+            let image="https://via.placeholder.com/400x300?text=Imagen+2";
+            if(!product.mid){
+                const message=await messages.create()
+                product=await productService.setProduct(pid,message._id)
+            }
+            let mid=product.mid
+            let boxMessages=await messages.get(mid)
+            boxMessages=boxMessages.messages
+            if(req.session.user)req.user=req.session.user
+            if(req.user){
+                let cart=await cartService.getCart(req.user.cid)
+                if(cart){
+                        
+                    for(let i=0;i<cart.products.length;i++){
+                        const item=cart.products[i];
+                        const productData=await productService.getProduct(item._id)
+                        //const productData=await Product.findById(item._id);
+                        if(productData){
+                            cart.products[i].product=productData
+                        }
+                    }
+                    cart= cart.toJSON()
+                }
+                const cartProducts=cart.products
+                    if(req.user.role && req.user.role==="admin")return res.render('product',{product:product,admin:req.user,cid:req.user.cid,pid:req.user.id,cartProducts,image,messages:boxMessages.toObject(),mid:mid,username:`${req.user.name} ${req.user.lastname}`})
+                    if(req.user.role && req.user.role==="user")return res.render('product',{product:product,user:req.user,cid:req.user.cid,uid:req.user.id,pid:pid,cartProducts,image,messages:boxMessages.toObject(),mid:mid,username:`${req.user.name} ${req.user.lastname}`})
+
+            }
+            if(boxMessages.length===0)boxMessages=[{user:"Vacio",message:"Se el primero en comentar"}]
+            res.render('product',{product:product,image,messages:boxMessages})
+            
+        } catch (error) {
+            console.error(error)
+            res.status(500).send({status:"error",message:error.message})
+        }
+    }
     viewProducts= async (req, res) => {
         try {
             if(req.session.user)req.user=req.session.user
@@ -20,24 +60,37 @@ class viewController{
             if(pageNumber){data.page=parseInt(pageNumber)}
             if(req.user){
                 const user=req.user
-                const cart=await cartManager.getCart(user.cid);
+                let cart=await cartService.getCart(user.cid);
+            if(cart){
+                    
+                for(let i=0;i<cart.products.length;i++){
+                    const item=cart.products[i];
+                    const productData=await productService.getProduct(item._id)
+                    //const productData=await Product.findById(item._id);
+                    if(productData){
+                        cart.products[i].product=productData
+                    }
+                }
+                cart= cart.toJSON()
+            }
+
                 const cartProducts=cart.products
                 if(category){
-                    const products=await nuevoProductManager.getProductsByCategory(data.limits,data.page,data.sort,category,data.stock)
+                    const products=await productService.getProductsByCategory(data.limits,data.page,data.sort,category,data.stock)
                     const{docs,hasPrevPage,hasNextPage,prevPage,nextPage,page}=products
                     res.render('index', { products:docs,hasPrevPage,hasNextPage,prevPage,nextPage,page,user:user,cartProducts });
                 }else{
-                    const products=await nuevoProductManager.getProducts(data.limits,data.page,data.sort,stock);
+                    const products=await productService.getProducts(data.limits,data.page,data.sort,stock);
                     const{docs,hasPrevPage,hasNextPage,prevPage,nextPage,page}=products           
                     res.render('index', { products:docs,hasPrevPage,hasNextPage,prevPage,nextPage,page,user:user,cartProducts });  
                 }
             }else{
                 if(category){
-                    const products=await nuevoProductManager.getProductsByCategory(data.limits,data.page,data.sort,category,data.stock)
+                    const products=await productService.getProductsByCategory(data.limits,data.page,data.sort,category,data.stock)
                     const{docs,hasPrevPage,hasNextPage,prevPage,nextPage,page}=products
                     res.render('index', { products:docs,hasPrevPage,hasNextPage,prevPage,nextPage,page });
                 }else{
-                    const products=await nuevoProductManager.getProducts(data.limits,data.page,data.sort,stock);
+                    const products=await productService.getProducts(data.limits,data.page,data.sort,stock);
                     const{docs,hasPrevPage,hasNextPage,prevPage,nextPage,page}=products           
                     res.render('index', { products:docs,hasPrevPage,hasNextPage,prevPage,nextPage,page });  
                 }
@@ -48,8 +101,7 @@ class viewController{
     }
     postProduct=async (req,res) => {
         try {
-    
-            const { title, description, price, thumbnail, code, stock, category } = req.body;
+            const { title, description, price, thumbnail, code, stock, category,brand } = req.body;
             if(!title||!description||!price||!code||!stock||!category){
                 return res.status(403).send({message:"Debes llenar todos los campos",status:"error"})
             }
@@ -57,32 +109,45 @@ class viewController{
                 const producto={
                     title,
                     description,
-                    price,
+                    price:parseInt(price),
                     thumbnail,
                     code,
-                    stock,
-                    category
+                    stock:parseInt(stock),
+                    category,
+                    brand
                 }
-                const result=await nuevoProductManager.addProduct(producto)
+                const result=await productService.createProduct(producto)
                 if(result.status){
-                    if(result.staus===400){
-                        return res.status(400).send({status:"error",message:result.message})
-                    }else {
                         return  res.status(409).send({ status: "error", message:result.message})
-                    }
                 }else{
-                    res.status(200).send({ status: "success", payload: result });
+                    res.status(200).send({ status: "success", payload: result,message:`Producto creado, id : ${result._id}` });
                 }
             }
         } catch (error) {
-            res.status(501).send({status:'error',message:error.message});
+            if(error.code===11000){
+                return res.status(400).send({status:"error",message:"Code en uso"})
+            }
+            let message=""
+            if(error.name==='ValidationError'){   
+                const {errors}=error
+                for (let field in errors) {
+                    if (errors.hasOwnProperty(field)) {
+                      const {  kind, path, value } = errors[field];
+                      message=`"${value}" no es valido en categorias`;
+                    }
+                  }
+                  console.log(message)
+            res.status(401).send({status:"error",message:message})
+                }else{
+                    res.status(501).send({status:'error',message:error.message});
+                }    
         }
     }
     deleteProduct=async (req, res) => {
         try {
             const { pid } = req.params;
-            const result = await nuevoProductManager.deleteProduct(pid);
-            if(result===null){
+            const result = await productService.deleteProduct(pid);
+            if(!result){
                 return res.status(401).send({message:"NO EXISTE PRODUCTO CON ESE ID",status:"error"})
             }else{
                 return res.send({message:"PRODUCTO ELIMINADO CON EXITO",status:"succes",pid:pid})
@@ -95,11 +160,11 @@ class viewController{
         try {
             const {pid,key,value}=req.body
     
-            const product=await nuevoProductManager.getProductsById(pid);
+            const product=await productService.getProduct(pid);
             if(!product){
                 return res.status(401).send({status:"error",message:"No existe producto con ese id"})
             }else{
-                const result= await nuevoProductManager.updateProduct(pid,key,value)
+                const result= await productService.updateProduct(pid,key,value)
                 return res.send({status:'succes',message:"Producto actualizado con exito",pid,key,value})
             } 
         } catch (error) {
@@ -129,7 +194,7 @@ class viewController{
         try {
             const { cid, pid } = req.params;
             console.log(cid,pid)
-            const results = await cartManager.removeProduct(cid,pid);
+            const results = await cartService.removeProduct(cid,pid);
             console.log(results);
             res.send(results);
         } catch (error) {
@@ -139,7 +204,7 @@ class viewController{
     }
     admin=async(req,res)=>{
         try {
-            const products=await nuevoProductManager.getProducts()
+            const products=await productService.getProducts()
             console.log(products)
             res.render('adminMenu',{products:products.docs})
         } catch (error) {

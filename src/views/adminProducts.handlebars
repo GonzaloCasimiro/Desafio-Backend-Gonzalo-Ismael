@@ -1,0 +1,67 @@
+{{>adminHeader}}
+<section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+ 
+  <form id="myForm" class="max-w-md mx-auto mt-8 p-8 bg-white rounded shadow-md">
+    <h2 class="text-xl font-semibold mb-4">AGREGAR PRODUCTO</h2>
+    <label for="title" class="block mb-2">Título:</label>
+    <input type="text" id="title" name="title" class="w-full py-2 px-4 mb-4 border rounded-md" required>
+    
+    <label for="description" class="block mb-2">Descripción:</label>
+    <textarea id="description" name="description" rows="4" class="w-full py-2 px-4 mb-4 border rounded-md" required></textarea>
+    
+    <label for="price" class="block mb-2">Precio:</label>
+    <input type="number" id="price" name="price" class="w-full py-2 px-4 mb-4 border rounded-md" required>
+    
+    <label for="thumbnail" class="block mb-2">Thumbnail:</label>
+    <input type="file" id="thumbnail" name="thumbnail" class="w-full py-2 px-4 mb-4 border rounded-md">
+    
+    <label for="code" class="block mb-2">Código:</label>
+    <input type="text" id="code" name="code" class="w-full py-2 px-4 mb-4 border rounded-md" required>
+    
+    <label for="stock" class="block mb-2">Stock:</label>
+    <input type="number" id="stock" name="stock" class="w-full py-2 px-4 mb-4 border rounded-md" required>
+    
+    <label for="category" class="block mb-2">Categoría:</label>
+    <input type="text" id="category" name="category" class="w-full py-2 px-4 mb-4 border rounded-md" required>
+    
+    <input type="submit" value="Submit" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md cursor-pointer">
+</form>  
+
+<form id="deleteProduct" action="/views/products/{{ pid }}" method="DELETE" class="max-w-md mx-auto mt-8 p-8 bg-white rounded shadow-md" style="margin-left: 20px;">
+    <h2 class="text-xl font-semibold mb-4">ELIMINAR PRODUCTO</h2>
+    <label for="pid" class="block mb-2">Id Del Producto</label>
+    <input type="text" id="pid" name="pid" class="w-full py-2 px-4 mb-4 border rounded-md" required>
+    <input type="submit" value="Eliminar Producto" class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-md cursor-pointer">
+</form>
+<div class="max-w-md mx-auto mt-8 p-8 bg-white rounded shadow-md">
+    <!-- Formulario para buscar producto -->
+    <form id="searchProductForm" class="mb-8">
+        <h2 class="text-xl font-semibold mb-4">Buscar Producto</h2>
+        
+        <label for="productCode" class="block mb-2">Código del Producto:</label>
+        <input type="text" id="productCode" name="productCode" class="w-full py-2 px-4 mb-4 border rounded-md focus:outline-none focus:border-blue-500" required>
+        
+        <input type="submit" value="Buscar Producto" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md cursor-pointer">
+    </form>
+
+    <!-- Formulario para aumentar precio -->
+    <form id="increasePriceForm">
+        <h2 class="text-xl font-semibold mb-4">Ajustar Precio</h2>
+        
+        <label for="brand" class="block mb-2">Marca:</label>
+        <select id="brand" name="brand" class="w-full py-2 px-4 mb-4 border rounded-md focus:outline-none focus:border-blue-500" required>
+            <option value="samsung">Samsung</option>
+            <option value="tcl">TCL</option>
+            <option value="apple">Apple</option>
+            <option value="motorola">Motorola</option>
+            <option value="xiaomi">Xiaomi</option>
+        </select>
+        
+        <label for="percentageIncrease" class="block mb-2">Porcentaje</label>
+        <input type="number" id="percentageIncrease" name="percentageIncrease" class="w-full py-2 px-4 mb-4 border rounded-md focus:outline-none focus:border-blue-500" required>
+        
+        <input type="submit" value="Aumentar Precio" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md cursor-pointer">
+    </form>
+</div>
+</section>
+<script src="/js/admin/adminProducts.js"></script>
