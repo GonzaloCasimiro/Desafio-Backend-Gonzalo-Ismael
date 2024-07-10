@@ -15,9 +15,6 @@ register.addEventListener('submit',e=>{
         },
         body:JSON.stringify(data)
     }).then(response=>{
-    if(!response.ok){
-        throw new Error('FAILED REQUEST')
-    }
     return response.json()
 }).then(data=>{
     if(data.status==='succes'){

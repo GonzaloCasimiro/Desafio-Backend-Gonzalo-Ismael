@@ -1,8 +1,6 @@
 
 const {default:mongoose}=require('mongoose');
 const { cartService, productService, ticketService } = require("../service/service.js");
-const TicketDaoMongo = require('../dao/MONGO/TicketDao.mongo.js');
-const Ticket = require('../models/ticketModel.js');
 
 class CartController{
     constructor(){}
@@ -151,12 +149,18 @@ class CartController{
                     outStock.push({quantity:quantity,product:productData.toJSON()})
                 }
             }
-            console.log(inStock)
             if(inStock.length>0){
-                const TicketManager=new TicketDaoMongo(Ticket)
-                const ticket = await TicketManager.create({name,lastname,city,adress,amount:total,products:inStock,email})
+                const ticket = await ticketService.createTicket({name,lastname,city,adress,amount:total,products:inStock,email})
                 console.log(ticket,"ticket")
-            } 
+                if(ticket){
+                for(let i=0;i<inStock.length;i++){
+                    console.log(inStock[i].pid)
+                    console.log(inStock[i].quantity)
+                    await cartService.updateCart(cid,inStock[i].pid,inStock[i].quantity*-1)
+                }
+            }
+            }
+            
             res.send({status:"succes",message:`Ticket creado y enviado al email ${email}`})
         } catch (error) {
             console.error(error)

@@ -46,9 +46,15 @@
                     <div class="mb-4">
                         <p id="amount" class="text-gray-700 text-sm font-bold">Monto de la compra: {{total}} $</p>
                     </div>
+                    {{#if inStock.length}}
                     <button carritoID="{{user.cid}}" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 focus:outline-none">
                         CREAR TICKET
                     </button>
+                    {{else}}
+                    <p class="text-red-600 para el texto y bg-red-100">
+                        No hay Stock, en los productos en tu carrito de compras
+                    </p>
+                    {{/if}}
                 </form>
             </div>
         </div>

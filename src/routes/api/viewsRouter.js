@@ -5,10 +5,11 @@ const { auth } = require('../../middlewares/auth.middleware.js');
 const { passportCall } = require('../../middlewares/passportCall.middelware.js');
 const { authorization } = require('../../middlewares/authorization.middleware.js');
 const viewController = require('../../controllers/view.controller.js');
-const { productService, cartService, userService } = require('../../service/service.js');
+const { productService, cartService, userService,ticketService} = require('../../service/service.js');
 const MessagesDaoMongo = require('../../dao/MONGO/ChatDao.mongo.js');
 const Message = require('../../models/messageSchema.js');
 const { default: mongoose } = require('mongoose');
+const {mapProductsDto,setProductsInCart, stock} = require('../../dtos/cartsDto.js');
 const messages=new MessagesDaoMongo(Message)
 //viewRouter.use(productSocket())
 const{viewProducts,postProduct,deleteProduct,updateProduct,getChats,postMessage,updateCart,admin,getProduct}=new viewController()
@@ -55,26 +56,21 @@ viewRouter.get('/purchase',passportCall("jwt"),authorization("user"),async(req,r
     try {
         const {cid,email}=req.user
         let cart=await cartService.getCart(cid);
-        let inStock=[]
-        let outStock=[]
-        let total=0
-        for(let i=0;i<cart.products.length;i++){
-            const item=cart.products[i];
-            const quantity=cart.products[i].quantity
-            const getStock=await productService.getStock(item._id,quantity)
-            let productData=await productService.getProduct(item._id)
-            if(getStock){
-                inStock.push({quantity:quantity,product:productData.toJSON()})
-                total=total+productData.price
-            }else{
-                outStock.push({quantity:quantity,product:productData.toJSON()})
-            }
-        } 
-        console.log(inStock,"Stock")
+        const onProcessTicket=await ticketService.getTickets(email,"on process")
+        if(onProcessTicket){
+            let products=mapProductsDto(cart.products,onProcessTicket.products)//array con productos del anterior ticket que NO estan en el cart
+           console.log(products,"productos que en teoria no esta,...")
+            cart=await cartService.addProducts(cid,products) //pushea cada objeto de products al cart
+           await ticketService.deleteTicket(onProcessTicket._id)//eliminar ticket
+        
+        }
+        const cartStock=await stock(cart)
+        cart=await setProductsInCart(cart)// uso este dto porque no me anda el populate del cart 
         let user=await userService.getUser(email)
         user=user.toJSON()
-        res.render("purchase",{inStock,outStock,user,total})
+        res.render("purchase",{inStock:cartStock.inStock,outStock:cartStock.outStock,user,total:cartStock.total,cartProducts:cart.products})
     } catch (error) {
+        console.log(error)
         res.send(error)
     }
 })

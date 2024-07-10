@@ -3,8 +3,7 @@ const { default: mongoose } = require("mongoose");
 const ticketSchema = new mongoose.Schema({
     name:{
         type:String,
-        required:true,
-        index:true          
+        required:true,        
     },
     lastname:{
         type:String,
@@ -38,9 +37,17 @@ const ticketSchema = new mongoose.Schema({
     },
     status:{
         type:String,
-        default:"on process"
+        default:"on process",
+        enum:["on process","paid"]
     }
-});
+},{timestamps:true,
+    toJSON: {
+    transform: (doc, ret) => {
+        ret.createdAt = formatDate(ret.createdAt);
+        ret.updatedAt = formatDate(ret.updatedAt);
+        return ret;
+    }
+}});
 const Ticket=mongoose.model('ticket',ticketSchema)
 
 

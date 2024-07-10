@@ -13,6 +13,8 @@ class viewController{
         try {
             const {pid}=req.params;
             let product=await productService.getProduct(pid);
+            console.log(product)
+            product=product.toJSON()
             let image="https://via.placeholder.com/400x300?text=Imagen+2";
             if(!product.mid){
                 const message=await messages.create()

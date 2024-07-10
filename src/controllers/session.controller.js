@@ -10,7 +10,8 @@ const newUserManager=new UserDaoMongo();
 class SessionController{
     constructor(){}
     register=async(req,res)=>{
-        let {name,lastname,password,email,role}=req.body
+        try {
+            let {name,lastname,password,email,role}=req.body
         if(!password ||!email||!name||!lastname)return res.status(401).send({status:'error',message:"Debe llenar todos los campos"})
         //usuario existe ?
         const validateEmail=await userService.getUser(email)
@@ -34,9 +35,15 @@ class SessionController{
                 httpOnly:true
             }).send({status:'succes',message:'usuario registrado',role:newUser.role})
         }
+        } catch (error) {
+            console.error(error)
+            res.send(error)
+        }
+        
     }
     login=async(req,res)=>{
-        const {password,email}=req.body
+        try {
+            const {password,email}=req.body
         if(!password ||!email)return res.status(401).send({status:'error',message:"Debe llenar todos los campos"})
         const user=await userService.getUser(email)
         if(!user){
@@ -57,6 +64,11 @@ class SessionController{
                 httpOnly:true
             }).send({status:'succes',message:`Bienvenido ${user.name} ${user.lastname}`,role:user.role})
         }
+        } catch (error) {
+            console.error(error)
+            res.send(error)
+        }
+        
     }
     logout=(req,res)=>{
         if(req.session.user){

@@ -22,6 +22,7 @@ ticket.addEventListener('submit',e=>{
     return response.json()
 }).then(data=>{
    alert(data.message)
+   window.location.href="/"
     
 }).catch(error=>{
     console.log(error)

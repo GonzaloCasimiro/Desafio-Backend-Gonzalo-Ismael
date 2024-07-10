@@ -8,6 +8,14 @@ class CartDaoMongo {
     constructor(model) {
         this.model=model
     }
+    async addProducts(cid,products){
+        return this.model.findOneAndUpdate({_id:cid},
+            {
+                $push:{products:{$each:products}}
+            },
+            {new:true}
+        ).lean()
+    }
     async add(cid, pid) {
         const productid=new mongoose.Types.ObjectId(pid)
         let cart=await this.model.findOneAndUpdate({_id:cid,'products._id':productid},
@@ -59,8 +67,9 @@ class CartDaoMongo {
                 {_id:cid,'products._id':pid},
                 {$inc:{'products.$.quantity':quantity}},
                 {new:true,})
-            
-                return cart
+            cart.products=cart.products.filter(product=>product.quantity!==0)
+            await cart.save()    
+            return cart
         
     }
     
