@@ -11,8 +11,8 @@ productRouter.get('/:pid',getProduct );
 
 productRouter.put('/' ,editProductMid, updateProduct );
 
-productRouter.post('/',addProduct );
+productRouter.post('/',authorization('admin'),addProduct );
 
-productRouter.delete('/',deleteProduct );
+productRouter.delete('/',authorization('admin'),deleteProduct );
 
 module.exports = productRouter;

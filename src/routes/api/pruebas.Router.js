@@ -1,6 +1,8 @@
 const {Router} =require("express");
 const {auth} = require("../../middlewares/auth.middleware.js");
+const { passportCall } = require("../../middlewares/passportCall.middelware.js");
 const pruebasRouter=Router();
+
 
 
 //CREAR ENDPOINT PARA PROBAR LOS METODOS DE COOKIE-PARSER
@@ -48,7 +50,15 @@ pruebasRouter.get("/logout",(req,res)=>{
     })
 })
 //ESTE ENDPOINT SOLO LO PUEDE VER UN ADMINISTRADOR
-pruebasRouter.get("/current",auth,(req,res)=>{
-    res.send("datos solo para admins")
+pruebasRouter.get("/current",passportCall("jwt"),(req,res)=>{
+    if(req.session) {
+        console.log(req.session)
+        req.user=req.session.user}
+    if(req.user){
+        const {name,lastname,email,role}=req.user
+        return res.send({user:`${name} ${lastname}`,email:email,role:role})
+    }else{
+        return res.send("usuario no logeado")
+    }
 })
 module.exports= pruebasRouter

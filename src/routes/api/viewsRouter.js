@@ -19,14 +19,14 @@ viewRouter.post('/products',postProduct );
 viewRouter.get('/product/:pid',passportCall('jwt'),getProduct)
 
 
-viewRouter.delete('/products/:pid', deleteProduct);
-viewRouter.put('/products', updateProduct)
+viewRouter.delete('/products/:pid',authorization('admin'), deleteProduct);
+viewRouter.put('/products', authorization('admin'),updateProduct)
 viewRouter.get("/chats", getChats)
 viewRouter.post("/message", postMessage)
 //cart
 viewRouter.put('/:cid/product/:pid', updateCart);
 
-viewRouter.get('/admin',passportCall('jwt'),authorization('admin') ,admin/*async(req,res)=>{
+viewRouter.get('/admin',passportCall('jwt'),authorization("admin") ,admin/*async(req,res)=>{
     try {
         const products=await nuevoProductManager.getProducts()
         console.log(products)
@@ -36,14 +36,14 @@ viewRouter.get('/admin',passportCall('jwt'),authorization('admin') ,admin/*async
     }
 }*/)
 
-viewRouter.get('/admin/products',authorization("admin"),async(req,res)=>{
+viewRouter.get('/admin/products',passportCall('jwt'),authorization("admin"),async(req,res)=>{
     try {
         res.render('adminProducts',{})
     } catch (error) {
         res.send('error')
     }
 })
-viewRouter.get('/update/:pid',authorization("admin"),async(req,res)=>{
+viewRouter.get('/update/:pid',passportCall("jwt"),authorization("admin"),async(req,res)=>{
     try {
         const {pid}=req.params
         const product=await productService.getProduct(pid);
@@ -54,12 +54,12 @@ viewRouter.get('/update/:pid',authorization("admin"),async(req,res)=>{
 })
 viewRouter.get('/purchase',passportCall("jwt"),authorization("user"),async(req,res)=>{
     try {
+        if(req.session)req.session.user=req.user
         const {cid,email}=req.user
         let cart=await cartService.getCart(cid);
         const onProcessTicket=await ticketService.getTickets(email,"on process")
         if(onProcessTicket){
             let products=mapProductsDto(cart.products,onProcessTicket.products)//array con productos del anterior ticket que NO estan en el cart
-           console.log(products,"productos que en teoria no esta,...")
             cart=await cartService.addProducts(cid,products) //pushea cada objeto de products al cart
            await ticketService.deleteTicket(onProcessTicket._id)//eliminar ticket
         
@@ -74,12 +74,5 @@ viewRouter.get('/purchase',passportCall("jwt"),authorization("user"),async(req,r
         res.send(error)
     }
 })
-viewRouter.get('/purchase',passportCall("jwt",authorization("user"),async(req,res)=>{
-    try {
-        const {name,lastname,email,id,cid}=req.user
-        
-    } catch (error) {
-        
-    }
-}))
+
 module.exports = viewRouter;

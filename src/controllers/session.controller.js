@@ -5,18 +5,32 @@ const { createHash, isValid } = require("../utils");
 const { generateToken, authToken } = require("../utils/jsonwebtoken");
 const UserDaoMongo = require('../dao/MONGO/UserDao.mongo');
 const { cartService, userService } = require('../service/service');
+const CustomError = require('../utils/errors/CustomError');
+const { generateUserError } = require('../utils/errors/info');
+const EError = require('../utils/errors/enum');
 const newUserManager=new UserDaoMongo();
-
 class SessionController{
     constructor(){}
-    register=async(req,res)=>{
+    register=async(req,res,next)=>{
         try {
             let {name,lastname,password,email,role}=req.body
-        if(!password ||!email||!name||!lastname)return res.status(401).send({status:'error',message:"Debe llenar todos los campos"})
-        //usuario existe ?
+        if(!password ||!email||!name||!lastname){
+    
+            CustomError.createError({
+                name:"Error al crear usuario",
+                cause:generateUserError({name,lastname,password,email}),
+                message:"Erro al crear usuario",
+                code:EError.INVALID_TYPES
+            })
+        }
         const validateEmail=await userService.getUser(email)
         if(validateEmail){  
-            return res.status(401).send({status:'error',message:"Email ya registrado"})
+            CustomError.createError({
+                name:"Error al crear usuario",
+                cause:"Email ya registrado",
+                message:"Error al crear usuario",
+                code:EError.INVALID_TYPES
+            })
         }else{
             const newCart = await cartService.createCart();
             const cid=newCart._id
@@ -36,18 +50,30 @@ class SessionController{
             }).send({status:'succes',message:'usuario registrado',role:newUser.role})
         }
         } catch (error) {
-            console.error(error)
-            res.send(error)
+            next(error)
         }
         
     }
-    login=async(req,res)=>{
+    login=async(req,res,next)=>{
         try {
             const {password,email}=req.body
-        if(!password ||!email)return res.status(401).send({status:'error',message:"Debe llenar todos los campos"})
+        if(!password ||!email){
+            CustomError.createError({
+                name:"Error al inciar sesion",
+                cause:"Debes llenar todos los campos",
+                message:"Error al iniciar sesion",
+                code:EError.INVALID_TYPES
+            })
+        }//return res.status(401).send({status:'error',message:"Debe llenar todos los campos"})
         const user=await userService.getUser(email)
         if(!user){
-            res.status(401).send({status:'error',message:"Credenciales invalidas"})
+            CustomError.createError({
+                name:"Error al iniciar sesion",
+                cause:"Credenciales invalidas",
+                message:"Error al inciar sesion",
+                code:EError.INVALID_TYPES
+            })
+            //res.status(401).send({status:'error',message:"Credenciales invalidas"})
         }else{
             if(!isValid(user,password))return res.status(401).send({status:'error',message:"Password incorrecto"})
             
@@ -65,8 +91,7 @@ class SessionController{
             }).send({status:'succes',message:`Bienvenido ${user.name} ${user.lastname}`,role:user.role})
         }
         } catch (error) {
-            console.error(error)
-            res.send(error)
+            next(error)
         }
         
     }

@@ -1,10 +1,5 @@
 const { Router } = require("express");
-const { default: mongoose } = require("mongoose");
 const CartController = require("../../controllers/cart.controllers.js");
-const { cartService } = require("../../service/service.js");
-const MongooseTypeDto = require("../../dtos/mongooseType.dto.js");
-const { authorization } = require("../../middlewares/authorization.middleware.js");
-const { cartAuth } = require("../../middlewares/auth.middleware.js");
 const { passportCall } = require("../../middlewares/passportCall.middelware.js");
 
 const cartRouter = Router();

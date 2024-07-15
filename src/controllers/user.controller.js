@@ -1,6 +1,8 @@
 const CartDaoMongo = require("../dao/MONGO/CartDao.mongo");
 const UserDaoMongo = require("../dao/MONGO/UserDao.mongo");
 const { cartService, userService } = require("../service/service");
+const { createError } = require("../utils/errors/CustomError");
+const { generateUserError } = require("../utils/errors/info");
 UserDaoMongo
 CartDaoMongo
 
@@ -32,6 +34,7 @@ class UserController{
         try {
             const {name,lastname,password,email}=req.body;
             if(!name||!lastname||!password||!email){
+
                 res.send('Debes llenar todos los campos');
             }else{
                 const validateEmail= await userService.getUser(email);

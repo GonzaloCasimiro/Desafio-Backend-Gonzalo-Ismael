@@ -18,7 +18,7 @@ const MongoStore =require("connect-mongo");
 const { isLog } = require("./middlewares/auth.middleware.js");
 const { passportCall } = require("./middlewares/passportCall.middelware.js");
 const { port, mongoUrl, persistence } = require("./config/config.js");
-
+const handleErrors = require("./utils/errors/index.js");
 const app = express();
 app.use(cors())
 app.use(express.json());
@@ -122,6 +122,7 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'handlebars');
 //rutas
 app.use(router)
+app.use(handleErrors())
 
 connectDB();
 

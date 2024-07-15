@@ -6,6 +6,7 @@ class CartController{
     constructor(){}
     addProduct=async (req, res) => {
         try {
+            if(req.session)req.user=req.session.user
             if(req.user.role==="admin")return res.status(403).send({status:"error",message:"Un administrador no puede cargar productos"})
             const { cid, pid } = req.params;
             //const stock=await productService.getStock(pid);
@@ -131,6 +132,7 @@ class CartController{
     }
     createTicket=async(req,res)=>{
         try {
+            if(req.session) req.user=req.session.user
             const{name,lastname,email,adress,city}=req.body
             const{cid}=req.user
             let cart=await cartService.getCart(cid)

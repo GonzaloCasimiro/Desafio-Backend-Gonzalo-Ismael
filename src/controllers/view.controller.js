@@ -5,6 +5,11 @@ const Message = require('../models/messageSchema.js');
 const MessagesDaoMongo = require('../dao/MONGO/ChatDao.mongo.js');
 const messages=new MessagesDaoMongo(Message)
 const { cartService, productService } = require('../service/service.js');
+const { productError } = require('../utils/errors/info.js');
+const { createError } = require('../utils/errors/CustomError.js');
+const CustomError = require('../utils/errors/CustomError.js');
+const EError = require('../utils/errors/enum.js');
+const Product = require('../models/productSchema.js');
 
 const nuevoChatManger=new MessagesDaoMongo();
 class viewController{
@@ -54,6 +59,7 @@ class viewController{
     viewProducts= async (req, res) => {
         try {
             if(req.session.user)req.user=req.session.user
+            console.log(req.user)
             const { limits,pageNumber,sort,category,stock } = req.query;
             const data={}
             if(stock){data.stock=parseInt(stock)}
@@ -63,6 +69,7 @@ class viewController{
             if(req.user){
                 const user=req.user
                 let cart=await cartService.getCart(user.cid);
+                console.log(cart)
             if(cart){
                     
                 for(let i=0;i<cart.products.length;i++){
@@ -101,11 +108,26 @@ class viewController{
             res.send(error);
         }
     }
-    postProduct=async (req,res) => {
+    postProduct=async (req,res,next) => {
         try {
-            const { title, description, price, thumbnail, code, stock, category,brand } = req.body;
+            let { title, description, price, thumbnail, code, stock, category,brand } = req.body;
             if(!title||!description||!price||!code||!stock||!category){
-                return res.status(403).send({message:"Debes llenar todos los campos",status:"error"})
+                CustomError.createError({
+                    name:"Error al registrar producto",
+                    cause:productError({title,description,price,code,stock,category}),
+                    message:"Error al registrar producto",
+                    code:EError.INVALID_TYPES
+                    
+                })
+            }
+            const categorias =  await Product.schema.path('category').enumValues;
+            if(!categorias.includes(category)){
+                CustomError.createError({
+                    name:"Error al registrar producto",
+                    cause:`${category}, no es valido en nuestra lista de categorias`,
+                    message:"error al registrar producto",
+                    code:EError.INVALID_TYPES
+                })
             }
             else{
                 const producto={
@@ -126,23 +148,7 @@ class viewController{
                 }
             }
         } catch (error) {
-            if(error.code===11000){
-                return res.status(400).send({status:"error",message:"Code en uso"})
-            }
-            let message=""
-            if(error.name==='ValidationError'){   
-                const {errors}=error
-                for (let field in errors) {
-                    if (errors.hasOwnProperty(field)) {
-                      const {  kind, path, value } = errors[field];
-                      message=`"${value}" no es valido en categorias`;
-                    }
-                  }
-                  console.log(message)
-            res.status(401).send({status:"error",message:message})
-                }else{
-                    res.status(501).send({status:'error',message:error.message});
-                }    
+            return next(error)
         }
     }
     deleteProduct=async (req, res) => {
@@ -185,7 +191,7 @@ class viewController{
     postMessage=async(req,res)=>{
         try {
             const {user,message}=req.body
-            const result=await nuevoChatManger.newMessage(message,user)
+            const result=await nuevoChatManger.message(message,user)
             console.log(result)
             res.send(result)
         } catch (error) {
@@ -195,9 +201,7 @@ class viewController{
     updateCart=async (req, res) => {
         try {
             const { cid, pid } = req.params;
-            console.log(cid,pid)
             const results = await cartService.removeProduct(cid,pid);
-            console.log(results);
             res.send(results);
         } catch (error) {
             console.log(error)
@@ -206,6 +210,7 @@ class viewController{
     }
     admin=async(req,res)=>{
         try {
+            console.log(req.user)
             const products=await productService.getProducts()
             console.log(products)
             res.render('adminMenu',{products:products.docs})

@@ -6,8 +6,6 @@ class ProductController{
         try {
             const {code}=req.params
             const result=await productService.getProductByCode(code)
-            console.log(code,"code");
-            console.log(result,"result")
            if(result) return res.status(200).send({status:"success",message:"Producto encontrado",pid:result._id})
             res.status(401).send({status:"error",message:`${code}, no es valido`})
         } catch (error) {
@@ -24,12 +22,10 @@ class ProductController{
             if(pageNumber){data.page=parseInt(pageNumber)}
             if(category){
                 const products=await productService.getProductsByCategory(data.limits,data.page,data.sort,category,data.stock)
-                console.log(products)
                 const{docs,hasPrevPage,hasNextPage,prevPage,nextPage,page}=products
                 res.render('index', { products:docs,hasPrevPage,hasNextPage,prevPage,nextPage,page });
             }else{
                 const products=await productService.getProducts(data.limits,data.page,data.sort,stock);
-                console.log(products)
                 const{docs,hasPrevPage,hasNextPage,prevPage,nextPage,page}=products
                 
                 res.render('index', { products:docs,hasPrevPage,hasNextPage,prevPage,nextPage,page });  
