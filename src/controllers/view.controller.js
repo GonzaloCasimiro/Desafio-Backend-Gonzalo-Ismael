@@ -154,6 +154,7 @@ class viewController{
     deleteProduct=async (req, res) => {
         try {
             const { pid } = req.params;
+            console.log(req.params)
             const result = await productService.deleteProduct(pid);
             if(!result){
                 return res.status(401).send({message:"NO EXISTE PRODUCTO CON ESE ID",status:"error"})

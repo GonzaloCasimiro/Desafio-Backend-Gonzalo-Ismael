@@ -1,5 +1,7 @@
 const ProductDaoMongo = require("../dao/MONGO/ProductDao.mongo");
 const { productService } = require("../service/service");
+const CustomError = require("../utils/errors/CustomError");
+const EError = require("../utils/errors/enum");
 class ProductController{
     constructor(){}
     getByCode=async(req,res)=>{
@@ -78,17 +80,22 @@ class ProductController{
             res.send(`${error}`);
         }
     }
-    deleteProduct=async (req, res) => {
+    deleteProduct=async (req, res,next) => {
         try {
             const { pid } = req.body
             const result = await productService.deleteProduct(pid);
             if(!result){
-                return res.status(401).send({message:"id incorrecto",status:"error"})
+                CustomError.createError({
+                    name:"Error al eliminar producto",
+                    cause:"Id incorrecto",
+                    message:"error al eliminar producto",
+                    code:EError.INVALID_TYPES
+                })
             }else{
                 return res.send({message:"producto eliminado",status:"succes",pid})
             }
         } catch (error) {
-            res.send(error);
+            next(error)
         }
     }
 }

@@ -13,6 +13,6 @@ productRouter.put('/' ,editProductMid, updateProduct );
 
 productRouter.post('/',authorization('admin'),addProduct );
 
-productRouter.delete('/',authorization('admin'),deleteProduct );
+productRouter.delete('/',deleteProduct );
 
 module.exports = productRouter;

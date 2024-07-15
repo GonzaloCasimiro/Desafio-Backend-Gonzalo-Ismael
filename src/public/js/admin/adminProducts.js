@@ -68,16 +68,14 @@ const deleteProduct=document.getElementById("deleteProduct")
 
 deleteProduct.addEventListener("submit",e=>{
     e.preventDefault();
-    const data={
-        pid:document.getElementById("pid").value
-    }
-    const pid=data.pid
+        const pid=document.getElementById("pid-delete").value
     console.log(pid)
-    fetch('/api/views/products/'+data.pid, {
+    fetch('/products',{
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'
-        }
+        },
+        body: JSON.stringify({pid})
     }).then(response => {
         if (response.ok) {
             return response.json();
