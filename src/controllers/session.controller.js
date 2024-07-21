@@ -56,17 +56,20 @@ class SessionController{
     }
     login=async(req,res,next)=>{
         try {
-            const {password,email}=req.body
+            let {password,email}=req.body
         if(!password ||!email){
+            req.logger.warning(`No ingreso todos los datos- (Email , Contraseña)`)
             CustomError.createError({
                 name:"Error al inciar sesion",
                 cause:"Debes llenar todos los campos",
                 message:"Error al iniciar sesion",
                 code:EError.INVALID_TYPES
             })
+            
         }//return res.status(401).send({status:'error',message:"Debe llenar todos los campos"})
         const user=await userService.getUser(email)
         if(!user){
+            req.logger.warning('Ingreso un email no valido')
             CustomError.createError({
                 name:"Error al iniciar sesion",
                 cause:"Credenciales invalidas",
@@ -75,8 +78,11 @@ class SessionController{
             })
             //res.status(401).send({status:'error',message:"Credenciales invalidas"})
         }else{
-            if(!isValid(user,password))return res.status(401).send({status:'error',message:"Password incorrecto"})
-            
+            if(!isValid(user,password)){
+                req.logger.warning('Ingreso email valido,password incorrecto')
+                return res.status(401).send({status:'error',message:"Password incorrecto"})
+            }
+                req.logger.info(`Inicio sesion correctamente, usuario email : ${email}`)
             const token=generateToken({
                 id:user._id,
                 cid:user.cid,
@@ -91,6 +97,7 @@ class SessionController{
             }).send({status:'succes',message:`Bienvenido ${user.name} ${user.lastname}`,role:user.role})
         }
         } catch (error) {
+            req.logger.error(error)
             next(error)
         }
         

@@ -1,0 +1,25 @@
+info: POST en /api/sessions/login- 7/19/2024, 12:59:44 AM
+warning: No ingreso todos los datos- (Email , Contraseña)
+info: POST en /api/sessions/login- 7/19/2024, 12:59:58 AM
+warning: Ingreso un email no valido
+info: POST en /api/sessions/login- 7/19/2024, 1:00:04 AM
+warning: Ingreso un email no valido
+info: POST en /api/sessions/login- 7/19/2024, 1:00:11 AM
+info: POST en /api/sessions/login- 7/19/2024, 1:00:51 AM
+info: GET en /loggerTest- 7/21/2024, 6:49:29 AM
+info: GET en /loggerTest- 7/21/2024, 6:49:29 AM
+info: Hola desde el logger-info
+info: Hola desde el logger-info
+info: GET en /favicon.ico- 7/21/2024, 6:49:29 AM
+info: GET en /favicon.ico- 7/21/2024, 6:49:29 AM
+info: GET en /loggerTest- 7/21/2024, 6:52:22 AM
+info: GET en /loggerTest- 7/21/2024, 6:52:22 AM
+info: info desde el /logerTest
+info: info desde el /logerTest
+http: hhtpp desde el /logerTest
+warning: warninrg desde el /logerTest
+error: error desde el /logerTest
+http: hhtpp desde el /logerTest
+warning: warninrg desde el /logerTest
+error: error desde el /logerTest
+fatal: fatal , desde el /logertest

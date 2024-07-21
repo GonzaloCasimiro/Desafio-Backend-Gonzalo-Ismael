@@ -19,12 +19,15 @@ const { isLog } = require("./middlewares/auth.middleware.js");
 const { passportCall } = require("./middlewares/passportCall.middelware.js");
 const { port, mongoUrl, persistence } = require("./config/config.js");
 const handleErrors = require("./utils/errors/index.js");
+const addLoger = require("./utils/logers.js");
 const app = express();
-app.use(cors())
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors())
 //app.use(cookieParser());
 app.use(cookieParser())    // firma "secreta de cookie" (luego la oculatermos con .env)
+app.use(addLoger)
 //session con mongo
 app.use(session({
     store:MongoStore.create({
@@ -48,6 +51,7 @@ app.use(session({
 initializePassport()// llamar funcion de passport config
 app.use(passport.initialize())// documentacion
 app.use(passport.session())//documentacion
+
 /*
 const fileStorage=FileStore(session) //A
 app.use(session({

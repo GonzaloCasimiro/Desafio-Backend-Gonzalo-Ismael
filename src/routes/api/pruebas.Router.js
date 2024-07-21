@@ -3,7 +3,10 @@ const {auth} = require("../../middlewares/auth.middleware.js");
 const { passportCall } = require("../../middlewares/passportCall.middelware.js");
 const pruebasRouter=Router();
 
-
+pruebasRouter.get('/log',(req,res)=>{
+    req.logger.fatal('Alerta!!!')
+    res.send('logs')
+})
 
 //CREAR ENDPOINT PARA PROBAR LOS METODOS DE COOKIE-PARSER
 pruebasRouter.get("/setCookie",(req,res)=>{

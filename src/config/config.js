@@ -7,6 +7,8 @@ const enviroment='development'
 dotenv.config({
     path:mode==='development'? './.env.development':'./.env.production'
 })
+console.log('Mode:', mode)
+console.log('Using .env file:', mode === 'development' ? './.env.development' : './.env.production')
 
 module.exports={
     port:process.env.PORT,

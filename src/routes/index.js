@@ -9,6 +9,7 @@ const sessionRouter = require("./api/sessionRouter.js");
 const commentRouter = require('./api/commentRouter.js');
 const mockingRouter = require('./api/mockingRouter.js');
 
+
 router.use('/products', productRouter);
 router.use('/api/carts', cartRouter);
 router.use('/api/views', viewRouter);
@@ -17,5 +18,13 @@ router.use("/pruebas",pruebasRouter)
 router.use("/api/sessions",sessionRouter)
 router.use('/api/comments',commentRouter)
 router.use('/api/mockingproducts',mockingRouter)
+router.use('/loggerTest',async(req,res)=>{
+    req.logger.info("info desde el /logerTest")
+    req.logger.http('hhtpp desde el /logerTest')
+    req.logger.warning('warninrg desde el /logerTest')
+    req.logger.error('error desde el /logerTest')
+    req.logger.fatal('fatal , desde el /logertest')
+    res.send('logertest')
+})
 
 module.exports=router
