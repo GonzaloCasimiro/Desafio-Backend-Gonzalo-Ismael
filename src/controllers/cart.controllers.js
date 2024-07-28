@@ -1,16 +1,26 @@
 
 const {default:mongoose}=require('mongoose');
 const { cartService, productService, ticketService } = require("../service/service.js");
+const CustomError = require('../utils/errors/CustomError.js');
+const EError = require('../utils/errors/enum.js');
 
 class CartController{
     constructor(){}
-    addProduct=async (req, res) => {
+    addProduct=async (req, res,next) => {
         try {
-            if(req.session)req.user=req.session.user
+            if(req.session.user)req.user=req.session.user
             if(req.user.role==="admin")return res.status(403).send({status:"error",message:"Un administrador no puede cargar productos"})
-            const { cid, pid } = req.params;
+            let { cid, pid } = req.params;
             //const stock=await productService.getStock(pid);
-            
+                const product=await productService.getProduct(pid);
+                if(req.user.role==="premium"&&product.owner===req.user.email){
+                    CustomError.createError({
+                        name:"Error al agregar producto",
+                        cause:"No puedes agregar al carrito un producto creado por ti",
+                        message:'Error al agregar producto',
+                        code:EError.NOT_ALLOWED_ERROR
+                    })
+                }
                 const result=await cartService.addProduct(cid,pid);
                 if(!result){
                     return res.status(401).send({status:'error',message:'error al agregar producto al carrito'})           
@@ -27,11 +37,10 @@ class CartController{
                         price:productData.price,
                         id:pid
                     }
-                    console.log(producto)
                     return res.send({status:"succes",message:"producto agregado al cart",producto})
                 }
         } catch (error) {
-            res.status(500).send({status:'error',message:error.message});
+            next(error)
         }
     }
     removeProduct=async (req, res) => {

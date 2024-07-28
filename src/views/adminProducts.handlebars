@@ -1,8 +1,33 @@
 {{>adminHeader}}
+{{#if products}}
+<h2 class="text-xl font-semibold mb-4">PRODUCTOS CREADOS POR TI.</h2>
+   <section id="productsSection" class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {{#each products}}
+                 <div class="card bg-white shadow-md rounded-lg overflow-hidden">
+                    <img src="{{thumbnail}}" alt="{{title}}" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h2 class="card-title text-xl font-semibold mb-2">{{title}}</h2>
+                        <p class="card-description text-gray-600 mb-2">{{description}}</p>
+                        <p class="card-price text-lg font-bold mb-2">${{price}}</p>
+                        <p class="card-category text-gray-500 mb-2">{{category}}</p>
+                        <p class="card-stock text-gray-500 mb-2">Stock: {{stock}}</p>
+                        <p class="card-owner text-gray-500 mb-2">Owner: {{owner}}</p>
+                        <p class="card-id text-gray-500 mb-2">ID: {{_id}}</p>
+                    </div>
+                </div>
+            {{/each}}
+    </section>
+            {{/if}}
+
 <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
  
   <form id="myForm" class="max-w-md mx-auto mt-8 p-8 bg-white rounded shadow-md">
     <h2 class="text-xl font-semibold mb-4">AGREGAR PRODUCTO</h2>
+    {{#if premium}}
+        <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Creador</label>
+        <input type="text" id="owner" name="email-display" class="border border-gray-300 p-2 w-full rounded" value="{{premium}}" readonly>
+    {{/if}}
+    
     <label for="title" class="block mb-2">Título:</label>
     <input type="text" id="title" name="title" class="w-full py-2 px-4 mb-4 border rounded-md" required>
     
@@ -29,6 +54,10 @@
 
 <form id="deleteProduct" action="/views/products/{{ pid }}" method="DELETE" class="max-w-md mx-auto mt-8 p-8 bg-white rounded shadow-md" style="margin-left: 20px;">
     <h2 class="text-xl font-semibold mb-4">ELIMINAR PRODUCTO</h2>
+    {{#if premium}}
+        <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+        <input type="text" id="premiumDelete" name="email-display" class="border border-gray-300 p-2 w-full rounded" value="{{premium}}" readonly>
+    {{/if}}
     <label for="pid" class="block mb-2">Id Del Producto</label>
     <input type="text" id="pid-delete" name="pid" class="w-full py-2 px-4 mb-4 border rounded-md" required>
     <input type="submit" value="Eliminar Producto" class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-md cursor-pointer">

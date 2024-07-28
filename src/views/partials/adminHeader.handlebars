@@ -9,12 +9,20 @@
                     </a>
                     
                 </div>
+                {{#if premium}}
+                 <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 items-center">
+                    <a href="/api/views/products" class="hover:bg-gray-700 px-3 py-2 rounded bg-blue-500 text-white px-4 py-2 rounded">Volver al Ecommerce como usuario</a>
+                </div>
+                
+                {{else}}
                 <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 items-center">
                     <a href="/api/sessions/admin/users" class="hover:bg-gray-700 px-3 py-2 rounded bg-blue-500 text-white px-4 py-2 rounded">Administrar usuarios</a>
                     <a href="/api/views/admin/products" class="hover:bg-gray-700 px-3 py-2 rounded bg-blue-500 text-white px-4 py-2 rounded">Administrar Productos</a>
                     <a href="/api/views/soporte" class="hover:bg-gray-700 px-3 py-2 rounder bg-blue-500 text-white px-4 py-2 rounded">Soporte al Cliente</a>
                     <a href="/api/sessions/logout" class="hover:bg-gray-700 px-3 py-2 rounder bg-blue-500 text-white px-4 py-2 rounded">Logout</a>
                 </div>
+                {{/if}}
+                
             </div>
         </div>
 </header>

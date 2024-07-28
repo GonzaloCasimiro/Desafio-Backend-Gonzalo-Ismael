@@ -5,8 +5,9 @@ editProduct.addEventListener("click",e=>{
     const data={
         pid:editProduct.getAttribute('data-product-id'),
         key:document.getElementById('edit-select').value,
-        value:document.getElementById('edit-value').value
+        value:document.getElementById('edit-value').value,
     }
+    if(document.getElementById("owner")) data.owner=document.getElementById("owner").value
     fetch("/products",{
         method: 'PUT',
         headers: {

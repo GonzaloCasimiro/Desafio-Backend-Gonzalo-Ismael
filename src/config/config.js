@@ -14,5 +14,7 @@ module.exports={
     port:process.env.PORT,
     mongoUrl:process.env.MONGO_URL,
     PRIVATE_KEY:process.env.PRIVATE_KEY,
-    persistence:process.env.PERSISTENCE
+    persistence:process.env.PERSISTENCE,
+    gmail_user:process.env.GMAIL_USER,
+    gmail_pass:process.env.GMAIL_PASS  
 }

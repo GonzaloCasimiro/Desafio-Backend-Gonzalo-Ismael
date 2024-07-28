@@ -6,6 +6,7 @@ exports.passportCall=strategy=>{
             if(err)return next(err)
            // if(!user)return res.status(401).send({status:'error',message:info.message? info.message:info.toString()})
             req.user=user
+            console.log(req.user)
             next()
         })(req,res,next)
     }

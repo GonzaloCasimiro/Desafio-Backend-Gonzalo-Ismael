@@ -4,7 +4,7 @@ const passport = require("passport");
 const { passportCall } = require("../../middlewares/passportCall.middelware.js");
 const { authorization } = require("../../middlewares/authorization.middleware.js");
 const SessionController = require("../../controllers/session.controller.js");
-const {register,login,logout,github,githubCallback}=new SessionController()
+const {register,login,logout,forgotPassword,resetPassword}=new SessionController()
 //session => login-register-logout
 sessionRouter.get('/login',(req,res)=>{
     res.render('login')
@@ -29,7 +29,8 @@ sessionRouter.get("/logout",logout)
 sessionRouter.get("/current",passportCall('jwt'),authorization('admin'),(req,res)=>{
     res.send("datos solo para admins")
 })
-
+sessionRouter.post('/forgot-password',forgotPassword)
+sessionRouter.post('/reset-password',resetPassword)
 module.exports =sessionRouter
 
 

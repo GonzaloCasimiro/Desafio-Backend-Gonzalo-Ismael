@@ -1,18 +1,16 @@
 const { Router } = require('express');
 const viewRouter = Router();
-const { Product } = require('../../models/productSchema.js');
-const { auth } = require('../../middlewares/auth.middleware.js');
 const { passportCall } = require('../../middlewares/passportCall.middelware.js');
-const { authorization } = require('../../middlewares/authorization.middleware.js');
+const { authorization, productAuth, purchaseAuth } = require('../../middlewares/authorization.middleware.js');
 const viewController = require('../../controllers/view.controller.js');
 const { productService, cartService, userService,ticketService} = require('../../service/service.js');
 const MessagesDaoMongo = require('../../dao/MONGO/ChatDao.mongo.js');
 const Message = require('../../models/messageSchema.js');
-const { default: mongoose } = require('mongoose');
 const {mapProductsDto,setProductsInCart, stock} = require('../../dtos/cartsDto.js');
-const messages=new MessagesDaoMongo(Message)
+const { verifyPasswordToken } = require('../../utils/jsonwebtoken.js');
+const Product = require('../../models/productSchema.js');
 //viewRouter.use(productSocket())
-const{viewProducts,postProduct,deleteProduct,updateProduct,getChats,postMessage,updateCart,admin,getProduct}=new viewController()
+const{viewProducts,postProduct,deleteProduct,updateProduct,getChats,postMessage,updateCart,admin,getProduct,editPerfil,resetPassword}=new viewController()
 viewRouter.get('/products', passportCall('jwt'), viewProducts);
 
 viewRouter.post('/products',postProduct );
@@ -36,23 +34,39 @@ viewRouter.get('/admin',passportCall('jwt'),authorization("admin") ,admin/*async
     }
 }*/)
 
-viewRouter.get('/admin/products',passportCall('jwt'),authorization("admin"),async(req,res)=>{
+viewRouter.get('/admin/products',passportCall('jwt'),productAuth(),async(req,res)=>{
     try {
-        res.render('adminProducts',{})
+        let premium=false
+        let createdProducts=false
+        if(req.user.role==="premium"){
+            premium =req.user.email
+            createdProducts=await Product.find({owner:premium}).lean()
+
+        }
+        console.log(createdProducts)
+        res.render('adminProducts',{premium,products:createdProducts})
     } catch (error) {
+        console.log(error)
         res.send('error')
     }
 })
-viewRouter.get('/update/:pid',passportCall("jwt"),authorization("admin"),async(req,res)=>{
+viewRouter.get('/update/:pid',passportCall("jwt"),productAuth(),async(req,res)=>{
     try {
         const {pid}=req.params
-        const product=await productService.getProduct(pid);
-        res.render('updateProduct',{product:product})
+        let premium=false
+        if(req.user.role==="premium"){
+            premium=req.user.email
+        }
+
+        let product=await productService.getProduct(pid);
+        product=product.toJSON();
+        req.logger.info(product)
+        res.render('updateProduct',{product:product,premium})
     } catch (error) {
         res.send(error)
     }
 })
-viewRouter.get('/purchase',passportCall("jwt"),authorization("user"),async(req,res)=>{
+viewRouter.get('/purchase',passportCall("jwt"),purchaseAuth(),async(req,res)=>{
     try {
         if(req.session)req.session.user=req.user
         const {cid,email}=req.user
@@ -74,5 +88,7 @@ viewRouter.get('/purchase',passportCall("jwt"),authorization("user"),async(req,r
         res.send(error)
     }
 })
+viewRouter.get('/editPerfil',passportCall('jwt'),editPerfil)
+viewRouter.get('/resetPassword/:token',verifyPasswordToken,resetPassword)
 
 module.exports = viewRouter;

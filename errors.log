@@ -23,3 +23,2739 @@ http: hhtpp desde el /logerTest
 warning: warninrg desde el /logerTest
 error: error desde el /logerTest
 fatal: fatal , desde el /logertest
+info: GET en /- 7/24/2024, 3:11:53 AM
+info: GET en /- 7/24/2024, 3:11:53 AM
+info: GET en /js/login.js- 7/24/2024, 3:11:53 AM
+info: GET en /js/login.js- 7/24/2024, 3:11:53 AM
+info: GET en /favicon.ico- 7/24/2024, 3:11:53 AM
+info: GET en /favicon.ico- 7/24/2024, 3:11:53 AM
+info: POST en /api/sessions/login- 7/24/2024, 3:12:04 AM
+info: POST en /api/sessions/login- 7/24/2024, 3:12:04 AM
+warning: Ingreso un email no valido
+warning: Ingreso un email no valido
+error: undefined {"cause":"Credenciales invalidas","code":2,"name":"Error al iniciar sesion"}
+error: undefined {"cause":"Credenciales invalidas","code":2,"name":"Error al iniciar sesion"}
+info: GET en /api/sessions/register- 7/24/2024, 3:12:09 AM
+info: GET en /api/sessions/register- 7/24/2024, 3:12:09 AM
+info: GET en /js/register.js- 7/24/2024, 3:12:09 AM
+info: GET en /js/register.js- 7/24/2024, 3:12:09 AM
+info: POST en /api/sessions/register- 7/24/2024, 3:12:40 AM
+info: POST en /api/sessions/register- 7/24/2024, 3:12:40 AM
+info: GET en /api/views/products- 7/24/2024, 3:12:41 AM
+info: GET en /api/views/products- 7/24/2024, 3:12:41 AM
+info: GET en /api/views/products- 7/24/2024, 3:12:41 AM
+info: GET en /api/views/products- 7/24/2024, 3:12:41 AM
+info: GET en /js/products.js- 7/24/2024, 3:12:41 AM
+info: GET en /js/products.js- 7/24/2024, 3:12:41 AM
+info: GET en /js/cart.js- 7/24/2024, 3:12:41 AM
+info: GET en /js/cart.js- 7/24/2024, 3:12:41 AM
+info: GET en /api/sessions/edit- 7/24/2024, 3:12:45 AM
+info: GET en /api/sessions/edit- 7/24/2024, 3:12:45 AM
+info: GET en /favicon.ico- 7/24/2024, 3:23:02 AM
+info: GET en /favicon.ico- 7/24/2024, 3:23:02 AM
+info: GET en /api/views/products- 7/24/2024, 3:23:41 AM
+info: GET en /api/views/products- 7/24/2024, 3:23:41 AM
+info: GET en /api/views/products- 7/24/2024, 3:23:41 AM
+info: GET en /api/views/products- 7/24/2024, 3:23:41 AM
+info: GET en /js/products.js- 7/24/2024, 3:23:41 AM
+info: GET en /js/products.js- 7/24/2024, 3:23:41 AM
+info: GET en /js/cart.js- 7/24/2024, 3:23:41 AM
+info: GET en /js/cart.js- 7/24/2024, 3:23:41 AM
+info: GET en /api/views/editPerfil- 7/24/2024, 3:23:43 AM
+info: GET en /api/views/editPerfil- 7/24/2024, 3:23:43 AM
+info: GET en /api/views/editPerfil- 7/24/2024, 3:24:50 AM
+info: GET en /api/views/editPerfil- 7/24/2024, 3:24:50 AM
+info: GET en /api/views/editPerfil- 7/24/2024, 3:25:27 AM
+info: GET en /api/views/editPerfil- 7/24/2024, 3:25:27 AM
+info: GET en /- 7/25/2024, 4:35:54 AM
+info: GET en /- 7/25/2024, 4:35:54 AM
+info: GET en /js/login.js- 7/25/2024, 4:35:54 AM
+info: GET en /js/login.js- 7/25/2024, 4:35:54 AM
+info: GET en /favicon.ico- 7/25/2024, 4:35:54 AM
+info: GET en /favicon.ico- 7/25/2024, 4:35:54 AM
+info: GET en /pruebas/sendmail- 7/25/2024, 4:36:04 AM
+info: GET en /pruebas/sendmail- 7/25/2024, 4:36:04 AM
+info: GET en /pruebas/mail- 7/25/2024, 4:36:13 AM
+info: GET en /pruebas/mail- 7/25/2024, 4:36:13 AM
+info: GET en /favicon.ico- 7/25/2024, 4:36:13 AM
+info: GET en /favicon.ico- 7/25/2024, 4:36:13 AM
+info: GET en /pruebas/mail- 7/25/2024, 5:06:50 AM
+info: GET en /pruebas/mail- 7/25/2024, 5:06:50 AM
+info: GET en /pruebas/mail- 7/25/2024, 5:09:33 AM
+info: GET en /pruebas/mail- 7/25/2024, 5:09:33 AM
+info: GET en /pruebas/mail- 7/25/2024, 5:12:10 AM
+info: GET en /pruebas/mail- 7/25/2024, 5:12:10 AM
+info: GET en /api/views/re-pass- 7/25/2024, 5:13:12 AM
+info: GET en /api/views/re-pass- 7/25/2024, 5:13:12 AM
+info: GET en /- 7/25/2024, 11:40:27 PM
+info: GET en /- 7/25/2024, 11:40:27 PM
+info: GET en /js/login.js- 7/25/2024, 11:40:27 PM
+info: GET en /js/login.js- 7/25/2024, 11:40:27 PM
+info: GET en /favicon.ico- 7/25/2024, 11:40:28 PM
+info: GET en /favicon.ico- 7/25/2024, 11:40:28 PM
+info: GET en /- 7/25/2024, 11:44:37 PM
+info: GET en /- 7/25/2024, 11:44:37 PM
+info: GET en /js/login.js- 7/25/2024, 11:44:37 PM
+info: GET en /js/login.js- 7/25/2024, 11:44:37 PM
+info: GET en /favicon.ico- 7/25/2024, 11:44:37 PM
+info: GET en /favicon.ico- 7/25/2024, 11:44:37 PM
+info: GET en /- 7/25/2024, 11:48:57 PM
+info: GET en /- 7/25/2024, 11:48:57 PM
+info: GET en /js/login.js- 7/25/2024, 11:48:57 PM
+info: GET en /js/login.js- 7/25/2024, 11:48:57 PM
+info: GET en /favicon.ico- 7/25/2024, 11:48:57 PM
+info: GET en /favicon.ico- 7/25/2024, 11:48:57 PM
+info: GET en /?reset-email=afssafasf%40gmail.com- 7/25/2024, 11:49:06 PM
+info: GET en /?reset-email=afssafasf%40gmail.com- 7/25/2024, 11:49:06 PM
+info: GET en /js/login.js- 7/25/2024, 11:49:06 PM
+info: GET en /js/login.js- 7/25/2024, 11:49:06 PM
+info: GET en /?reset-email=afssafasf%40gmail.com- 7/25/2024, 11:49:18 PM
+info: GET en /?reset-email=afssafasf%40gmail.com- 7/25/2024, 11:49:18 PM
+info: GET en /js/login.js- 7/25/2024, 11:49:19 PM
+info: GET en /js/login.js- 7/25/2024, 11:49:19 PM
+info: GET en /favicon.ico- 7/25/2024, 11:49:19 PM
+info: GET en /favicon.ico- 7/25/2024, 11:49:19 PM
+info: GET en /?reset-email=1234%40gmail.com- 7/25/2024, 11:49:25 PM
+info: GET en /?reset-email=1234%40gmail.com- 7/25/2024, 11:49:25 PM
+info: GET en /js/login.js- 7/25/2024, 11:49:25 PM
+info: GET en /js/login.js- 7/25/2024, 11:49:25 PM
+info: GET en /?reset-email=1234%40gmail.com- 7/25/2024, 11:50:04 PM
+info: GET en /?reset-email=1234%40gmail.com- 7/25/2024, 11:50:04 PM
+info: GET en /js/login.js- 7/25/2024, 11:50:04 PM
+info: GET en /js/login.js- 7/25/2024, 11:50:04 PM
+info: GET en /favicon.ico- 7/25/2024, 11:50:04 PM
+info: GET en /favicon.ico- 7/25/2024, 11:50:04 PM
+info: GET en /?reset-email=1234%40gmail.com- 7/25/2024, 11:50:51 PM
+info: GET en /?reset-email=1234%40gmail.com- 7/25/2024, 11:50:51 PM
+info: GET en /js/login.js- 7/25/2024, 11:50:52 PM
+info: GET en /js/login.js- 7/25/2024, 11:50:52 PM
+info: GET en /favicon.ico- 7/25/2024, 11:50:52 PM
+info: GET en /favicon.ico- 7/25/2024, 11:50:52 PM
+info: GET en /?reset-email=1234%40gmail.com- 7/26/2024, 12:02:58 AM
+info: GET en /?reset-email=1234%40gmail.com- 7/26/2024, 12:02:58 AM
+info: GET en /js/login.js- 7/26/2024, 12:02:58 AM
+info: GET en /js/login.js- 7/26/2024, 12:02:58 AM
+info: GET en /favicon.ico- 7/26/2024, 12:02:59 AM
+info: GET en /favicon.ico- 7/26/2024, 12:02:59 AM
+info: POST en /api/sessions/forgot-password- 7/26/2024, 12:03:00 AM
+info: POST en /api/sessions/forgot-password- 7/26/2024, 12:03:00 AM
+info: POST en /api/sessions/forgot-password- 7/26/2024, 12:03:02 AM
+info: POST en /api/sessions/forgot-password- 7/26/2024, 12:03:02 AM
+info: POST en /api/sessions/forgot-password- 7/26/2024, 12:07:35 AM
+info: POST en /api/sessions/forgot-password- 7/26/2024, 12:07:35 AM
+info: No ingreso un Email
+info: No ingreso un Email
+info: POST en /api/sessions/forgot-password- 7/26/2024, 12:08:15 AM
+info: POST en /api/sessions/forgot-password- 7/26/2024, 12:08:15 AM
+info: No ingreso un Email
+info: No ingreso un Email
+info: GET en /?reset-email=1234%40gmail.com- 7/26/2024, 12:08:17 AM
+info: GET en /?reset-email=1234%40gmail.com- 7/26/2024, 12:08:17 AM
+info: GET en /js/login.js- 7/26/2024, 12:08:17 AM
+info: GET en /js/login.js- 7/26/2024, 12:08:17 AM
+info: GET en /favicon.ico- 7/26/2024, 12:08:18 AM
+info: GET en /favicon.ico- 7/26/2024, 12:08:18 AM
+info: POST en /api/sessions/forgot-password- 7/26/2024, 12:08:18 AM
+info: POST en /api/sessions/forgot-password- 7/26/2024, 12:08:18 AM
+info: No ingreso un Email
+info: No ingreso un Email
+info: POST en /api/sessions/forgot-password- 7/26/2024, 12:08:44 AM
+info: POST en /api/sessions/forgot-password- 7/26/2024, 12:08:44 AM
+info: No ingreso un Email
+info: No ingreso un Email
+info: POST en /api/sessions/forgot-password- 7/26/2024, 12:09:22 AM
+info: POST en /api/sessions/forgot-password- 7/26/2024, 12:09:22 AM
+info: POST en /api/sessions/forgot-password- 7/26/2024, 12:09:51 AM
+info: POST en /api/sessions/forgot-password- 7/26/2024, 12:09:51 AM
+info: No ingreso un Email
+info: No ingreso un Email
+info: POST en /api/sessions/forgot-password- 7/26/2024, 12:10:07 AM
+info: POST en /api/sessions/forgot-password- 7/26/2024, 12:10:07 AM
+info: No ingreso un Email
+info: No ingreso un Email
+info: GET en /?reset-email=1234%40gmail.com- 7/26/2024, 12:10:11 AM
+info: GET en /?reset-email=1234%40gmail.com- 7/26/2024, 12:10:11 AM
+info: GET en /js/login.js- 7/26/2024, 12:10:11 AM
+info: GET en /js/login.js- 7/26/2024, 12:10:11 AM
+info: GET en /favicon.ico- 7/26/2024, 12:10:12 AM
+info: GET en /favicon.ico- 7/26/2024, 12:10:12 AM
+info: POST en /api/sessions/forgot-password- 7/26/2024, 12:10:12 AM
+info: POST en /api/sessions/forgot-password- 7/26/2024, 12:10:12 AM
+info: No ingreso un Email
+info: No ingreso un Email
+info: POST en /api/sessions/forgot-password- 7/26/2024, 12:14:53 AM
+info: POST en /api/sessions/forgot-password- 7/26/2024, 12:14:53 AM
+info: Ingreso un email no valido
+info: Ingreso un email no valido
+info: POST en /api/sessions/forgot-password- 7/26/2024, 12:15:04 AM
+info: POST en /api/sessions/forgot-password- 7/26/2024, 12:15:04 AM
+info: Ingreso un email no valido
+info: Ingreso un email no valido
+info: POST en /api/sessions/forgot-password- 7/26/2024, 12:15:06 AM
+info: POST en /api/sessions/forgot-password- 7/26/2024, 12:15:06 AM
+info: Ingreso un email no valido
+info: Ingreso un email no valido
+info: POST en /api/sessions/forgot-password- 7/26/2024, 12:19:19 AM
+info: POST en /api/sessions/forgot-password- 7/26/2024, 12:19:19 AM
+info: Ingreso un email no valido
+info: Ingreso un email no valido
+info: POST en /api/sessions/forgot-password- 7/26/2024, 12:20:48 AM
+info: POST en /api/sessions/forgot-password- 7/26/2024, 12:20:48 AM
+info: POST en /api/sessions/forgot-password- 7/26/2024, 12:21:08 AM
+info: POST en /api/sessions/forgot-password- 7/26/2024, 12:21:08 AM
+info: GET en /api/views/re-pass- 7/26/2024, 12:22:47 AM
+info: GET en /api/views/re-pass- 7/26/2024, 12:22:47 AM
+info: GET en /api/views/re-pass- 7/26/2024, 12:29:12 AM
+info: GET en /api/views/re-pass- 7/26/2024, 12:29:12 AM
+info: GET en /api/views/resetPassword- 7/26/2024, 12:31:48 AM
+info: GET en /api/views/resetPassword- 7/26/2024, 12:31:48 AM
+info: GET en /js/reset-password.js- 7/26/2024, 12:31:48 AM
+info: GET en /js/reset-password.js- 7/26/2024, 12:31:48 AM
+info: GET en /js/reset-password.js- 7/26/2024, 12:31:48 AM
+info: GET en /js/reset-password.js- 7/26/2024, 12:31:48 AM
+info: GET en /favicon.ico- 7/26/2024, 12:31:48 AM
+info: GET en /favicon.ico- 7/26/2024, 12:31:48 AM
+info: GET en /api/views/resetPassword- 7/26/2024, 12:33:54 AM
+info: GET en /api/views/resetPassword- 7/26/2024, 12:33:54 AM
+info: GET en /api/views/resetPassword- 7/26/2024, 12:35:37 AM
+info: GET en /api/views/resetPassword- 7/26/2024, 12:35:37 AM
+info: GET en /api/views/resetPassword?new-password=12345- 7/26/2024, 12:35:39 AM
+info: GET en /api/views/resetPassword?new-password=12345- 7/26/2024, 12:35:39 AM
+info: GET en /api/views/resetPassword?new-password=12345- 7/26/2024, 12:36:15 AM
+info: GET en /api/views/resetPassword?new-password=12345- 7/26/2024, 12:36:15 AM
+info: GET en /favicon.ico- 7/26/2024, 12:36:15 AM
+info: GET en /favicon.ico- 7/26/2024, 12:36:15 AM
+info: GET en /api/views/resetPassword?new-password=123456- 7/26/2024, 12:36:17 AM
+info: GET en /api/views/resetPassword?new-password=123456- 7/26/2024, 12:36:17 AM
+info: GET en /favicon.ico- 7/26/2024, 12:36:18 AM
+info: GET en /favicon.ico- 7/26/2024, 12:36:18 AM
+info: GET en /api/views/resetPassword?new-password=123- 7/26/2024, 12:36:21 AM
+info: GET en /api/views/resetPassword?new-password=123- 7/26/2024, 12:36:21 AM
+info: GET en /api/views/resetPassword?new-password=123- 7/26/2024, 12:39:01 AM
+info: GET en /api/views/resetPassword?new-password=123- 7/26/2024, 12:39:01 AM
+info: GET en /favicon.ico- 7/26/2024, 12:39:01 AM
+info: GET en /favicon.ico- 7/26/2024, 12:39:01 AM
+info: GET en /api/views/resetPassword?new-password=2333- 7/26/2024, 12:39:03 AM
+info: GET en /api/views/resetPassword?new-password=2333- 7/26/2024, 12:39:03 AM
+info: GET en /favicon.ico- 7/26/2024, 12:39:03 AM
+info: GET en /favicon.ico- 7/26/2024, 12:39:03 AM
+info: GET en /api/views/resetPassword?new-password=2333- 7/26/2024, 12:40:29 AM
+info: GET en /api/views/resetPassword?new-password=2333- 7/26/2024, 12:40:29 AM
+info: GET en /favicon.ico- 7/26/2024, 12:40:29 AM
+info: GET en /favicon.ico- 7/26/2024, 12:40:29 AM
+info: POST en /api/sessions/forgot-password- 7/26/2024, 1:12:27 AM
+info: POST en /api/sessions/forgot-password- 7/26/2024, 1:12:27 AM
+info: GET en /?reset-email=1234%40gmail.com- 7/26/2024, 1:12:34 AM
+info: GET en /?reset-email=1234%40gmail.com- 7/26/2024, 1:12:34 AM
+info: GET en /js/login.js- 7/26/2024, 1:12:34 AM
+info: GET en /js/login.js- 7/26/2024, 1:12:34 AM
+info: GET en /favicon.ico- 7/26/2024, 1:12:35 AM
+info: GET en /favicon.ico- 7/26/2024, 1:12:35 AM
+info: POST en /api/sessions/forgot-password- 7/26/2024, 1:16:29 AM
+info: POST en /api/sessions/forgot-password- 7/26/2024, 1:16:29 AM
+info: POST en /api/sessions/forgot-password- 7/26/2024, 1:23:55 AM
+info: POST en /api/sessions/forgot-password- 7/26/2024, 1:23:55 AM
+info: POST en /api/sessions/forgot-password- 7/26/2024, 1:57:00 AM
+info: POST en /api/sessions/forgot-password- 7/26/2024, 1:57:00 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbnphbG9pc21hZWxjYXNpbWlyb0BnbWFpbC5jb20iLCJpYXQiOjE3MjE5Njk4MjAsImV4cCI6MTcyMTk3MzQyMH0.b6O0SGZhSQZcWVXdX9s-Hh7J9r__Yf8_o0WQ50as9WA- 7/26/2024, 1:57:16 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbnphbG9pc21hZWxjYXNpbWlyb0BnbWFpbC5jb20iLCJpYXQiOjE3MjE5Njk4MjAsImV4cCI6MTcyMTk3MzQyMH0.b6O0SGZhSQZcWVXdX9s-Hh7J9r__Yf8_o0WQ50as9WA- 7/26/2024, 1:57:16 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbnphbG9pc21hZWxjYXNpbWlyb0BnbWFpbC5jb20iLCJpYXQiOjE3MjE5Njk4MjAsImV4cCI6MTcyMTk3MzQyMH0.b6O0SGZhSQZcWVXdX9s-Hh7J9r__Yf8_o0WQ50as9WA- 7/26/2024, 1:58:06 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbnphbG9pc21hZWxjYXNpbWlyb0BnbWFpbC5jb20iLCJpYXQiOjE3MjE5Njk4MjAsImV4cCI6MTcyMTk3MzQyMH0.b6O0SGZhSQZcWVXdX9s-Hh7J9r__Yf8_o0WQ50as9WA- 7/26/2024, 1:58:06 AM
+info: GET en /?reset-email=1234%40gmail.com- 7/26/2024, 2:02:52 AM
+info: GET en /?reset-email=1234%40gmail.com- 7/26/2024, 2:02:52 AM
+info: GET en /js/login.js- 7/26/2024, 2:02:52 AM
+info: GET en /js/login.js- 7/26/2024, 2:02:52 AM
+info: GET en /favicon.ico- 7/26/2024, 2:02:53 AM
+info: GET en /favicon.ico- 7/26/2024, 2:02:53 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbnphbG9pc21hZWxjYXNpbWlyb0BnbWFpbC5jb20iLCJpYXQiOjE3MjE5Njk4MjAsImV4cCI6MTcyMTk3MzQyMH0.b6O0SGZhSQZcWVXdX9s-Hh7J9r__Yf8_o0WQ50as9WA- 7/26/2024, 2:03:12 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbnphbG9pc21hZWxjYXNpbWlyb0BnbWFpbC5jb20iLCJpYXQiOjE3MjE5Njk4MjAsImV4cCI6MTcyMTk3MzQyMH0.b6O0SGZhSQZcWVXdX9s-Hh7J9r__Yf8_o0WQ50as9WA- 7/26/2024, 2:03:12 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbnphbG9pc21hZWxjYXNpbWlyb0BnbWFpbC5jb20iLCJpYXQiOjE3MjE5Njk4MjAsImV4cCI6MTcyMTk3MzQyMH0.b6O0SGZhSQZcWVXdX9s-Hh7J9r__Yf8_o0WQ50as9WA- 7/26/2024, 2:07:55 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbnphbG9pc21hZWxjYXNpbWlyb0BnbWFpbC5jb20iLCJpYXQiOjE3MjE5Njk4MjAsImV4cCI6MTcyMTk3MzQyMH0.b6O0SGZhSQZcWVXdX9s-Hh7J9r__Yf8_o0WQ50as9WA- 7/26/2024, 2:07:55 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbnphbG9pc21hZWxjYXNpbWlyb0BnbWFpbC5jb20iLCJpYXQiOjE3MjE5Njk4MjAsImV4cCI6MTcyMTk3MzQyMH0.b6O0SGZhSQZcWVXdX9s-Hh7J9r__Yf8_o0WQ50as9WA- 7/26/2024, 2:17:26 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbnphbG9pc21hZWxjYXNpbWlyb0BnbWFpbC5jb20iLCJpYXQiOjE3MjE5Njk4MjAsImV4cCI6MTcyMTk3MzQyMH0.b6O0SGZhSQZcWVXdX9s-Hh7J9r__Yf8_o0WQ50as9WA- 7/26/2024, 2:17:26 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIo0WQ50as9WA- 7/26/2024, 2:17:35 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIo0WQ50as9WA- 7/26/2024, 2:17:35 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIo0WQ50as9WA- 7/26/2024, 2:18:30 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIo0WQ50as9WA- 7/26/2024, 2:18:30 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIo0WQ50as9WA- 7/26/2024, 2:19:38 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIo0WQ50as9WA- 7/26/2024, 2:19:38 AM
+info: Token expirado
+info: Token expirado
+info: GET en /api/views/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbnphbG9pc21hZWxjYXNpbWlyb0BnbWFpbC5jb20iLCJpYXQiOjE3MjE5Njk4MjAsImV4cCI6MTcyMTk3MzQyMH0.b6O0SGZhSQZcWVXdX9s-Hh7J9r__Yf8_o0WQ50as9WA- 7/26/2024, 2:23:34 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbnphbG9pc21hZWxjYXNpbWlyb0BnbWFpbC5jb20iLCJpYXQiOjE3MjE5Njk4MjAsImV4cCI6MTcyMTk3MzQyMH0.b6O0SGZhSQZcWVXdX9s-Hh7J9r__Yf8_o0WQ50as9WA- 7/26/2024, 2:23:34 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:23:40 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:23:40 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:23:43 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:23:43 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:23:44 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:23:44 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:23:44 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:23:44 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:23:45 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:23:45 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:23:45 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:23:45 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:23:45 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:23:45 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:23:48 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:23:48 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:23:48 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:23:48 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:23:48 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:23:48 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbnphbG9pc21hZWxjYXNpbWlyb0BnbWFpbC5jb20iLCJpYXQiOjE3MjE5Njk4MjAsImV4cCI6MTcyMTk3MzQyMH0.b6O0SGZhSQZcWVXdX9s-Hh7J9r__Yf8_o0WQ50as9WA- 7/26/2024, 2:25:57 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbnphbG9pc21hZWxjYXNpbWlyb0BnbWFpbC5jb20iLCJpYXQiOjE3MjE5Njk4MjAsImV4cCI6MTcyMTk3MzQyMH0.b6O0SGZhSQZcWVXdX9s-Hh7J9r__Yf8_o0WQ50as9WA- 7/26/2024, 2:25:57 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:26:03 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:26:03 AM
+info: No ingreso Contraseña
+info: No ingreso Contraseña
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:26:30 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:26:30 AM
+info: No ingreso Contraseña
+info: No ingreso Contraseña
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:26:46 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:26:46 AM
+info: No ingreso Contraseña
+info: No ingreso Contraseña
+info: GET en /api/views/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbnphbG9pc21hZWxjYXNpbWlyb0BnbWFpbC5jb20iLCJpYXQiOjE3MjE5Njk4MjAsImV4cCI6MTcyMTk3MzQyMH0.b6O0SGZhSQZcWVXdX9s-Hh7J9r__Yf8_o0WQ50as9WA- 7/26/2024, 2:26:48 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbnphbG9pc21hZWxjYXNpbWlyb0BnbWFpbC5jb20iLCJpYXQiOjE3MjE5Njk4MjAsImV4cCI6MTcyMTk3MzQyMH0.b6O0SGZhSQZcWVXdX9s-Hh7J9r__Yf8_o0WQ50as9WA- 7/26/2024, 2:26:48 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:26:50 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:26:50 AM
+info: No ingreso Contraseña
+info: No ingreso Contraseña
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:26:51 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:26:51 AM
+info: No ingreso Contraseña
+info: No ingreso Contraseña
+info: GET en /api/views/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbnphbG9pc21hZWxjYXNpbWlyb0BnbWFpbC5jb20iLCJpYXQiOjE3MjE5Njk4MjAsImV4cCI6MTcyMTk3MzQyMH0.b6O0SGZhSQZcWVXdX9s-Hh7J9r__Yf8_o0WQ50as9WA- 7/26/2024, 2:27:35 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbnphbG9pc21hZWxjYXNpbWlyb0BnbWFpbC5jb20iLCJpYXQiOjE3MjE5Njk4MjAsImV4cCI6MTcyMTk3MzQyMH0.b6O0SGZhSQZcWVXdX9s-Hh7J9r__Yf8_o0WQ50as9WA- 7/26/2024, 2:27:35 AM
+info: GET en /favicon.ico- 7/26/2024, 2:27:36 AM
+info: GET en /favicon.ico- 7/26/2024, 2:27:36 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:27:38 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:27:38 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:27:57 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:27:57 AM
+info: No ingreso Contraseña
+info: No ingreso Contraseña
+info: GET en /api/views/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbnphbG9pc21hZWxjYXNpbWlyb0BnbWFpbC5jb20iLCJpYXQiOjE3MjE5Njk4MjAsImV4cCI6MTcyMTk3MzQyMH0.b6O0SGZhSQZcWVXdX9s-Hh7J9r__Yf8_o0WQ50as9WA- 7/26/2024, 2:48:36 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbnphbG9pc21hZWxjYXNpbWlyb0BnbWFpbC5jb20iLCJpYXQiOjE3MjE5Njk4MjAsImV4cCI6MTcyMTk3MzQyMH0.b6O0SGZhSQZcWVXdX9s-Hh7J9r__Yf8_o0WQ50as9WA- 7/26/2024, 2:48:36 AM
+info: GET en /favicon.ico- 7/26/2024, 2:48:36 AM
+info: GET en /favicon.ico- 7/26/2024, 2:48:36 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:48:40 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:48:40 AM
+info: Contraseña restablecida correctamente, email : gonzaloismaelcasimiro@gmail.com
+info: Contraseña restablecida correctamente, email : gonzaloismaelcasimiro@gmail.com
+info: GET en /api/sessions/login- 7/26/2024, 2:49:25 AM
+info: GET en /api/sessions/login- 7/26/2024, 2:49:25 AM
+info: GET en /js/login.js- 7/26/2024, 2:49:25 AM
+info: GET en /js/login.js- 7/26/2024, 2:49:25 AM
+info: GET en /favicon.ico- 7/26/2024, 2:49:25 AM
+info: GET en /favicon.ico- 7/26/2024, 2:49:25 AM
+info: POST en /api/sessions/login- 7/26/2024, 2:49:35 AM
+info: POST en /api/sessions/login- 7/26/2024, 2:49:35 AM
+info: Inicio sesion correctamente, usuario email : gonzaloismaelcasimiro@gmail.com
+info: Inicio sesion correctamente, usuario email : gonzaloismaelcasimiro@gmail.com
+info: GET en /api/views/products- 7/26/2024, 2:49:35 AM
+info: GET en /api/views/products- 7/26/2024, 2:49:35 AM
+info: GET en /api/views/products- 7/26/2024, 2:49:36 AM
+info: GET en /api/views/products- 7/26/2024, 2:49:36 AM
+info: GET en /js/products.js- 7/26/2024, 2:49:36 AM
+info: GET en /js/products.js- 7/26/2024, 2:49:36 AM
+info: GET en /js/cart.js- 7/26/2024, 2:49:36 AM
+info: GET en /js/cart.js- 7/26/2024, 2:49:36 AM
+info: GET en /favicon.ico- 7/26/2024, 2:49:36 AM
+info: GET en /favicon.ico- 7/26/2024, 2:49:36 AM
+info: GET en /api/sessions/logout- 7/26/2024, 2:49:38 AM
+info: GET en /api/sessions/logout- 7/26/2024, 2:49:38 AM
+info: GET en /- 7/26/2024, 2:49:38 AM
+info: GET en /- 7/26/2024, 2:49:38 AM
+info: GET en /js/login.js- 7/26/2024, 2:49:38 AM
+info: GET en /js/login.js- 7/26/2024, 2:49:38 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbnphbG9pc21hZWxjYXNpbWlyb0BnbWFpbC5jb20iLCJpYXQiOjE3MjE5Njk4MjAsImV4cCI6MTcyMTk3MzQyMH0.b6O0SGZhSQZcWVXdX9s-Hh7J9r__Yf8_o0WQ50as9WA- 7/26/2024, 2:54:27 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbnphbG9pc21hZWxjYXNpbWlyb0BnbWFpbC5jb20iLCJpYXQiOjE3MjE5Njk4MjAsImV4cCI6MTcyMTk3MzQyMH0.b6O0SGZhSQZcWVXdX9s-Hh7J9r__Yf8_o0WQ50as9WA- 7/26/2024, 2:54:27 AM
+info: GET en /favicon.ico- 7/26/2024, 2:54:28 AM
+info: GET en /favicon.ico- 7/26/2024, 2:54:28 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:54:32 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:54:32 AM
+info: No ha ingresado una contraseña distinta a la registrada
+info: No ha ingresado una contraseña distinta a la registrada
+info: GET en /api/views/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbnphbG9pc21hZWxjYXNpbWlyb0BnbWFpbC5jb20iLCJpYXQiOjE3MjE5Njk4MjAsImV4cCI6MTcyMTk3MzQyMH0.b6O0SGZhSQZcWVXdX9s-Hh7J9r__Yf8_o0WQ50as9WA- 7/26/2024, 2:55:58 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbnphbG9pc21hZWxjYXNpbWlyb0BnbWFpbC5jb20iLCJpYXQiOjE3MjE5Njk4MjAsImV4cCI6MTcyMTk3MzQyMH0.b6O0SGZhSQZcWVXdX9s-Hh7J9r__Yf8_o0WQ50as9WA- 7/26/2024, 2:55:58 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:56:08 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:56:08 AM
+info: No ha ingresado una contraseña distinta a la registrada
+info: No ha ingresado una contraseña distinta a la registrada
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:56:18 AM
+info: POST en /api/sessions/reset-password- 7/26/2024, 2:56:18 AM
+info: Contraseña restablecida correctamente, email : gonzaloismaelcasimiro@gmail.com
+info: Contraseña restablecida correctamente, email : gonzaloismaelcasimiro@gmail.com
+info: GET en /- 7/26/2024, 2:56:19 AM
+info: GET en /- 7/26/2024, 2:56:19 AM
+info: GET en /js/login.js- 7/26/2024, 2:56:19 AM
+info: GET en /js/login.js- 7/26/2024, 2:56:19 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbnphbG9pc21hZWxjYXNpbWlyb0BnbWFpbC5jb20iLCJpYXQiOjE3MjE5Njk4MjAsImV4cCI6MTcyMTk3MzQyMH0.b6O0SGZhSQZcWVXdX9s-Hh7J9r__Yf8_o0WQ50as9WA- 7/26/2024, 3:06:55 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbnphbG9pc21hZWxjYXNpbWlyb0BnbWFpbC5jb20iLCJpYXQiOjE3MjE5Njk4MjAsImV4cCI6MTcyMTk3MzQyMH0.b6O0SGZhSQZcWVXdX9s-Hh7J9r__Yf8_o0WQ50as9WA- 7/26/2024, 3:06:55 AM
+info: Token expirado
+info: Token expirado
+info: GET en /js/login.js- 7/26/2024, 3:06:55 AM
+info: GET en /js/login.js- 7/26/2024, 3:06:55 AM
+info: GET en /favicon.ico- 7/26/2024, 3:06:55 AM
+info: GET en /favicon.ico- 7/26/2024, 3:06:55 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbnphbG9pc21hZWxjYXNpbWlyb0BnbWFpbC5jb20iLCJpYXQiOjE3MjE5Njk4MjAsImV4cCI6MTcyMTk3MzQyMH0.b6O0SGZhSQZcWVXdX9s-Hh7J9r__Yf8_o0WQ50as9WA- 7/26/2024, 3:07:16 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbnphbG9pc21hZWxjYXNpbWlyb0BnbWFpbC5jb20iLCJpYXQiOjE3MjE5Njk4MjAsImV4cCI6MTcyMTk3MzQyMH0.b6O0SGZhSQZcWVXdX9s-Hh7J9r__Yf8_o0WQ50as9WA- 7/26/2024, 3:07:16 AM
+info: Token expirado
+info: Token expirado
+info: GET en /js/login.js- 7/26/2024, 3:07:16 AM
+info: GET en /js/login.js- 7/26/2024, 3:07:16 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbnphbG9pc21hZWxjYXNpbWlyb0BnbWFpbC5jb20iLCJpYXQiOjE3MjE5Njk4MjAsImV4cCI6MTcyMTk3MzQyMH0.b6O0SGZhSQZcWVXdX9s-Hh7J9r__Yf8_o0WQ50as9WA- 7/26/2024, 3:08:01 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbnphbG9pc21hZWxjYXNpbWlyb0BnbWFpbC5jb20iLCJpYXQiOjE3MjE5Njk4MjAsImV4cCI6MTcyMTk3MzQyMH0.b6O0SGZhSQZcWVXdX9s-Hh7J9r__Yf8_o0WQ50as9WA- 7/26/2024, 3:08:01 AM
+info: Token expirado
+info: Token expirado
+info: GET en /js/login.js- 7/26/2024, 3:08:01 AM
+info: GET en /js/login.js- 7/26/2024, 3:08:01 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbnphbG9pc21hZWxjYXNpbWlyb0BnbWFpbC5jb20iLCJpYXQiOjE3MjE5Njk4MjAsImV4cCI6MTcyMTk3MzQyMH0.b6O0SGZhSQZcWVXdX9s-Hh7J9r__Yf8_o0WQ50as9WA- 7/26/2024, 3:08:28 AM
+info: GET en /api/views/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbnphbG9pc21hZWxjYXNpbWlyb0BnbWFpbC5jb20iLCJpYXQiOjE3MjE5Njk4MjAsImV4cCI6MTcyMTk3MzQyMH0.b6O0SGZhSQZcWVXdX9s-Hh7J9r__Yf8_o0WQ50as9WA- 7/26/2024, 3:08:28 AM
+info: Token expirado
+info: Token expirado
+info: GET en /js/login.js- 7/26/2024, 3:08:28 AM
+info: GET en /js/login.js- 7/26/2024, 3:08:28 AM
+info: GET en /- 7/27/2024, 6:01:16 AM
+info: GET en /- 7/27/2024, 6:01:16 AM
+info: GET en /js/login.js- 7/27/2024, 6:01:16 AM
+info: GET en /js/login.js- 7/27/2024, 6:01:16 AM
+info: GET en /favicon.ico- 7/27/2024, 6:01:16 AM
+info: GET en /favicon.ico- 7/27/2024, 6:01:16 AM
+info: POST en /api/sessions/login- 7/27/2024, 6:01:22 AM
+info: POST en /api/sessions/login- 7/27/2024, 6:01:22 AM
+info: Inicio sesion correctamente, usuario email : admin@gmail.com
+info: Inicio sesion correctamente, usuario email : admin@gmail.com
+info: GET en /api/views/admin- 7/27/2024, 6:01:22 AM
+info: GET en /api/views/admin- 7/27/2024, 6:01:22 AM
+info: GET en /api/views/admin- 7/27/2024, 6:01:23 AM
+info: GET en /api/views/admin- 7/27/2024, 6:01:23 AM
+info: GET en /favicon.ico- 7/27/2024, 6:01:23 AM
+info: GET en /favicon.ico- 7/27/2024, 6:01:23 AM
+info: GET en /api/views/admin/products- 7/27/2024, 6:05:13 AM
+info: GET en /api/views/admin/products- 7/27/2024, 6:05:13 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 6:05:13 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 6:05:13 AM
+info: GET en /api/sessions/logout- 7/27/2024, 6:06:53 AM
+info: GET en /api/sessions/logout- 7/27/2024, 6:06:53 AM
+info: GET en /- 7/27/2024, 6:06:53 AM
+info: GET en /- 7/27/2024, 6:06:53 AM
+info: GET en /js/login.js- 7/27/2024, 6:06:53 AM
+info: GET en /js/login.js- 7/27/2024, 6:06:53 AM
+info: GET en /api/sessions/register- 7/27/2024, 6:07:01 AM
+info: GET en /api/sessions/register- 7/27/2024, 6:07:01 AM
+info: GET en /js/register.js- 7/27/2024, 6:07:01 AM
+info: GET en /js/register.js- 7/27/2024, 6:07:01 AM
+info: POST en /api/sessions/register- 7/27/2024, 6:08:09 AM
+info: POST en /api/sessions/register- 7/27/2024, 6:08:09 AM
+info: GET en /- 7/27/2024, 6:09:07 AM
+info: GET en /- 7/27/2024, 6:09:07 AM
+info: GET en /- 7/27/2024, 6:11:25 AM
+info: GET en /- 7/27/2024, 6:11:25 AM
+info: GET en /- 7/27/2024, 6:12:40 AM
+info: GET en /- 7/27/2024, 6:12:40 AM
+info: GET en /api/views/products- 7/27/2024, 6:12:40 AM
+info: GET en /api/views/products- 7/27/2024, 6:12:40 AM
+info: GET en /js/products.js- 7/27/2024, 6:12:41 AM
+info: GET en /js/products.js- 7/27/2024, 6:12:41 AM
+info: GET en /js/cart.js- 7/27/2024, 6:12:41 AM
+info: GET en /js/cart.js- 7/27/2024, 6:12:41 AM
+info: GET en /api/views/products- 7/27/2024, 6:12:41 AM
+info: GET en /api/views/products- 7/27/2024, 6:12:41 AM
+info: GET en /api/views/products- 7/27/2024, 6:12:42 AM
+info: GET en /api/views/products- 7/27/2024, 6:12:42 AM
+info: GET en /favicon.ico- 7/27/2024, 6:12:42 AM
+info: GET en /favicon.ico- 7/27/2024, 6:12:42 AM
+info: GET en /api/views/products- 7/27/2024, 6:27:46 AM
+info: GET en /api/views/products- 7/27/2024, 6:27:46 AM
+info: GET en /favicon.ico- 7/27/2024, 6:27:46 AM
+info: GET en /favicon.ico- 7/27/2024, 6:27:46 AM
+info: GET en /api/views/products- 7/27/2024, 6:27:51 AM
+info: GET en /api/views/products- 7/27/2024, 6:27:51 AM
+info: GET en /favicon.ico- 7/27/2024, 6:27:52 AM
+info: GET en /favicon.ico- 7/27/2024, 6:27:52 AM
+info: GET en /favicon.ico- 7/27/2024, 6:27:53 AM
+info: GET en /favicon.ico- 7/27/2024, 6:27:53 AM
+info: GET en /api/views/admin/products- 7/27/2024, 6:28:29 AM
+info: GET en /api/views/admin/products- 7/27/2024, 6:28:29 AM
+info: GET en /favicon.ico- 7/27/2024, 6:28:29 AM
+info: GET en /favicon.ico- 7/27/2024, 6:28:29 AM
+info: GET en /favicon.ico- 7/27/2024, 6:28:33 AM
+info: GET en /favicon.ico- 7/27/2024, 6:28:33 AM
+info: GET en /- 7/27/2024, 6:28:36 AM
+info: GET en /- 7/27/2024, 6:28:36 AM
+info: GET en /api/views/products- 7/27/2024, 6:28:36 AM
+info: GET en /api/views/products- 7/27/2024, 6:28:36 AM
+info: GET en /favicon.ico- 7/27/2024, 6:28:36 AM
+info: GET en /favicon.ico- 7/27/2024, 6:28:36 AM
+info: GET en /api/views/products- 7/27/2024, 6:28:38 AM
+info: GET en /api/views/products- 7/27/2024, 6:28:38 AM
+info: GET en /favicon.ico- 7/27/2024, 6:28:38 AM
+info: GET en /favicon.ico- 7/27/2024, 6:28:38 AM
+info: GET en /- 7/27/2024, 6:28:42 AM
+info: GET en /- 7/27/2024, 6:28:42 AM
+info: GET en /api/views/products- 7/27/2024, 6:28:42 AM
+info: GET en /api/views/products- 7/27/2024, 6:28:42 AM
+info: GET en /favicon.ico- 7/27/2024, 6:28:42 AM
+info: GET en /favicon.ico- 7/27/2024, 6:28:42 AM
+info: GET en /api/views/products- 7/27/2024, 6:29:03 AM
+info: GET en /api/views/products- 7/27/2024, 6:29:03 AM
+info: GET en /js/products.js- 7/27/2024, 6:29:04 AM
+info: GET en /js/products.js- 7/27/2024, 6:29:04 AM
+info: GET en /js/cart.js- 7/27/2024, 6:29:04 AM
+info: GET en /js/cart.js- 7/27/2024, 6:29:04 AM
+info: GET en /api/views/products- 7/27/2024, 6:29:04 AM
+info: GET en /api/views/products- 7/27/2024, 6:29:04 AM
+info: GET en /api/views/products- 7/27/2024, 6:29:04 AM
+info: GET en /api/views/products- 7/27/2024, 6:29:04 AM
+info: GET en /favicon.ico- 7/27/2024, 6:29:04 AM
+info: GET en /favicon.ico- 7/27/2024, 6:29:04 AM
+info: GET en /api/views/products- 7/27/2024, 6:29:21 AM
+info: GET en /api/views/products- 7/27/2024, 6:29:21 AM
+info: GET en /favicon.ico- 7/27/2024, 6:29:21 AM
+info: GET en /favicon.ico- 7/27/2024, 6:29:21 AM
+info: GET en /api/views/products- 7/27/2024, 6:29:48 AM
+info: GET en /api/views/products- 7/27/2024, 6:29:48 AM
+info: GET en /js/products.js- 7/27/2024, 6:29:48 AM
+info: GET en /js/products.js- 7/27/2024, 6:29:48 AM
+info: GET en /js/cart.js- 7/27/2024, 6:29:48 AM
+info: GET en /js/cart.js- 7/27/2024, 6:29:48 AM
+info: GET en /api/views/products- 7/27/2024, 6:29:48 AM
+info: GET en /api/views/products- 7/27/2024, 6:29:48 AM
+info: GET en /api/views/products- 7/27/2024, 6:29:49 AM
+info: GET en /api/views/products- 7/27/2024, 6:29:49 AM
+info: GET en /favicon.ico- 7/27/2024, 6:29:49 AM
+info: GET en /favicon.ico- 7/27/2024, 6:29:49 AM
+info: GET en /api/views/products- 7/27/2024, 6:31:44 AM
+info: GET en /api/views/products- 7/27/2024, 6:31:44 AM
+info: GET en /js/products.js- 7/27/2024, 6:31:45 AM
+info: GET en /js/products.js- 7/27/2024, 6:31:45 AM
+info: GET en /js/cart.js- 7/27/2024, 6:31:45 AM
+info: GET en /js/cart.js- 7/27/2024, 6:31:45 AM
+info: GET en /api/views/products- 7/27/2024, 6:31:45 AM
+info: GET en /api/views/products- 7/27/2024, 6:31:45 AM
+info: GET en /api/views/products- 7/27/2024, 6:31:45 AM
+info: GET en /api/views/products- 7/27/2024, 6:31:45 AM
+info: GET en /favicon.ico- 7/27/2024, 6:31:45 AM
+info: GET en /favicon.ico- 7/27/2024, 6:31:45 AM
+info: GET en /api/views/products- 7/27/2024, 6:32:24 AM
+info: GET en /api/views/products- 7/27/2024, 6:32:24 AM
+info: GET en /js/products.js- 7/27/2024, 6:32:24 AM
+info: GET en /js/products.js- 7/27/2024, 6:32:24 AM
+info: GET en /js/cart.js- 7/27/2024, 6:32:24 AM
+info: GET en /js/cart.js- 7/27/2024, 6:32:24 AM
+info: GET en /api/views/products- 7/27/2024, 6:32:24 AM
+info: GET en /api/views/products- 7/27/2024, 6:32:24 AM
+info: GET en /api/views/products- 7/27/2024, 6:32:25 AM
+info: GET en /api/views/products- 7/27/2024, 6:32:25 AM
+info: GET en /favicon.ico- 7/27/2024, 6:32:25 AM
+info: GET en /favicon.ico- 7/27/2024, 6:32:25 AM
+info: GET en /api/views/products- 7/27/2024, 6:34:27 AM
+info: GET en /api/views/products- 7/27/2024, 6:34:27 AM
+info: GET en /js/products.js- 7/27/2024, 6:34:27 AM
+info: GET en /js/products.js- 7/27/2024, 6:34:27 AM
+info: GET en /js/cart.js- 7/27/2024, 6:34:27 AM
+info: GET en /js/cart.js- 7/27/2024, 6:34:27 AM
+info: GET en /api/views/products- 7/27/2024, 6:34:27 AM
+info: GET en /api/views/products- 7/27/2024, 6:34:27 AM
+info: GET en /api/views/products- 7/27/2024, 6:34:27 AM
+info: GET en /api/views/products- 7/27/2024, 6:34:27 AM
+info: GET en /favicon.ico- 7/27/2024, 6:34:28 AM
+info: GET en /favicon.ico- 7/27/2024, 6:34:28 AM
+info: GET en /api/views/products- 7/27/2024, 6:34:36 AM
+info: GET en /api/views/products- 7/27/2024, 6:34:36 AM
+info: GET en /api/views/products- 7/27/2024, 6:34:37 AM
+info: GET en /api/views/products- 7/27/2024, 6:34:37 AM
+info: GET en /js/products.js- 7/27/2024, 6:34:37 AM
+info: GET en /js/products.js- 7/27/2024, 6:34:37 AM
+info: GET en /js/cart.js- 7/27/2024, 6:34:37 AM
+info: GET en /js/cart.js- 7/27/2024, 6:34:37 AM
+info: GET en /api/views/products- 7/27/2024, 6:34:37 AM
+info: GET en /api/views/products- 7/27/2024, 6:34:37 AM
+info: GET en /favicon.ico- 7/27/2024, 6:34:37 AM
+info: GET en /favicon.ico- 7/27/2024, 6:34:37 AM
+info: GET en /api/views/products- 7/27/2024, 6:36:38 AM
+info: GET en /api/views/products- 7/27/2024, 6:36:38 AM
+info: GET en /js/products.js- 7/27/2024, 6:36:38 AM
+info: GET en /js/products.js- 7/27/2024, 6:36:38 AM
+info: GET en /js/cart.js- 7/27/2024, 6:36:38 AM
+info: GET en /js/cart.js- 7/27/2024, 6:36:38 AM
+info: GET en /api/views/products- 7/27/2024, 6:36:38 AM
+info: GET en /api/views/products- 7/27/2024, 6:36:38 AM
+info: GET en /api/views/products- 7/27/2024, 6:36:39 AM
+info: GET en /api/views/products- 7/27/2024, 6:36:39 AM
+info: GET en /favicon.ico- 7/27/2024, 6:36:39 AM
+info: GET en /favicon.ico- 7/27/2024, 6:36:39 AM
+info: GET en /api/views/products- 7/27/2024, 6:36:48 AM
+info: GET en /api/views/products- 7/27/2024, 6:36:48 AM
+info: GET en /api/views/products- 7/27/2024, 6:36:48 AM
+info: GET en /api/views/products- 7/27/2024, 6:36:48 AM
+info: GET en /js/products.js- 7/27/2024, 6:36:48 AM
+info: GET en /js/products.js- 7/27/2024, 6:36:48 AM
+info: GET en /js/cart.js- 7/27/2024, 6:36:48 AM
+info: GET en /js/cart.js- 7/27/2024, 6:36:48 AM
+info: GET en /api/views/products- 7/27/2024, 6:36:49 AM
+info: GET en /api/views/products- 7/27/2024, 6:36:49 AM
+info: GET en /favicon.ico- 7/27/2024, 6:36:49 AM
+info: GET en /favicon.ico- 7/27/2024, 6:36:49 AM
+info: GET en /api/views/products- 7/27/2024, 6:39:01 AM
+info: GET en /api/views/products- 7/27/2024, 6:39:01 AM
+info: GET en /favicon.ico- 7/27/2024, 6:39:01 AM
+info: GET en /favicon.ico- 7/27/2024, 6:39:01 AM
+info: GET en /api/views/products- 7/27/2024, 6:39:13 AM
+info: GET en /api/views/products- 7/27/2024, 6:39:13 AM
+info: GET en /js/products.js- 7/27/2024, 6:39:13 AM
+info: GET en /js/products.js- 7/27/2024, 6:39:13 AM
+info: GET en /js/cart.js- 7/27/2024, 6:39:13 AM
+info: GET en /js/cart.js- 7/27/2024, 6:39:13 AM
+info: GET en /api/views/products- 7/27/2024, 6:39:13 AM
+info: GET en /api/views/products- 7/27/2024, 6:39:13 AM
+info: GET en /api/views/products- 7/27/2024, 6:39:14 AM
+info: GET en /api/views/products- 7/27/2024, 6:39:14 AM
+info: GET en /favicon.ico- 7/27/2024, 6:39:14 AM
+info: GET en /favicon.ico- 7/27/2024, 6:39:14 AM
+info: GET en /api/views/admin/products- 7/27/2024, 6:39:17 AM
+info: GET en /api/views/admin/products- 7/27/2024, 6:39:17 AM
+info: GET en /favicon.ico- 7/27/2024, 6:39:17 AM
+info: GET en /favicon.ico- 7/27/2024, 6:39:17 AM
+info: GET en /api/views/admin/products- 7/27/2024, 6:59:58 AM
+info: GET en /api/views/admin/products- 7/27/2024, 6:59:58 AM
+info: GET en /favicon.ico- 7/27/2024, 6:59:58 AM
+info: GET en /favicon.ico- 7/27/2024, 6:59:58 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:00:20 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:00:20 AM
+info: GET en /favicon.ico- 7/27/2024, 7:00:20 AM
+info: GET en /favicon.ico- 7/27/2024, 7:00:20 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:01:26 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:01:26 AM
+info: GET en /favicon.ico- 7/27/2024, 7:01:26 AM
+info: GET en /favicon.ico- 7/27/2024, 7:01:26 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:01:28 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:01:28 AM
+info: GET en /favicon.ico- 7/27/2024, 7:01:29 AM
+info: GET en /favicon.ico- 7/27/2024, 7:01:29 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:01:30 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:01:30 AM
+info: GET en /favicon.ico- 7/27/2024, 7:01:30 AM
+info: GET en /favicon.ico- 7/27/2024, 7:01:30 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:01:50 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:01:50 AM
+info: GET en /favicon.ico- 7/27/2024, 7:01:50 AM
+info: GET en /favicon.ico- 7/27/2024, 7:01:50 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:02:59 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:02:59 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 7:03:00 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 7:03:00 AM
+info: GET en /favicon.ico- 7/27/2024, 7:03:00 AM
+info: GET en /favicon.ico- 7/27/2024, 7:03:00 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:05:58 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:05:58 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 7:05:58 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 7:05:58 AM
+info: GET en /favicon.ico- 7/27/2024, 7:05:59 AM
+info: GET en /favicon.ico- 7/27/2024, 7:05:59 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:06:30 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:06:30 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 7:06:30 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 7:06:30 AM
+info: GET en /favicon.ico- 7/27/2024, 7:06:31 AM
+info: GET en /favicon.ico- 7/27/2024, 7:06:31 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:06:46 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:06:46 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 7:06:46 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 7:06:46 AM
+info: GET en /favicon.ico- 7/27/2024, 7:06:46 AM
+info: GET en /favicon.ico- 7/27/2024, 7:06:46 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:30:20 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:30:20 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 7:30:20 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 7:30:20 AM
+info: GET en /favicon.ico- 7/27/2024, 7:30:20 AM
+info: GET en /favicon.ico- 7/27/2024, 7:30:20 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:32:49 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:32:49 AM
+info: GET en /favicon.ico- 7/27/2024, 7:32:49 AM
+info: GET en /favicon.ico- 7/27/2024, 7:32:49 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:32:50 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:32:50 AM
+info: GET en /favicon.ico- 7/27/2024, 7:32:50 AM
+info: GET en /favicon.ico- 7/27/2024, 7:32:50 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:33:07 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:33:07 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 7:33:07 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 7:33:07 AM
+info: GET en /favicon.ico- 7/27/2024, 7:33:07 AM
+info: GET en /favicon.ico- 7/27/2024, 7:33:07 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:37:34 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:37:34 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 7:37:34 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 7:37:34 AM
+info: GET en /favicon.ico- 7/27/2024, 7:37:35 AM
+info: GET en /favicon.ico- 7/27/2024, 7:37:35 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:37:44 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:37:44 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 7:37:44 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 7:37:44 AM
+info: GET en /favicon.ico- 7/27/2024, 7:37:44 AM
+info: GET en /favicon.ico- 7/27/2024, 7:37:44 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:37:46 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:37:46 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 7:37:46 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 7:37:46 AM
+info: GET en /favicon.ico- 7/27/2024, 7:37:47 AM
+info: GET en /favicon.ico- 7/27/2024, 7:37:47 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:39:47 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:39:47 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 7:39:47 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 7:39:47 AM
+info: GET en /favicon.ico- 7/27/2024, 7:39:47 AM
+info: GET en /favicon.ico- 7/27/2024, 7:39:47 AM
+info: POST en /api/views/products- 7/27/2024, 7:48:47 AM
+info: POST en /api/views/products- 7/27/2024, 7:48:47 AM
+info: GET en /products/code/66a4d08f3d496a0aff87d55d- 7/27/2024, 7:49:01 AM
+info: GET en /products/code/66a4d08f3d496a0aff87d55d- 7/27/2024, 7:49:01 AM
+info: GET en /products/code/66a4d08f3d496a0aff87d55d- 7/27/2024, 7:49:13 AM
+info: GET en /products/code/66a4d08f3d496a0aff87d55d- 7/27/2024, 7:49:13 AM
+info: POST en /api/views/products- 7/27/2024, 7:50:39 AM
+info: POST en /api/views/products- 7/27/2024, 7:50:39 AM
+info: POST en /api/views/products- 7/27/2024, 7:51:20 AM
+info: POST en /api/views/products- 7/27/2024, 7:51:20 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:51:42 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:51:42 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 7:51:42 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 7:51:42 AM
+info: GET en /favicon.ico- 7/27/2024, 7:51:42 AM
+info: GET en /favicon.ico- 7/27/2024, 7:51:42 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:52:24 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:52:24 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 7:52:24 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 7:52:24 AM
+info: GET en /favicon.ico- 7/27/2024, 7:52:24 AM
+info: GET en /favicon.ico- 7/27/2024, 7:52:24 AM
+info: POST en /api/views/products- 7/27/2024, 7:52:30 AM
+info: POST en /api/views/products- 7/27/2024, 7:52:30 AM
+info: POST en /api/views/products- 7/27/2024, 7:53:31 AM
+info: POST en /api/views/products- 7/27/2024, 7:53:31 AM
+info: GET en /products/code/66a4d08f3d496a0aff87d55d- 7/27/2024, 7:53:41 AM
+info: GET en /products/code/66a4d08f3d496a0aff87d55d- 7/27/2024, 7:53:41 AM
+info: DELETE en /products- 7/27/2024, 7:53:46 AM
+info: DELETE en /products- 7/27/2024, 7:53:46 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:54:08 AM
+info: GET en /api/views/admin/products- 7/27/2024, 7:54:08 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 7:54:08 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 7:54:08 AM
+info: GET en /favicon.ico- 7/27/2024, 7:54:09 AM
+info: GET en /favicon.ico- 7/27/2024, 7:54:09 AM
+info: POST en /api/views/products- 7/27/2024, 7:54:15 AM
+info: POST en /api/views/products- 7/27/2024, 7:54:15 AM
+info: GET en /products/code/66a4d1d7388264f61a320bb0- 7/27/2024, 7:54:28 AM
+info: GET en /products/code/66a4d1d7388264f61a320bb0- 7/27/2024, 7:54:28 AM
+info: GET en /products/code/66a4d1d7388264f61a320bb0- 7/27/2024, 7:59:16 AM
+info: GET en /products/code/66a4d1d7388264f61a320bb0- 7/27/2024, 7:59:16 AM
+info: GET en /products/code/123BCDA- 7/27/2024, 7:59:39 AM
+info: GET en /products/code/123BCDA- 7/27/2024, 7:59:39 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 7:59:42 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 7:59:42 AM
+info: GET en /favicon.ico- 7/27/2024, 7:59:43 AM
+info: GET en /favicon.ico- 7/27/2024, 7:59:43 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 8:40:37 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 8:40:37 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 8:40:37 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 8:40:37 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 8:40:37 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 8:40:37 AM
+info: GET en /favicon.ico- 7/27/2024, 8:40:37 AM
+info: GET en /favicon.ico- 7/27/2024, 8:40:37 AM
+info: GET en /favicon.ico- 7/27/2024, 8:40:52 AM
+info: GET en /favicon.ico- 7/27/2024, 8:40:52 AM
+info: GET en /products/code/123BCDA- 7/27/2024, 8:40:53 AM
+info: GET en /products/code/123BCDA- 7/27/2024, 8:40:53 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 8:40:55 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 8:40:55 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 8:40:55 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 8:40:55 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 8:40:55 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 8:40:55 AM
+info: GET en /favicon.ico- 7/27/2024, 8:40:55 AM
+info: GET en /favicon.ico- 7/27/2024, 8:40:55 AM
+info: GET en /favicon.ico- 7/27/2024, 8:42:45 AM
+info: GET en /favicon.ico- 7/27/2024, 8:42:45 AM
+info: GET en /api/views/admin/products- 7/27/2024, 8:42:46 AM
+info: GET en /api/views/admin/products- 7/27/2024, 8:42:46 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 8:42:46 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 8:42:46 AM
+info: GET en /favicon.ico- 7/27/2024, 8:42:47 AM
+info: GET en /favicon.ico- 7/27/2024, 8:42:47 AM
+info: GET en /products/code/123BCDA- 7/27/2024, 8:42:48 AM
+info: GET en /products/code/123BCDA- 7/27/2024, 8:42:48 AM
+info: GET en /api/views/update/undefined- 7/27/2024, 8:42:50 AM
+info: GET en /api/views/update/undefined- 7/27/2024, 8:42:50 AM
+info: GET en /favicon.ico- 7/27/2024, 8:42:50 AM
+info: GET en /favicon.ico- 7/27/2024, 8:42:50 AM
+info: GET en /api/views/update/undefined- 7/27/2024, 8:43:00 AM
+info: GET en /api/views/update/undefined- 7/27/2024, 8:43:00 AM
+info: GET en /favicon.ico- 7/27/2024, 8:43:01 AM
+info: GET en /favicon.ico- 7/27/2024, 8:43:01 AM
+info: GET en /favicon.ico- 7/27/2024, 8:43:03 AM
+info: GET en /favicon.ico- 7/27/2024, 8:43:03 AM
+info: GET en /api/views/admin/products- 7/27/2024, 8:43:08 AM
+info: GET en /api/views/admin/products- 7/27/2024, 8:43:08 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 8:43:08 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 8:43:08 AM
+info: GET en /favicon.ico- 7/27/2024, 8:43:09 AM
+info: GET en /favicon.ico- 7/27/2024, 8:43:09 AM
+info: GET en /products/code/123BCDA- 7/27/2024, 8:43:09 AM
+info: GET en /products/code/123BCDA- 7/27/2024, 8:43:09 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 8:43:11 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 8:43:11 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 8:43:11 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 8:43:11 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 8:43:11 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 8:43:11 AM
+info: GET en /favicon.ico- 7/27/2024, 8:43:11 AM
+info: GET en /favicon.ico- 7/27/2024, 8:43:11 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 8:44:58 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 8:44:58 AM
+info: {
+  _id: new ObjectId('66a4d1d7388264f61a320bb0'),
+  title: 'probando',
+  description: 'probando productos',
+  price: 10,
+  code: '123BCDA',
+  category: 'samsung',
+  thumbnail: '#',
+  stock: 15,
+  owner: 'premium@gmail.com',
+  __v: 0
+}
+info: {
+  _id: new ObjectId('66a4d1d7388264f61a320bb0'),
+  title: 'probando',
+  description: 'probando productos',
+  price: 10,
+  code: '123BCDA',
+  category: 'samsung',
+  thumbnail: '#',
+  stock: 15,
+  owner: 'premium@gmail.com',
+  __v: 0
+}
+info: GET en /js/admin/editProduct.js- 7/27/2024, 8:44:59 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 8:44:59 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 8:44:59 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 8:44:59 AM
+info: GET en /favicon.ico- 7/27/2024, 8:45:00 AM
+info: GET en /favicon.ico- 7/27/2024, 8:45:00 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 8:45:30 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 8:45:30 AM
+info: {
+  _id: new ObjectId('66a4d1d7388264f61a320bb0'),
+  title: 'probando',
+  description: 'probando productos',
+  price: 10,
+  code: '123BCDA',
+  category: 'samsung',
+  thumbnail: '#',
+  stock: 15,
+  owner: 'premium@gmail.com',
+  __v: 0
+}
+info: {
+  _id: new ObjectId('66a4d1d7388264f61a320bb0'),
+  title: 'probando',
+  description: 'probando productos',
+  price: 10,
+  code: '123BCDA',
+  category: 'samsung',
+  thumbnail: '#',
+  stock: 15,
+  owner: 'premium@gmail.com',
+  __v: 0
+}
+info: GET en /js/admin/editProduct.js- 7/27/2024, 8:45:30 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 8:45:30 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 8:45:30 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 8:45:30 AM
+info: GET en /favicon.ico- 7/27/2024, 8:45:31 AM
+info: GET en /favicon.ico- 7/27/2024, 8:45:31 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 8:45:54 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 8:45:54 AM
+info: {
+  _id: new ObjectId('66a4d1d7388264f61a320bb0'),
+  title: 'probando',
+  description: 'probando productos',
+  price: 10,
+  code: '123BCDA',
+  category: 'samsung',
+  thumbnail: '#',
+  stock: 15,
+  owner: 'premium@gmail.com',
+  __v: 0
+}
+info: {
+  _id: new ObjectId('66a4d1d7388264f61a320bb0'),
+  title: 'probando',
+  description: 'probando productos',
+  price: 10,
+  code: '123BCDA',
+  category: 'samsung',
+  thumbnail: '#',
+  stock: 15,
+  owner: 'premium@gmail.com',
+  __v: 0
+}
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 8:45:54 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 8:45:54 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 8:45:54 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 8:45:54 AM
+info: GET en /favicon.ico- 7/27/2024, 8:45:55 AM
+info: GET en /favicon.ico- 7/27/2024, 8:45:55 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 8:46:25 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 8:46:25 AM
+info: [object Object]
+info: [object Object]
+info: GET en /js/admin/editProduct.js- 7/27/2024, 8:46:25 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 8:46:25 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 8:46:25 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 8:46:25 AM
+info: GET en /favicon.ico- 7/27/2024, 8:46:25 AM
+info: GET en /favicon.ico- 7/27/2024, 8:46:25 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 9:04:24 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 9:04:24 AM
+info: [object Object]
+info: [object Object]
+info: GET en /js/admin/editProduct.js- 7/27/2024, 9:04:24 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 9:04:24 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 9:04:24 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 9:04:24 AM
+info: GET en /favicon.ico- 7/27/2024, 9:04:25 AM
+info: GET en /favicon.ico- 7/27/2024, 9:04:25 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 9:04:58 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 9:04:58 AM
+info: [object Object]
+info: [object Object]
+info: GET en /js/admin/editProduct.js- 7/27/2024, 9:04:59 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 9:04:59 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 9:04:59 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 9:04:59 AM
+info: GET en /favicon.ico- 7/27/2024, 9:04:59 AM
+info: GET en /favicon.ico- 7/27/2024, 9:04:59 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 9:05:35 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 9:05:35 AM
+info: [object Object]
+info: [object Object]
+info: GET en /js/admin/editProduct.js- 7/27/2024, 9:05:35 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 9:05:35 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 9:05:36 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 9:05:36 AM
+info: GET en /favicon.ico- 7/27/2024, 9:05:36 AM
+info: GET en /favicon.ico- 7/27/2024, 9:05:36 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 9:06:12 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 9:06:12 AM
+info: [object Object]
+info: [object Object]
+info: GET en /js/admin/editProduct.js- 7/27/2024, 9:06:12 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 9:06:12 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 9:06:12 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 9:06:12 AM
+info: GET en /favicon.ico- 7/27/2024, 9:06:12 AM
+info: GET en /favicon.ico- 7/27/2024, 9:06:12 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 9:06:26 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 9:06:26 AM
+info: [object Object]
+info: [object Object]
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 9:06:26 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 9:06:26 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 9:06:26 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 9:06:26 AM
+info: GET en /favicon.ico- 7/27/2024, 9:06:27 AM
+info: GET en /favicon.ico- 7/27/2024, 9:06:27 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 9:07:53 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 9:07:53 AM
+info: [object Object]
+info: [object Object]
+info: GET en /js/admin/editProduct.js- 7/27/2024, 9:07:54 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 9:07:54 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 9:07:54 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 9:07:54 AM
+info: GET en /favicon.ico- 7/27/2024, 9:07:54 AM
+info: GET en /favicon.ico- 7/27/2024, 9:07:54 AM
+info: PUT en /products- 7/27/2024, 9:30:38 AM
+info: PUT en /products- 7/27/2024, 9:30:38 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 9:30:41 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 9:30:41 AM
+info: [object Object]
+info: [object Object]
+info: GET en /js/admin/editProduct.js- 7/27/2024, 9:30:41 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 9:30:41 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 9:30:42 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 9:30:42 AM
+info: GET en /favicon.ico- 7/27/2024, 9:30:42 AM
+info: GET en /favicon.ico- 7/27/2024, 9:30:42 AM
+info: PUT en /products- 7/27/2024, 9:31:12 AM
+info: PUT en /products- 7/27/2024, 9:31:12 AM
+info: PUT en /products- 7/27/2024, 9:31:12 AM
+info: PUT en /products- 7/27/2024, 9:31:12 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 9:31:13 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 9:31:13 AM
+info: [object Object]
+info: [object Object]
+info: GET en /js/admin/editProduct.js- 7/27/2024, 9:31:13 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 9:31:13 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 9:31:14 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 9:31:14 AM
+info: GET en /favicon.ico- 7/27/2024, 9:31:14 AM
+info: GET en /favicon.ico- 7/27/2024, 9:31:14 AM
+info: PUT en /products- 7/27/2024, 9:31:15 AM
+info: PUT en /products- 7/27/2024, 9:31:15 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 9:31:18 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 9:31:18 AM
+info: [object Object]
+info: [object Object]
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 9:31:18 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 9:31:18 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 9:31:18 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 9:31:18 AM
+info: GET en /favicon.ico- 7/27/2024, 9:31:18 AM
+info: GET en /favicon.ico- 7/27/2024, 9:31:18 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 9:31:20 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 9:31:20 AM
+info: [object Object]
+info: [object Object]
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 9:31:20 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 9:31:20 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 9:31:20 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 9:31:20 AM
+info: GET en /favicon.ico- 7/27/2024, 9:31:20 AM
+info: GET en /favicon.ico- 7/27/2024, 9:31:20 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 9:33:14 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 9:33:14 AM
+info: [object Object]
+info: [object Object]
+info: GET en /js/admin/editProduct.js- 7/27/2024, 9:33:15 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 9:33:15 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 9:33:15 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 9:33:15 AM
+info: GET en /favicon.ico- 7/27/2024, 9:33:15 AM
+info: GET en /favicon.ico- 7/27/2024, 9:33:15 AM
+info: PUT en /products- 7/27/2024, 9:33:17 AM
+info: PUT en /products- 7/27/2024, 9:33:17 AM
+info: PUT en /products- 7/27/2024, 9:33:45 AM
+info: PUT en /products- 7/27/2024, 9:33:45 AM
+info: PUT en /products- 7/27/2024, 9:33:50 AM
+info: PUT en /products- 7/27/2024, 9:33:50 AM
+info: PUT en /products- 7/27/2024, 9:33:51 AM
+info: PUT en /products- 7/27/2024, 9:33:51 AM
+info: PUT en /products- 7/27/2024, 9:33:51 AM
+info: PUT en /products- 7/27/2024, 9:33:51 AM
+info: PUT en /products- 7/27/2024, 9:34:20 AM
+info: PUT en /products- 7/27/2024, 9:34:20 AM
+info: PUT en /products- 7/27/2024, 9:34:35 AM
+info: PUT en /products- 7/27/2024, 9:34:35 AM
+info: PUT en /products- 7/27/2024, 9:34:56 AM
+info: PUT en /products- 7/27/2024, 9:34:56 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 9:35:27 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 9:35:27 AM
+info: [object Object]
+info: [object Object]
+info: GET en /js/admin/editProduct.js- 7/27/2024, 9:35:27 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 9:35:27 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 9:35:27 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 9:35:27 AM
+info: GET en /favicon.ico- 7/27/2024, 9:35:27 AM
+info: GET en /favicon.ico- 7/27/2024, 9:35:27 AM
+info: PUT en /products- 7/27/2024, 9:35:29 AM
+info: PUT en /products- 7/27/2024, 9:35:29 AM
+info: PUT en /products- 7/27/2024, 9:35:55 AM
+info: PUT en /products- 7/27/2024, 9:35:55 AM
+info: PUT en /products- 7/27/2024, 9:36:09 AM
+info: PUT en /products- 7/27/2024, 9:36:09 AM
+info: PUT en /products- 7/27/2024, 9:36:28 AM
+info: PUT en /products- 7/27/2024, 9:36:28 AM
+info: PUT en /products- 7/27/2024, 9:37:12 AM
+info: PUT en /products- 7/27/2024, 9:37:12 AM
+info: premium@gmail.com
+info: premium@gmail.com
+info: PUT en /products- 7/27/2024, 9:37:38 AM
+info: PUT en /products- 7/27/2024, 9:37:38 AM
+info: premium@gmail.com
+info: premium@gmail.com
+info: PUT en /products- 7/27/2024, 9:37:53 AM
+info: PUT en /products- 7/27/2024, 9:37:53 AM
+info: premium@gmail.com
+info: premium@gmail.com
+info: PUT en /products- 7/27/2024, 9:37:59 AM
+info: PUT en /products- 7/27/2024, 9:37:59 AM
+info: premium@gmail.com
+info: premium@gmail.com
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 9:38:09 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 9:38:09 AM
+info: [object Object]
+info: [object Object]
+info: GET en /js/admin/editProduct.js- 7/27/2024, 9:38:09 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 9:38:09 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 9:38:10 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 9:38:10 AM
+info: GET en /favicon.ico- 7/27/2024, 9:38:10 AM
+info: GET en /favicon.ico- 7/27/2024, 9:38:10 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 9:38:11 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 9:38:11 AM
+info: [object Object]
+info: [object Object]
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 9:38:11 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 9:38:11 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 9:38:11 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 9:38:11 AM
+info: GET en /favicon.ico- 7/27/2024, 9:38:12 AM
+info: GET en /favicon.ico- 7/27/2024, 9:38:12 AM
+info: PUT en /products- 7/27/2024, 9:38:28 AM
+info: PUT en /products- 7/27/2024, 9:38:28 AM
+info: premium@gmail.com
+info: premium@gmail.com
+info: PUT en /products- 7/27/2024, 9:38:50 AM
+info: PUT en /products- 7/27/2024, 9:38:50 AM
+info: premium@gmail.com
+info: premium@gmail.com
+info: {
+  _id: new ObjectId('66a4d1d7388264f61a320bb0'),
+  title: 'probando',
+  description: 'probando productos',
+  price: 10,
+  code: '123BCDA',
+  category: 'samsung',
+  thumbnail: '#',
+  stock: 15,
+  owner: 'premium@gmail.com',
+  __v: 0
+}
+info: {
+  _id: new ObjectId('66a4d1d7388264f61a320bb0'),
+  title: 'probando',
+  description: 'probando productos',
+  price: 10,
+  code: '123BCDA',
+  category: 'samsung',
+  thumbnail: '#',
+  stock: 15,
+  owner: 'premium@gmail.com',
+  __v: 0
+}
+info: PUT en /products- 7/27/2024, 9:38:52 AM
+info: PUT en /products- 7/27/2024, 9:38:52 AM
+info: premium@gmail.com
+info: premium@gmail.com
+info: {
+  _id: new ObjectId('66a4d1d7388264f61a320bb0'),
+  title: 'probando',
+  description: 'probando productos',
+  price: 10,
+  code: '123BCDA',
+  category: 'samsung',
+  thumbnail: '#',
+  stock: 15,
+  owner: 'premium@gmail.com',
+  __v: 0
+}
+info: {
+  _id: new ObjectId('66a4d1d7388264f61a320bb0'),
+  title: 'probando',
+  description: 'probando productos',
+  price: 10,
+  code: '123BCDA',
+  category: 'samsung',
+  thumbnail: '#',
+  stock: 15,
+  owner: 'premium@gmail.com',
+  __v: 0
+}
+info: PUT en /products- 7/27/2024, 9:39:16 AM
+info: PUT en /products- 7/27/2024, 9:39:16 AM
+info: premium@gmail.com
+info: premium@gmail.com
+info: PUT en /products- 7/27/2024, 9:39:22 AM
+info: PUT en /products- 7/27/2024, 9:39:22 AM
+info: premium@gmail.com
+info: premium@gmail.com
+info: PUT en /products- 7/27/2024, 9:39:23 AM
+info: PUT en /products- 7/27/2024, 9:39:23 AM
+info: premium@gmail.com
+info: premium@gmail.com
+info: PUT en /products- 7/27/2024, 9:39:23 AM
+info: PUT en /products- 7/27/2024, 9:39:23 AM
+info: premium@gmail.com
+info: premium@gmail.com
+info: PUT en /products- 7/27/2024, 9:39:23 AM
+info: PUT en /products- 7/27/2024, 9:39:23 AM
+info: premium@gmail.com
+info: premium@gmail.com
+info: PUT en /products- 7/27/2024, 9:42:21 AM
+info: PUT en /products- 7/27/2024, 9:42:21 AM
+info: premium@gmail.com
+info: premium@gmail.com
+info: Producto actualizado {"$__":{"activePaths":{"paths":{"__v":"init","_id":"init","category":"init","code":"init","description":"init","owner":"init","price":"init","stock":"init","thumbnail":"init","title":"init"},"states":{"default":{},"init":{"__v":true,"_id":true,"category":true,"code":true,"description":true,"owner":true,"price":true,"stock":true,"thumbnail":true,"title":true},"require":{}}},"skipId":true},"$isNew":false,"_doc":{"__v":0,"_id":"66a4d1d7388264f61a320bb0","category":"samsung","code":"123BCDA","description":"productos probando","owner":"premium@gmail.com","price":10,"stock":15,"thumbnail":"#","title":"probando"}}
+info: Producto actualizado {"$__":{"activePaths":{"paths":{"__v":"init","_id":"init","category":"init","code":"init","description":"init","owner":"init","price":"init","stock":"init","thumbnail":"init","title":"init"},"states":{"default":{},"init":{"__v":true,"_id":true,"category":true,"code":true,"description":true,"owner":true,"price":true,"stock":true,"thumbnail":true,"title":true},"require":{}}},"skipId":true},"$isNew":false,"_doc":{"__v":0,"_id":"66a4d1d7388264f61a320bb0","category":"samsung","code":"123BCDA","description":"productos probando","owner":"premium@gmail.com","price":10,"stock":15,"thumbnail":"#","title":"probando"}}
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 9:42:24 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 9:42:24 AM
+info: [object Object]
+info: [object Object]
+info: GET en /js/admin/editProduct.js- 7/27/2024, 9:42:25 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 9:42:25 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 9:42:25 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 9:42:25 AM
+info: GET en /favicon.ico- 7/27/2024, 9:42:25 AM
+info: GET en /favicon.ico- 7/27/2024, 9:42:25 AM
+info: GET en /pruebas/updateProducts- 7/27/2024, 10:03:52 AM
+info: GET en /pruebas/updateProducts- 7/27/2024, 10:03:52 AM
+info: GET en /pruebas/setProducts- 7/27/2024, 10:04:02 AM
+info: GET en /pruebas/setProducts- 7/27/2024, 10:04:02 AM
+info: GET en /pruebas/setProducts- 7/27/2024, 10:05:02 AM
+info: GET en /pruebas/setProducts- 7/27/2024, 10:05:02 AM
+info: GET en /pruebas/setProducts- 7/27/2024, 10:05:16 AM
+info: GET en /pruebas/setProducts- 7/27/2024, 10:05:16 AM
+info: GET en /pruebas/setProducts- 7/27/2024, 10:06:20 AM
+info: GET en /pruebas/setProducts- 7/27/2024, 10:06:20 AM
+info: GET en /pruebas/setProducts- 7/27/2024, 10:06:33 AM
+info: GET en /pruebas/setProducts- 7/27/2024, 10:06:33 AM
+info: GET en /pruebas/setProducts- 7/27/2024, 10:07:02 AM
+info: GET en /pruebas/setProducts- 7/27/2024, 10:07:02 AM
+info: GET en /pruebas/setProducts- 7/27/2024, 10:09:49 AM
+info: GET en /pruebas/setProducts- 7/27/2024, 10:09:49 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 10:10:39 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 10:10:39 AM
+info: [object Object]
+info: [object Object]
+info: GET en /js/admin/editProduct.js- 7/27/2024, 10:10:39 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 10:10:39 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 10:10:39 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 10:10:39 AM
+info: GET en /favicon.ico- 7/27/2024, 10:10:40 AM
+info: GET en /favicon.ico- 7/27/2024, 10:10:40 AM
+info: PUT en /products- 7/27/2024, 10:10:46 AM
+info: PUT en /products- 7/27/2024, 10:10:46 AM
+info: premium@gmail.com
+info: premium@gmail.com
+info: Producto actualizado {"$__":{"activePaths":{"paths":{"__v":"init","_id":"init","category":"init","code":"init","description":"init","owner":"init","price":"init","stock":"init","thumbnail":"init","title":"init"},"states":{"default":{},"init":{"__v":true,"_id":true,"category":true,"code":true,"description":true,"owner":true,"price":true,"stock":true,"thumbnail":true,"title":true},"require":{}}},"skipId":true},"$isNew":false,"_doc":{"__v":0,"_id":"66a4d1d7388264f61a320bb0","category":"samsung","code":"123BCDA","description":"productos probando","owner":"premium@gmail.com","price":10,"stock":15,"thumbnail":"#","title":"probando"}}
+info: Producto actualizado {"$__":{"activePaths":{"paths":{"__v":"init","_id":"init","category":"init","code":"init","description":"init","owner":"init","price":"init","stock":"init","thumbnail":"init","title":"init"},"states":{"default":{},"init":{"__v":true,"_id":true,"category":true,"code":true,"description":true,"owner":true,"price":true,"stock":true,"thumbnail":true,"title":true},"require":{}}},"skipId":true},"$isNew":false,"_doc":{"__v":0,"_id":"66a4d1d7388264f61a320bb0","category":"samsung","code":"123BCDA","description":"productos probando","owner":"premium@gmail.com","price":10,"stock":15,"thumbnail":"#","title":"probando"}}
+info: PUT en /products- 7/27/2024, 10:10:52 AM
+info: PUT en /products- 7/27/2024, 10:10:52 AM
+info: premium@gmail.com
+info: premium@gmail.com
+info: Producto actualizado {"$__":{"activePaths":{"paths":{"__v":"init","_id":"init","category":"init","code":"init","description":"init","owner":"init","price":"init","stock":"init","thumbnail":"init","title":"init"},"states":{"default":{},"init":{"__v":true,"_id":true,"category":true,"code":true,"description":true,"owner":true,"price":true,"stock":true,"thumbnail":true,"title":true},"require":{}}},"skipId":true},"$isNew":false,"_doc":{"__v":0,"_id":"66a4d1d7388264f61a320bb0","category":"samsung","code":"123BCDA","description":"productos probando2","owner":"premium@gmail.com","price":10,"stock":15,"thumbnail":"#","title":"probando"}}
+info: Producto actualizado {"$__":{"activePaths":{"paths":{"__v":"init","_id":"init","category":"init","code":"init","description":"init","owner":"init","price":"init","stock":"init","thumbnail":"init","title":"init"},"states":{"default":{},"init":{"__v":true,"_id":true,"category":true,"code":true,"description":true,"owner":true,"price":true,"stock":true,"thumbnail":true,"title":true},"require":{}}},"skipId":true},"$isNew":false,"_doc":{"__v":0,"_id":"66a4d1d7388264f61a320bb0","category":"samsung","code":"123BCDA","description":"productos probando2","owner":"premium@gmail.com","price":10,"stock":15,"thumbnail":"#","title":"probando"}}
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 10:10:54 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 10:10:54 AM
+info: [object Object]
+info: [object Object]
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 10:10:55 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 10:10:55 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 10:10:55 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 10:10:55 AM
+info: GET en /favicon.ico- 7/27/2024, 10:10:55 AM
+info: GET en /favicon.ico- 7/27/2024, 10:10:55 AM
+info: PUT en /products- 7/27/2024, 10:11:02 AM
+info: PUT en /products- 7/27/2024, 10:11:02 AM
+info: premium@gmail.com
+info: premium@gmail.com
+info: Producto actualizado {"$__":{"activePaths":{"paths":{"__v":"init","_id":"init","category":"init","code":"init","description":"init","owner":"init","price":"init","stock":"init","thumbnail":"init","title":"init"},"states":{"default":{},"init":{"__v":true,"_id":true,"category":true,"code":true,"description":true,"owner":true,"price":true,"stock":true,"thumbnail":true,"title":true},"require":{}}},"skipId":true},"$isNew":false,"_doc":{"__v":0,"_id":"66a4d1d7388264f61a320bb0","category":"samsung","code":"123BCDA","description":"productos probando23","owner":"premium@gmail.com","price":10,"stock":15,"thumbnail":"#","title":"probando"}}
+info: Producto actualizado {"$__":{"activePaths":{"paths":{"__v":"init","_id":"init","category":"init","code":"init","description":"init","owner":"init","price":"init","stock":"init","thumbnail":"init","title":"init"},"states":{"default":{},"init":{"__v":true,"_id":true,"category":true,"code":true,"description":true,"owner":true,"price":true,"stock":true,"thumbnail":true,"title":true},"require":{}}},"skipId":true},"$isNew":false,"_doc":{"__v":0,"_id":"66a4d1d7388264f61a320bb0","category":"samsung","code":"123BCDA","description":"productos probando23","owner":"premium@gmail.com","price":10,"stock":15,"thumbnail":"#","title":"probando"}}
+info: GET en /pruebas/setProducts- 7/27/2024, 10:12:34 AM
+info: GET en /pruebas/setProducts- 7/27/2024, 10:12:34 AM
+info: GET en /pruebas/setProducts- 7/27/2024, 10:15:45 AM
+info: GET en /pruebas/setProducts- 7/27/2024, 10:15:45 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 10:16:14 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 10:16:14 AM
+info: [object Object]
+info: [object Object]
+info: GET en /js/admin/editProduct.js- 7/27/2024, 10:16:15 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 10:16:15 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 10:16:15 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 10:16:15 AM
+info: GET en /favicon.ico- 7/27/2024, 10:16:15 AM
+info: GET en /favicon.ico- 7/27/2024, 10:16:15 AM
+info: PUT en /products- 7/27/2024, 10:16:27 AM
+info: PUT en /products- 7/27/2024, 10:16:27 AM
+info: premium@gmail.com
+info: premium@gmail.com
+info: No es propietario del producto que intenta actualizar
+info: No es propietario del producto que intenta actualizar
+info: PUT en /products- 7/27/2024, 10:16:29 AM
+info: PUT en /products- 7/27/2024, 10:16:29 AM
+info: premium@gmail.com
+info: premium@gmail.com
+info: No es propietario del producto que intenta actualizar
+info: No es propietario del producto que intenta actualizar
+info: PUT en /products- 7/27/2024, 10:18:03 AM
+info: PUT en /products- 7/27/2024, 10:18:03 AM
+info: premium@gmail.com
+info: premium@gmail.com
+info: No es propietario del producto que intenta actualizar
+info: No es propietario del producto que intenta actualizar
+info: undefined {"cause":"No puedes actualizar un producto que no ha sido creado por ti.","code":5,"name":"Error al actualizar producto"}
+info: undefined {"cause":"No puedes actualizar un producto que no ha sido creado por ti.","code":5,"name":"Error al actualizar producto"}
+info: PUT en /products- 7/27/2024, 10:20:46 AM
+info: PUT en /products- 7/27/2024, 10:20:46 AM
+info: premium@gmail.com
+info: premium@gmail.com
+info: No es propietario del producto que intenta actualizar
+info: No es propietario del producto que intenta actualizar
+info: undefined {"cause":"No puedes actualizar un producto que no ha sido creado por ti.","code":5,"name":"Error al actualizar producto"}
+info: undefined {"cause":"No puedes actualizar un producto que no ha sido creado por ti.","code":5,"name":"Error al actualizar producto"}
+info: GET en /api/sessions/logout- 7/27/2024, 10:21:07 AM
+info: GET en /api/sessions/logout- 7/27/2024, 10:21:07 AM
+info: GET en /- 7/27/2024, 10:21:07 AM
+info: GET en /- 7/27/2024, 10:21:07 AM
+info: GET en /js/login.js- 7/27/2024, 10:21:07 AM
+info: GET en /js/login.js- 7/27/2024, 10:21:07 AM
+info: GET en /favicon.ico- 7/27/2024, 10:21:08 AM
+info: GET en /favicon.ico- 7/27/2024, 10:21:08 AM
+info: POST en /api/sessions/login- 7/27/2024, 10:21:19 AM
+info: POST en /api/sessions/login- 7/27/2024, 10:21:19 AM
+info: Inicio sesion correctamente, usuario email : admin@gmail.com
+info: Inicio sesion correctamente, usuario email : admin@gmail.com
+info: GET en /api/views/admin- 7/27/2024, 10:21:19 AM
+info: GET en /api/views/admin- 7/27/2024, 10:21:19 AM
+info: GET en /api/views/admin- 7/27/2024, 10:21:20 AM
+info: GET en /api/views/admin- 7/27/2024, 10:21:20 AM
+info: GET en /favicon.ico- 7/27/2024, 10:21:20 AM
+info: GET en /favicon.ico- 7/27/2024, 10:21:20 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 10:21:22 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 10:21:22 AM
+info: [object Object]
+info: [object Object]
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 10:21:22 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 10:21:22 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 10:21:22 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 10:21:22 AM
+info: GET en /favicon.ico- 7/27/2024, 10:21:23 AM
+info: GET en /favicon.ico- 7/27/2024, 10:21:23 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 10:25:16 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 10:25:16 AM
+info: [object Object]
+info: [object Object]
+info: GET en /js/admin/editProduct.js- 7/27/2024, 10:25:16 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 10:25:16 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 10:25:16 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 10:25:16 AM
+info: GET en /favicon.ico- 7/27/2024, 10:25:17 AM
+info: GET en /favicon.ico- 7/27/2024, 10:25:17 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 10:25:51 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 10:25:51 AM
+info: [object Object]
+info: [object Object]
+info: GET en /js/admin/editProduct.js- 7/27/2024, 10:25:51 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 10:25:51 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 10:25:52 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 10:25:52 AM
+info: GET en /favicon.ico- 7/27/2024, 10:25:52 AM
+info: GET en /favicon.ico- 7/27/2024, 10:25:52 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 10:29:37 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 10:29:37 AM
+info: [object Object]
+info: [object Object]
+info: GET en /js/admin/editProduct.js- 7/27/2024, 10:29:37 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 10:29:37 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 10:29:37 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 10:29:37 AM
+info: GET en /favicon.ico- 7/27/2024, 10:29:37 AM
+info: GET en /favicon.ico- 7/27/2024, 10:29:37 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 10:31:39 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 10:31:39 AM
+info: [object Object]
+info: [object Object]
+info: GET en /js/admin/editProduct.js- 7/27/2024, 10:31:39 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 10:31:39 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 10:31:39 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 10:31:39 AM
+info: GET en /favicon.ico- 7/27/2024, 10:31:39 AM
+info: GET en /favicon.ico- 7/27/2024, 10:31:39 AM
+info: PUT en /products- 7/27/2024, 10:31:41 AM
+info: PUT en /products- 7/27/2024, 10:31:41 AM
+info: undefined
+info: undefined
+info: undefined
+info: undefined
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 10:31:50 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 10:31:50 AM
+info: [object Object]
+info: [object Object]
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 10:31:50 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 10:31:50 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 10:31:50 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 10:31:50 AM
+info: GET en /favicon.ico- 7/27/2024, 10:31:50 AM
+info: GET en /favicon.ico- 7/27/2024, 10:31:50 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 10:31:52 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 10:31:52 AM
+info: [object Object]
+info: [object Object]
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 10:31:52 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 10:31:52 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 10:31:52 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 10:31:52 AM
+info: GET en /favicon.ico- 7/27/2024, 10:31:52 AM
+info: GET en /favicon.ico- 7/27/2024, 10:31:52 AM
+info: PUT en /products- 7/27/2024, 10:32:41 AM
+info: PUT en /products- 7/27/2024, 10:32:41 AM
+info: undefined
+info: undefined
+info: PUT en /products- 7/27/2024, 10:33:24 AM
+info: PUT en /products- 7/27/2024, 10:33:24 AM
+info: undefined
+info: undefined
+info: PUT en /products- 7/27/2024, 10:33:52 AM
+info: PUT en /products- 7/27/2024, 10:33:52 AM
+info: Producto actualizado {"$__":{"activePaths":{"paths":{"__v":"init","_id":"init","category":"init","code":"init","description":"init","owner":"init","price":"init","stock":"init","thumbnail":"init","title":"init"},"states":{"default":{},"init":{"__v":true,"_id":true,"category":true,"code":true,"description":true,"owner":true,"price":true,"stock":true,"thumbnail":true,"title":true},"require":{}}},"skipId":true},"$isNew":false,"_doc":{"__v":0,"_id":"66a4d1d7388264f61a320bb0","category":"samsung","code":"123BCDA","description":"probando la wea","owner":"admin","price":10,"stock":15,"thumbnail":"#","title":"probando"}}
+info: Producto actualizado {"$__":{"activePaths":{"paths":{"__v":"init","_id":"init","category":"init","code":"init","description":"init","owner":"init","price":"init","stock":"init","thumbnail":"init","title":"init"},"states":{"default":{},"init":{"__v":true,"_id":true,"category":true,"code":true,"description":true,"owner":true,"price":true,"stock":true,"thumbnail":true,"title":true},"require":{}}},"skipId":true},"$isNew":false,"_doc":{"__v":0,"_id":"66a4d1d7388264f61a320bb0","category":"samsung","code":"123BCDA","description":"probando la wea","owner":"admin","price":10,"stock":15,"thumbnail":"#","title":"probando"}}
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 10:33:57 AM
+info: GET en /api/views/update/66a4d1d7388264f61a320bb0- 7/27/2024, 10:33:57 AM
+info: [object Object]
+info: [object Object]
+info: GET en /js/admin/editProduct.js- 7/27/2024, 10:33:57 AM
+info: GET en /js/admin/editProduct.js- 7/27/2024, 10:33:57 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 10:33:57 AM
+info: GET en /api/views/update/URL_DE_LA_IMAGEN- 7/27/2024, 10:33:57 AM
+info: GET en /favicon.ico- 7/27/2024, 10:33:57 AM
+info: GET en /favicon.ico- 7/27/2024, 10:33:57 AM
+info: PUT en /products- 7/27/2024, 10:34:06 AM
+info: PUT en /products- 7/27/2024, 10:34:06 AM
+info: Producto actualizado {"$__":{"activePaths":{"paths":{"__v":"init","_id":"init","category":"init","code":"init","description":"init","owner":"init","price":"init","stock":"init","thumbnail":"init","title":"init"},"states":{"default":{},"init":{"__v":true,"_id":true,"category":true,"code":true,"description":true,"owner":true,"price":true,"stock":true,"thumbnail":true,"title":true},"require":{}}},"skipId":true},"$isNew":false,"_doc":{"__v":0,"_id":"66a4d1d7388264f61a320bb0","category":"samsung","code":"123BCDA","description":"probando de nuevo","owner":"admin","price":10,"stock":15,"thumbnail":"#","title":"probando"}}
+info: Producto actualizado {"$__":{"activePaths":{"paths":{"__v":"init","_id":"init","category":"init","code":"init","description":"init","owner":"init","price":"init","stock":"init","thumbnail":"init","title":"init"},"states":{"default":{},"init":{"__v":true,"_id":true,"category":true,"code":true,"description":true,"owner":true,"price":true,"stock":true,"thumbnail":true,"title":true},"require":{}}},"skipId":true},"$isNew":false,"_doc":{"__v":0,"_id":"66a4d1d7388264f61a320bb0","category":"samsung","code":"123BCDA","description":"probando de nuevo","owner":"admin","price":10,"stock":15,"thumbnail":"#","title":"probando"}}
+info: PUT en /products- 7/27/2024, 10:35:14 AM
+info: PUT en /products- 7/27/2024, 10:35:14 AM
+info: Producto de un usuario premium,un admin no puede actualizarlo
+info: Producto de un usuario premium,un admin no puede actualizarlo
+info: undefined {"cause":"Este producto pertenece a un usuario premium, no puedes actualizarlo.","code":5,"name":"Error al actualizar producto"}
+info: undefined {"cause":"Este producto pertenece a un usuario premium, no puedes actualizarlo.","code":5,"name":"Error al actualizar producto"}
+info: PUT en /products- 7/27/2024, 10:35:18 AM
+info: PUT en /products- 7/27/2024, 10:35:18 AM
+info: Producto de un usuario premium,un admin no puede actualizarlo
+info: Producto de un usuario premium,un admin no puede actualizarlo
+info: undefined {"cause":"Este producto pertenece a un usuario premium, no puedes actualizarlo.","code":5,"name":"Error al actualizar producto"}
+info: undefined {"cause":"Este producto pertenece a un usuario premium, no puedes actualizarlo.","code":5,"name":"Error al actualizar producto"}
+info: PUT en /products- 7/27/2024, 10:35:21 AM
+info: PUT en /products- 7/27/2024, 10:35:21 AM
+info: Producto de un usuario premium,un admin no puede actualizarlo
+info: Producto de un usuario premium,un admin no puede actualizarlo
+info: undefined {"cause":"Este producto pertenece a un usuario premium, no puedes actualizarlo.","code":5,"name":"Error al actualizar producto"}
+info: undefined {"cause":"Este producto pertenece a un usuario premium, no puedes actualizarlo.","code":5,"name":"Error al actualizar producto"}
+info: GET en /api/sessions/logout- 7/27/2024, 10:35:51 AM
+info: GET en /api/sessions/logout- 7/27/2024, 10:35:51 AM
+info: GET en /- 7/27/2024, 10:35:51 AM
+info: GET en /- 7/27/2024, 10:35:51 AM
+info: GET en /js/login.js- 7/27/2024, 10:35:51 AM
+info: GET en /js/login.js- 7/27/2024, 10:35:51 AM
+info: GET en /favicon.ico- 7/27/2024, 10:35:52 AM
+info: GET en /favicon.ico- 7/27/2024, 10:35:52 AM
+info: POST en /api/sessions/login- 7/27/2024, 10:36:01 AM
+info: POST en /api/sessions/login- 7/27/2024, 10:36:01 AM
+info: Inicio sesion correctamente, usuario email : premium@gmail.com
+info: Inicio sesion correctamente, usuario email : premium@gmail.com
+info: GET en /- 7/27/2024, 10:37:02 AM
+info: GET en /- 7/27/2024, 10:37:02 AM
+info: GET en /api/views/products- 7/27/2024, 10:37:03 AM
+info: GET en /api/views/products- 7/27/2024, 10:37:03 AM
+info: GET en /js/products.js- 7/27/2024, 10:37:04 AM
+info: GET en /js/products.js- 7/27/2024, 10:37:04 AM
+info: GET en /js/cart.js- 7/27/2024, 10:37:04 AM
+info: GET en /js/cart.js- 7/27/2024, 10:37:04 AM
+info: GET en /api/views/products- 7/27/2024, 10:37:04 AM
+info: GET en /api/views/products- 7/27/2024, 10:37:04 AM
+info: GET en /api/views/products- 7/27/2024, 10:37:04 AM
+info: GET en /api/views/products- 7/27/2024, 10:37:04 AM
+info: GET en /favicon.ico- 7/27/2024, 10:37:04 AM
+info: GET en /favicon.ico- 7/27/2024, 10:37:04 AM
+info: GET en /api/sessions/logout- 7/27/2024, 10:37:08 AM
+info: GET en /api/sessions/logout- 7/27/2024, 10:37:08 AM
+info: GET en /- 7/27/2024, 10:37:08 AM
+info: GET en /- 7/27/2024, 10:37:08 AM
+info: GET en /js/login.js- 7/27/2024, 10:37:08 AM
+info: GET en /js/login.js- 7/27/2024, 10:37:08 AM
+info: GET en /favicon.ico- 7/27/2024, 10:37:09 AM
+info: GET en /favicon.ico- 7/27/2024, 10:37:09 AM
+info: POST en /api/sessions/login- 7/27/2024, 10:37:18 AM
+info: POST en /api/sessions/login- 7/27/2024, 10:37:18 AM
+info: Inicio sesion correctamente, usuario email : premium@gmail.com
+info: Inicio sesion correctamente, usuario email : premium@gmail.com
+info: GET en /api/views/products- 7/27/2024, 10:37:19 AM
+info: GET en /api/views/products- 7/27/2024, 10:37:19 AM
+info: GET en /api/views/products- 7/27/2024, 10:37:19 AM
+info: GET en /api/views/products- 7/27/2024, 10:37:19 AM
+info: GET en /js/products.js- 7/27/2024, 10:37:19 AM
+info: GET en /js/products.js- 7/27/2024, 10:37:19 AM
+info: GET en /js/cart.js- 7/27/2024, 10:37:19 AM
+info: GET en /js/cart.js- 7/27/2024, 10:37:19 AM
+info: GET en /api/views/products- 7/27/2024, 10:37:19 AM
+info: GET en /api/views/products- 7/27/2024, 10:37:19 AM
+info: GET en /favicon.ico- 7/27/2024, 10:37:20 AM
+info: GET en /favicon.ico- 7/27/2024, 10:37:20 AM
+info: GET en /api/views/admin/products- 7/27/2024, 10:37:24 AM
+info: GET en /api/views/admin/products- 7/27/2024, 10:37:24 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 10:37:24 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 10:37:24 AM
+info: GET en /favicon.ico- 7/27/2024, 10:37:25 AM
+info: GET en /favicon.ico- 7/27/2024, 10:37:25 AM
+info: GET en /api/views/admin/products- 7/27/2024, 10:46:12 AM
+info: GET en /api/views/admin/products- 7/27/2024, 10:46:12 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 10:46:12 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 10:46:12 AM
+info: GET en /favicon.ico- 7/27/2024, 10:46:13 AM
+info: GET en /favicon.ico- 7/27/2024, 10:46:13 AM
+info: DELETE en /products- 7/27/2024, 10:58:09 AM
+info: DELETE en /products- 7/27/2024, 10:58:09 AM
+info: GET en /pruebas/setProducts- 7/27/2024, 10:58:26 AM
+info: GET en /pruebas/setProducts- 7/27/2024, 10:58:26 AM
+info: GET en /pruebas/setProducts- 7/27/2024, 10:58:28 AM
+info: GET en /pruebas/setProducts- 7/27/2024, 10:58:28 AM
+info: GET en /pruebas/setProducts- 7/27/2024, 10:58:28 AM
+info: GET en /pruebas/setProducts- 7/27/2024, 10:58:28 AM
+info: GET en /pruebas/setProducts- 7/27/2024, 10:58:29 AM
+info: GET en /pruebas/setProducts- 7/27/2024, 10:58:29 AM
+info: GET en /pruebas/setProducts- 7/27/2024, 10:58:29 AM
+info: GET en /pruebas/setProducts- 7/27/2024, 10:58:29 AM
+info: GET en /pruebas/setProducts- 7/27/2024, 10:58:29 AM
+info: GET en /pruebas/setProducts- 7/27/2024, 10:58:29 AM
+info: GET en /pruebas/setProducts- 7/27/2024, 10:58:29 AM
+info: GET en /pruebas/setProducts- 7/27/2024, 10:58:29 AM
+info: DELETE en /products- 7/27/2024, 10:59:58 AM
+info: DELETE en /products- 7/27/2024, 10:59:58 AM
+info: DELETE en /products- 7/27/2024, 11:00:00 AM
+info: DELETE en /products- 7/27/2024, 11:00:00 AM
+info: DELETE en /products- 7/27/2024, 11:00:17 AM
+info: DELETE en /products- 7/27/2024, 11:00:17 AM
+info: GET en /api/views/admin/products- 7/27/2024, 11:02:10 AM
+info: GET en /api/views/admin/products- 7/27/2024, 11:02:10 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 11:02:10 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 11:02:10 AM
+info: GET en /favicon.ico- 7/27/2024, 11:02:11 AM
+info: GET en /favicon.ico- 7/27/2024, 11:02:11 AM
+info: GET en /api/views/admin/products- 7/27/2024, 11:03:39 AM
+info: GET en /api/views/admin/products- 7/27/2024, 11:03:39 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 11:03:39 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 11:03:39 AM
+info: GET en /favicon.ico- 7/27/2024, 11:03:40 AM
+info: GET en /favicon.ico- 7/27/2024, 11:03:40 AM
+info: DELETE en /products- 7/27/2024, 11:03:41 AM
+info: DELETE en /products- 7/27/2024, 11:03:41 AM
+info: DELETE en /products- 7/27/2024, 11:05:10 AM
+info: DELETE en /products- 7/27/2024, 11:05:10 AM
+info: Producto eliminado {"$__":{"activePaths":{"paths":{"__v":"init","_id":"init","category":"init","code":"init","description":"init","owner":"init","price":"init","stock":"init","thumbnail":"init","title":"init"},"states":{"default":{},"init":{"__v":true,"_id":true,"category":true,"code":true,"description":true,"owner":true,"price":true,"stock":true,"thumbnail":true,"title":true},"require":{}}},"skipId":true},"$isNew":false,"_doc":{"__v":0,"_id":"66a4d1d7388264f61a320bb0","category":"samsung","code":"123BCDA","description":"probando de nuevo","owner":"premium@gmail.com","price":10,"stock":15,"thumbnail":"#","title":"probando"}}
+info: Producto eliminado {"$__":{"activePaths":{"paths":{"__v":"init","_id":"init","category":"init","code":"init","description":"init","owner":"init","price":"init","stock":"init","thumbnail":"init","title":"init"},"states":{"default":{},"init":{"__v":true,"_id":true,"category":true,"code":true,"description":true,"owner":true,"price":true,"stock":true,"thumbnail":true,"title":true},"require":{}}},"skipId":true},"$isNew":false,"_doc":{"__v":0,"_id":"66a4d1d7388264f61a320bb0","category":"samsung","code":"123BCDA","description":"probando de nuevo","owner":"premium@gmail.com","price":10,"stock":15,"thumbnail":"#","title":"probando"}}
+info: DELETE en /products- 7/27/2024, 11:07:00 AM
+info: DELETE en /products- 7/27/2024, 11:07:00 AM
+info: DELETE en /products- 7/27/2024, 11:07:13 AM
+info: DELETE en /products- 7/27/2024, 11:07:13 AM
+info: DELETE en /products- 7/27/2024, 11:07:14 AM
+info: DELETE en /products- 7/27/2024, 11:07:14 AM
+info: DELETE en /products- 7/27/2024, 11:07:14 AM
+info: DELETE en /products- 7/27/2024, 11:07:14 AM
+info: DELETE en /products- 7/27/2024, 11:07:14 AM
+info: DELETE en /products- 7/27/2024, 11:07:14 AM
+info: DELETE en /products- 7/27/2024, 11:07:18 AM
+info: DELETE en /products- 7/27/2024, 11:07:18 AM
+info: DELETE en /products- 7/27/2024, 11:07:18 AM
+info: DELETE en /products- 7/27/2024, 11:07:18 AM
+info: DELETE en /products- 7/27/2024, 11:07:18 AM
+info: DELETE en /products- 7/27/2024, 11:07:18 AM
+info: DELETE en /products- 7/27/2024, 11:07:19 AM
+info: DELETE en /products- 7/27/2024, 11:07:19 AM
+info: DELETE en /products- 7/27/2024, 11:07:19 AM
+info: DELETE en /products- 7/27/2024, 11:07:19 AM
+info: DELETE en /products- 7/27/2024, 11:07:19 AM
+info: DELETE en /products- 7/27/2024, 11:07:19 AM
+info: DELETE en /products- 7/27/2024, 11:07:19 AM
+info: DELETE en /products- 7/27/2024, 11:07:19 AM
+info: DELETE en /products- 7/27/2024, 11:07:42 AM
+info: DELETE en /products- 7/27/2024, 11:07:42 AM
+info: DELETE en /products- 7/27/2024, 11:08:04 AM
+info: DELETE en /products- 7/27/2024, 11:08:04 AM
+info: POST en /api/views/products- 7/27/2024, 11:08:49 AM
+info: POST en /api/views/products- 7/27/2024, 11:08:49 AM
+info: DELETE en /products- 7/27/2024, 11:09:45 AM
+info: DELETE en /products- 7/27/2024, 11:09:45 AM
+info: No es propietario del producto que intenta eliminar
+info: No es propietario del producto que intenta eliminar
+info: DELETE en /products- 7/27/2024, 11:10:35 AM
+info: DELETE en /products- 7/27/2024, 11:10:35 AM
+info: No es propietario del producto que intenta eliminar
+info: No es propietario del producto que intenta eliminar
+info: DELETE en /products- 7/27/2024, 11:11:11 AM
+info: DELETE en /products- 7/27/2024, 11:11:11 AM
+info: No es propietario del producto que intenta eliminar
+info: No es propietario del producto que intenta eliminar
+info: DELETE en /products- 7/27/2024, 11:11:52 AM
+info: DELETE en /products- 7/27/2024, 11:11:52 AM
+info: No es propietario del producto que intenta eliminar
+info: No es propietario del producto que intenta eliminar
+info: DELETE en /products- 7/27/2024, 11:12:14 AM
+info: DELETE en /products- 7/27/2024, 11:12:14 AM
+info: Producto eliminado {"$__":{"activePaths":{"paths":{"__v":"init","_id":"init","category":"init","code":"init","description":"init","owner":"init","price":"init","stock":"init","thumbnail":"init","title":"init"},"states":{"default":{},"init":{"__v":true,"_id":true,"category":true,"code":true,"description":true,"owner":true,"price":true,"stock":true,"thumbnail":true,"title":true},"require":{}}},"skipId":true},"$isNew":false,"_doc":{"__v":0,"_id":"66a4ff71d43e8e09a2368e8c","category":"samsung","code":"4433322","description":"producos prueba","owner":"premium@gmail.com","price":2,"stock":5,"thumbnail":"#","title":"producto para prueba"}}
+info: Producto eliminado {"$__":{"activePaths":{"paths":{"__v":"init","_id":"init","category":"init","code":"init","description":"init","owner":"init","price":"init","stock":"init","thumbnail":"init","title":"init"},"states":{"default":{},"init":{"__v":true,"_id":true,"category":true,"code":true,"description":true,"owner":true,"price":true,"stock":true,"thumbnail":true,"title":true},"require":{}}},"skipId":true},"$isNew":false,"_doc":{"__v":0,"_id":"66a4ff71d43e8e09a2368e8c","category":"samsung","code":"4433322","description":"producos prueba","owner":"premium@gmail.com","price":2,"stock":5,"thumbnail":"#","title":"producto para prueba"}}
+info: POST en /api/views/products- 7/27/2024, 11:12:17 AM
+info: POST en /api/views/products- 7/27/2024, 11:12:17 AM
+info: GET en /api/sessions/logout- 7/27/2024, 11:12:31 AM
+info: GET en /api/sessions/logout- 7/27/2024, 11:12:31 AM
+info: GET en /- 7/27/2024, 11:12:31 AM
+info: GET en /- 7/27/2024, 11:12:31 AM
+info: GET en /js/login.js- 7/27/2024, 11:12:31 AM
+info: GET en /js/login.js- 7/27/2024, 11:12:31 AM
+info: GET en /favicon.ico- 7/27/2024, 11:12:32 AM
+info: GET en /favicon.ico- 7/27/2024, 11:12:32 AM
+info: POST en /api/sessions/login- 7/27/2024, 11:12:49 AM
+info: POST en /api/sessions/login- 7/27/2024, 11:12:49 AM
+info: Inicio sesion correctamente, usuario email : admin@gmail.com
+info: Inicio sesion correctamente, usuario email : admin@gmail.com
+info: GET en /api/views/admin- 7/27/2024, 11:12:49 AM
+info: GET en /api/views/admin- 7/27/2024, 11:12:49 AM
+info: GET en /api/views/admin- 7/27/2024, 11:12:49 AM
+info: GET en /api/views/admin- 7/27/2024, 11:12:49 AM
+info: GET en /favicon.ico- 7/27/2024, 11:12:49 AM
+info: GET en /favicon.ico- 7/27/2024, 11:12:49 AM
+info: GET en /api/views/admin/products- 7/27/2024, 11:12:51 AM
+info: GET en /api/views/admin/products- 7/27/2024, 11:12:51 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 11:12:51 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 11:12:51 AM
+info: GET en /favicon.ico- 7/27/2024, 11:12:51 AM
+info: GET en /favicon.ico- 7/27/2024, 11:12:51 AM
+info: DELETE en /products- 7/27/2024, 11:12:55 AM
+info: DELETE en /products- 7/27/2024, 11:12:55 AM
+info: Producto de un usuario premium, un admin no puede eliminarlo
+info: Producto de un usuario premium, un admin no puede eliminarlo
+info: DELETE en /products- 7/27/2024, 11:13:02 AM
+info: DELETE en /products- 7/27/2024, 11:13:02 AM
+info: DELETE en /products- 7/27/2024, 11:13:56 AM
+info: DELETE en /products- 7/27/2024, 11:13:56 AM
+info: DELETE en /products- 7/27/2024, 11:14:25 AM
+info: DELETE en /products- 7/27/2024, 11:14:25 AM
+info: DELETE en /products- 7/27/2024, 11:14:28 AM
+info: DELETE en /products- 7/27/2024, 11:14:28 AM
+info: DELETE en /products- 7/27/2024, 11:14:32 AM
+info: DELETE en /products- 7/27/2024, 11:14:32 AM
+info: DELETE en /products- 7/27/2024, 11:14:45 AM
+info: DELETE en /products- 7/27/2024, 11:14:45 AM
+info: DELETE en /products- 7/27/2024, 11:15:05 AM
+info: DELETE en /products- 7/27/2024, 11:15:05 AM
+info: DELETE en /products- 7/27/2024, 11:15:08 AM
+info: DELETE en /products- 7/27/2024, 11:15:08 AM
+info: DELETE en /products- 7/27/2024, 11:16:02 AM
+info: DELETE en /products- 7/27/2024, 11:16:02 AM
+info: DELETE en /products- 7/27/2024, 11:16:14 AM
+info: DELETE en /products- 7/27/2024, 11:16:14 AM
+info: DELETE en /products- 7/27/2024, 11:16:14 AM
+info: DELETE en /products- 7/27/2024, 11:16:14 AM
+info: DELETE en /products- 7/27/2024, 11:16:14 AM
+info: DELETE en /products- 7/27/2024, 11:16:14 AM
+info: DELETE en /products- 7/27/2024, 11:16:14 AM
+info: DELETE en /products- 7/27/2024, 11:16:14 AM
+info: DELETE en /products- 7/27/2024, 11:16:17 AM
+info: DELETE en /products- 7/27/2024, 11:16:17 AM
+info: DELETE en /products- 7/27/2024, 11:16:48 AM
+info: DELETE en /products- 7/27/2024, 11:16:48 AM
+info: DELETE en /products- 7/27/2024, 11:16:51 AM
+info: DELETE en /products- 7/27/2024, 11:16:51 AM
+info: DELETE en /products- 7/27/2024, 11:16:59 AM
+info: DELETE en /products- 7/27/2024, 11:16:59 AM
+info: DELETE en /products- 7/27/2024, 11:17:11 AM
+info: DELETE en /products- 7/27/2024, 11:17:11 AM
+info: DELETE en /products- 7/27/2024, 11:18:00 AM
+info: DELETE en /products- 7/27/2024, 11:18:00 AM
+info: DELETE en /products- 7/27/2024, 11:18:04 AM
+info: DELETE en /products- 7/27/2024, 11:18:04 AM
+info: DELETE en /products- 7/27/2024, 11:18:04 AM
+info: DELETE en /products- 7/27/2024, 11:18:04 AM
+info: DELETE en /products- 7/27/2024, 11:18:04 AM
+info: DELETE en /products- 7/27/2024, 11:18:04 AM
+info: DELETE en /products- 7/27/2024, 11:18:04 AM
+info: DELETE en /products- 7/27/2024, 11:18:04 AM
+info: DELETE en /products- 7/27/2024, 11:18:04 AM
+info: DELETE en /products- 7/27/2024, 11:18:04 AM
+info: DELETE en /products- 7/27/2024, 11:18:33 AM
+info: DELETE en /products- 7/27/2024, 11:18:33 AM
+info: DELETE en /products- 7/27/2024, 11:18:35 AM
+info: DELETE en /products- 7/27/2024, 11:18:35 AM
+info: DELETE en /products- 7/27/2024, 11:18:35 AM
+info: DELETE en /products- 7/27/2024, 11:18:35 AM
+info: DELETE en /products- 7/27/2024, 11:18:35 AM
+info: DELETE en /products- 7/27/2024, 11:18:35 AM
+info: DELETE en /products- 7/27/2024, 11:18:36 AM
+info: DELETE en /products- 7/27/2024, 11:18:36 AM
+info: DELETE en /products- 7/27/2024, 11:18:36 AM
+info: DELETE en /products- 7/27/2024, 11:18:36 AM
+info: DELETE en /products- 7/27/2024, 11:18:57 AM
+info: DELETE en /products- 7/27/2024, 11:18:57 AM
+info: DELETE en /products- 7/27/2024, 11:22:19 AM
+info: DELETE en /products- 7/27/2024, 11:22:19 AM
+info: DELETE en /products- 7/27/2024, 11:22:33 AM
+info: DELETE en /products- 7/27/2024, 11:22:33 AM
+info: DELETE en /products- 7/27/2024, 11:22:34 AM
+info: DELETE en /products- 7/27/2024, 11:22:34 AM
+info: DELETE en /products- 7/27/2024, 11:22:34 AM
+info: DELETE en /products- 7/27/2024, 11:22:34 AM
+info: DELETE en /products- 7/27/2024, 11:22:46 AM
+info: DELETE en /products- 7/27/2024, 11:22:46 AM
+info: DELETE en /products- 7/27/2024, 11:23:00 AM
+info: DELETE en /products- 7/27/2024, 11:23:00 AM
+info: DELETE en /products- 7/27/2024, 11:23:00 AM
+info: DELETE en /products- 7/27/2024, 11:23:00 AM
+info: DELETE en /products- 7/27/2024, 11:23:00 AM
+info: DELETE en /products- 7/27/2024, 11:23:00 AM
+info: DELETE en /products- 7/27/2024, 11:23:45 AM
+info: DELETE en /products- 7/27/2024, 11:23:45 AM
+info: DELETE en /products- 7/27/2024, 11:27:59 AM
+info: DELETE en /products- 7/27/2024, 11:27:59 AM
+info: DELETE en /products- 7/27/2024, 11:28:53 AM
+info: DELETE en /products- 7/27/2024, 11:28:53 AM
+info: No ha ingresado un id valido
+info: No ha ingresado un id valido
+info: DELETE en /products- 7/27/2024, 11:28:56 AM
+info: DELETE en /products- 7/27/2024, 11:28:56 AM
+info: No ha ingresado un id valido
+info: No ha ingresado un id valido
+info: GET en /api/views/admin/products- 7/27/2024, 11:37:21 AM
+info: GET en /api/views/admin/products- 7/27/2024, 11:37:21 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 11:37:21 AM
+info: GET en /js/admin/adminProducts.js- 7/27/2024, 11:37:21 AM
+info: GET en /favicon.ico- 7/27/2024, 11:37:21 AM
+info: GET en /favicon.ico- 7/27/2024, 11:37:21 AM
+info: POST en /api/views/products- 7/27/2024, 11:37:24 AM
+info: POST en /api/views/products- 7/27/2024, 11:37:24 AM
+info: DELETE en /products- 7/27/2024, 11:37:41 AM
+info: DELETE en /products- 7/27/2024, 11:37:41 AM
+info: No ha ingresado un id valido
+info: No ha ingresado un id valido
+info: DELETE en /products- 7/27/2024, 11:37:43 AM
+info: DELETE en /products- 7/27/2024, 11:37:43 AM
+info: No ha ingresado un id valido
+info: No ha ingresado un id valido
+info: DELETE en /products- 7/27/2024, 11:38:41 AM
+info: DELETE en /products- 7/27/2024, 11:38:41 AM
+info: GET en /api/sessions/logout- 7/27/2024, 11:39:31 AM
+info: GET en /api/sessions/logout- 7/27/2024, 11:39:31 AM
+info: GET en /- 7/27/2024, 11:39:31 AM
+info: GET en /- 7/27/2024, 11:39:31 AM
+info: GET en /js/login.js- 7/27/2024, 11:39:31 AM
+info: GET en /js/login.js- 7/27/2024, 11:39:31 AM
+info: GET en /favicon.ico- 7/27/2024, 11:39:32 AM
+info: GET en /favicon.ico- 7/27/2024, 11:39:32 AM
+info: GET en /- 7/28/2024, 12:41:08 AM
+info: GET en /- 7/28/2024, 12:41:08 AM
+info: GET en /js/login.js- 7/28/2024, 12:41:08 AM
+info: GET en /js/login.js- 7/28/2024, 12:41:08 AM
+info: POST en /api/sessions/login- 7/28/2024, 12:41:18 AM
+info: POST en /api/sessions/login- 7/28/2024, 12:41:18 AM
+info: Inicio sesion correctamente, usuario email : premium@gmail.com
+info: Inicio sesion correctamente, usuario email : premium@gmail.com
+info: GET en /api/views/products- 7/28/2024, 12:41:18 AM
+info: GET en /api/views/products- 7/28/2024, 12:41:18 AM
+info: GET en /api/views/products- 7/28/2024, 12:41:18 AM
+info: GET en /api/views/products- 7/28/2024, 12:41:18 AM
+info: GET en /js/products.js- 7/28/2024, 12:41:18 AM
+info: GET en /js/products.js- 7/28/2024, 12:41:18 AM
+info: GET en /js/cart.js- 7/28/2024, 12:41:18 AM
+info: GET en /js/cart.js- 7/28/2024, 12:41:18 AM
+info: GET en /api/views/products/?sort=1- 7/28/2024, 12:43:02 AM
+info: GET en /api/views/products/?sort=1- 7/28/2024, 12:43:02 AM
+info: GET en /api/views/products/?sort=1- 7/28/2024, 12:43:02 AM
+info: GET en /api/views/products/?sort=1- 7/28/2024, 12:43:02 AM
+info: GET en /js/products.js- 7/28/2024, 12:43:02 AM
+info: GET en /js/products.js- 7/28/2024, 12:43:02 AM
+info: GET en /js/cart.js- 7/28/2024, 12:43:02 AM
+info: GET en /js/cart.js- 7/28/2024, 12:43:02 AM
+info: GET en /api/views/products/?sort=-1- 7/28/2024, 12:43:09 AM
+info: GET en /api/views/products/?sort=-1- 7/28/2024, 12:43:09 AM
+info: GET en /api/views/products/?sort=-1- 7/28/2024, 12:43:09 AM
+info: GET en /api/views/products/?sort=-1- 7/28/2024, 12:43:09 AM
+info: GET en /js/products.js- 7/28/2024, 12:43:09 AM
+info: GET en /js/products.js- 7/28/2024, 12:43:09 AM
+info: GET en /js/cart.js- 7/28/2024, 12:43:09 AM
+info: GET en /js/cart.js- 7/28/2024, 12:43:09 AM
+info: GET en /favicon.ico- 7/28/2024, 12:43:10 AM
+info: GET en /favicon.ico- 7/28/2024, 12:43:10 AM
+info: GET en /api/views/products/?sort=1- 7/28/2024, 12:43:23 AM
+info: GET en /api/views/products/?sort=1- 7/28/2024, 12:43:23 AM
+info: GET en /api/views/products/?sort=1- 7/28/2024, 12:43:23 AM
+info: GET en /api/views/products/?sort=1- 7/28/2024, 12:43:23 AM
+info: GET en /js/products.js- 7/28/2024, 12:43:23 AM
+info: GET en /js/products.js- 7/28/2024, 12:43:23 AM
+info: GET en /js/cart.js- 7/28/2024, 12:43:23 AM
+info: GET en /js/cart.js- 7/28/2024, 12:43:23 AM
+info: GET en /favicon.ico- 7/28/2024, 12:43:23 AM
+info: GET en /favicon.ico- 7/28/2024, 12:43:23 AM
+info: GET en /api/views/products/?sort=2- 7/28/2024, 12:43:32 AM
+info: GET en /api/views/products/?sort=2- 7/28/2024, 12:43:32 AM
+info: GET en /api/views/products/?sort=2- 7/28/2024, 12:43:32 AM
+info: GET en /api/views/products/?sort=2- 7/28/2024, 12:43:32 AM
+info: GET en /js/products.js- 7/28/2024, 12:43:32 AM
+info: GET en /js/products.js- 7/28/2024, 12:43:32 AM
+info: GET en /js/cart.js- 7/28/2024, 12:43:32 AM
+info: GET en /js/cart.js- 7/28/2024, 12:43:32 AM
+info: GET en /favicon.ico- 7/28/2024, 12:43:33 AM
+info: GET en /favicon.ico- 7/28/2024, 12:43:33 AM
+info: GET en /api/views/products/?sort=0- 7/28/2024, 12:43:37 AM
+info: GET en /api/views/products/?sort=0- 7/28/2024, 12:43:37 AM
+info: GET en /api/views/products/?sort=0- 7/28/2024, 12:43:37 AM
+info: GET en /api/views/products/?sort=0- 7/28/2024, 12:43:37 AM
+info: GET en /js/products.js- 7/28/2024, 12:43:37 AM
+info: GET en /js/products.js- 7/28/2024, 12:43:37 AM
+info: GET en /js/cart.js- 7/28/2024, 12:43:37 AM
+info: GET en /js/cart.js- 7/28/2024, 12:43:37 AM
+info: GET en /api/views/products/?sort=-1- 7/28/2024, 12:43:42 AM
+info: GET en /api/views/products/?sort=-1- 7/28/2024, 12:43:42 AM
+info: GET en /api/views/products/?sort=-1- 7/28/2024, 12:43:42 AM
+info: GET en /api/views/products/?sort=-1- 7/28/2024, 12:43:42 AM
+info: GET en /js/products.js- 7/28/2024, 12:43:42 AM
+info: GET en /js/products.js- 7/28/2024, 12:43:42 AM
+info: GET en /js/cart.js- 7/28/2024, 12:43:42 AM
+info: GET en /js/cart.js- 7/28/2024, 12:43:42 AM
+info: GET en /favicon.ico- 7/28/2024, 12:43:42 AM
+info: GET en /favicon.ico- 7/28/2024, 12:43:42 AM
+info: GET en /api/views/products/?sort=-1- 7/28/2024, 12:44:16 AM
+info: GET en /api/views/products/?sort=-1- 7/28/2024, 12:44:16 AM
+info: GET en /api/views/products/?sort=-1- 7/28/2024, 12:44:16 AM
+info: GET en /api/views/products/?sort=-1- 7/28/2024, 12:44:16 AM
+info: GET en /js/products.js- 7/28/2024, 12:44:16 AM
+info: GET en /js/products.js- 7/28/2024, 12:44:16 AM
+info: GET en /js/cart.js- 7/28/2024, 12:44:16 AM
+info: GET en /js/cart.js- 7/28/2024, 12:44:16 AM
+info: GET en /favicon.ico- 7/28/2024, 12:44:16 AM
+info: GET en /favicon.ico- 7/28/2024, 12:44:16 AM
+info: GET en /api/views/products/?sort=1- 7/28/2024, 12:44:21 AM
+info: GET en /api/views/products/?sort=1- 7/28/2024, 12:44:21 AM
+info: GET en /api/views/products/?sort=1- 7/28/2024, 12:44:22 AM
+info: GET en /api/views/products/?sort=1- 7/28/2024, 12:44:22 AM
+info: GET en /js/products.js- 7/28/2024, 12:44:22 AM
+info: GET en /js/products.js- 7/28/2024, 12:44:22 AM
+info: GET en /js/cart.js- 7/28/2024, 12:44:22 AM
+info: GET en /js/cart.js- 7/28/2024, 12:44:22 AM
+info: GET en /favicon.ico- 7/28/2024, 12:44:22 AM
+info: GET en /favicon.ico- 7/28/2024, 12:44:22 AM
+info: GET en /api/views/products/?sort=-1- 7/28/2024, 12:44:29 AM
+info: GET en /api/views/products/?sort=-1- 7/28/2024, 12:44:29 AM
+info: GET en /api/views/products/?sort=-1- 7/28/2024, 12:44:29 AM
+info: GET en /api/views/products/?sort=-1- 7/28/2024, 12:44:29 AM
+info: GET en /js/products.js- 7/28/2024, 12:44:29 AM
+info: GET en /js/products.js- 7/28/2024, 12:44:29 AM
+info: GET en /js/cart.js- 7/28/2024, 12:44:29 AM
+info: GET en /js/cart.js- 7/28/2024, 12:44:29 AM
+info: GET en /favicon.ico- 7/28/2024, 12:44:30 AM
+info: GET en /favicon.ico- 7/28/2024, 12:44:30 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0220bda9e82892bdbcb8- 7/28/2024, 12:45:50 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0220bda9e82892bdbcb8- 7/28/2024, 12:45:50 AM
+info: GET en /api/views/products/?sort=-1- 7/28/2024, 12:46:14 AM
+info: GET en /api/views/products/?sort=-1- 7/28/2024, 12:46:14 AM
+info: GET en /api/views/products/?sort=-1- 7/28/2024, 12:46:15 AM
+info: GET en /api/views/products/?sort=-1- 7/28/2024, 12:46:15 AM
+info: GET en /js/products.js- 7/28/2024, 12:46:15 AM
+info: GET en /js/products.js- 7/28/2024, 12:46:15 AM
+info: GET en /js/cart.js- 7/28/2024, 12:46:15 AM
+info: GET en /js/cart.js- 7/28/2024, 12:46:15 AM
+info: GET en /favicon.ico- 7/28/2024, 12:46:15 AM
+info: GET en /favicon.ico- 7/28/2024, 12:46:15 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0292bda9e82892bdbcd4- 7/28/2024, 12:46:17 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0292bda9e82892bdbcd4- 7/28/2024, 12:46:17 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0292bda9e82892bdbcd4- 7/28/2024, 12:48:13 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0292bda9e82892bdbcd4- 7/28/2024, 12:48:13 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0220bda9e82892bdbcb8- 7/28/2024, 12:49:05 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0220bda9e82892bdbcb8- 7/28/2024, 12:49:05 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0207bda9e82892bdbcae- 7/28/2024, 12:50:57 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0207bda9e82892bdbcae- 7/28/2024, 12:50:57 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0220bda9e82892bdbcb8- 7/28/2024, 12:51:56 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0220bda9e82892bdbcb8- 7/28/2024, 12:51:56 AM
+info: GET en /api/views/product/664b0292bda9e82892bdbcd4- 7/28/2024, 12:53:04 AM
+info: GET en /api/views/product/664b0292bda9e82892bdbcd4- 7/28/2024, 12:53:04 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0292bda9e82892bdbcd4- 7/28/2024, 12:53:04 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0292bda9e82892bdbcd4- 7/28/2024, 12:53:04 AM
+info: GET en /favicon.ico- 7/28/2024, 12:53:05 AM
+info: GET en /favicon.ico- 7/28/2024, 12:53:05 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0220bda9e82892bdbcb8- 7/28/2024, 12:53:08 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0220bda9e82892bdbcb8- 7/28/2024, 12:53:08 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0220bda9e82892bdbcb8- 7/28/2024, 12:54:45 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0220bda9e82892bdbcb8- 7/28/2024, 12:54:45 AM
+info: GET en /api/sessions/logout- 7/28/2024, 12:55:02 AM
+info: GET en /api/sessions/logout- 7/28/2024, 12:55:02 AM
+info: GET en /- 7/28/2024, 12:55:02 AM
+info: GET en /- 7/28/2024, 12:55:02 AM
+info: GET en /js/login.js- 7/28/2024, 12:55:02 AM
+info: GET en /js/login.js- 7/28/2024, 12:55:02 AM
+info: POST en /api/sessions/login- 7/28/2024, 12:55:09 AM
+info: POST en /api/sessions/login- 7/28/2024, 12:55:09 AM
+info: Inicio sesion correctamente, usuario email : premium@gmail.com
+info: Inicio sesion correctamente, usuario email : premium@gmail.com
+info: GET en /api/views/products- 7/28/2024, 12:55:09 AM
+info: GET en /api/views/products- 7/28/2024, 12:55:09 AM
+info: GET en /api/views/products- 7/28/2024, 12:55:09 AM
+info: GET en /api/views/products- 7/28/2024, 12:55:09 AM
+info: GET en /js/products.js- 7/28/2024, 12:55:09 AM
+info: GET en /js/products.js- 7/28/2024, 12:55:09 AM
+info: GET en /js/cart.js- 7/28/2024, 12:55:09 AM
+info: GET en /js/cart.js- 7/28/2024, 12:55:09 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0292bda9e82892bdbcd4- 7/28/2024, 12:55:13 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0292bda9e82892bdbcd4- 7/28/2024, 12:55:13 AM
+info: GET en /api/sessions/logout- 7/28/2024, 12:56:05 AM
+info: GET en /api/sessions/logout- 7/28/2024, 12:56:05 AM
+info: GET en /- 7/28/2024, 12:56:05 AM
+info: GET en /- 7/28/2024, 12:56:05 AM
+info: GET en /js/login.js- 7/28/2024, 12:56:05 AM
+info: GET en /js/login.js- 7/28/2024, 12:56:05 AM
+info: POST en /api/sessions/login- 7/28/2024, 12:56:57 AM
+info: POST en /api/sessions/login- 7/28/2024, 12:56:57 AM
+info: Inicio sesion correctamente, usuario email : premium@gmail.com
+info: Inicio sesion correctamente, usuario email : premium@gmail.com
+info: GET en /api/views/products- 7/28/2024, 12:56:57 AM
+info: GET en /api/views/products- 7/28/2024, 12:56:57 AM
+info: GET en /js/products.js- 7/28/2024, 12:56:57 AM
+info: GET en /js/products.js- 7/28/2024, 12:56:57 AM
+info: GET en /js/cart.js- 7/28/2024, 12:56:57 AM
+info: GET en /js/cart.js- 7/28/2024, 12:56:57 AM
+info: GET en /api/views/products- 7/28/2024, 12:56:57 AM
+info: GET en /api/views/products- 7/28/2024, 12:56:57 AM
+info: GET en /api/views/products- 7/28/2024, 12:56:58 AM
+info: GET en /api/views/products- 7/28/2024, 12:56:58 AM
+info: GET en /favicon.ico- 7/28/2024, 12:56:58 AM
+info: GET en /favicon.ico- 7/28/2024, 12:56:58 AM
+info: GET en /api/views/products- 7/28/2024, 12:57:07 AM
+info: GET en /api/views/products- 7/28/2024, 12:57:07 AM
+info: GET en /api/views/products- 7/28/2024, 12:57:07 AM
+info: GET en /api/views/products- 7/28/2024, 12:57:07 AM
+info: GET en /js/products.js- 7/28/2024, 12:57:07 AM
+info: GET en /js/products.js- 7/28/2024, 12:57:07 AM
+info: GET en /js/cart.js- 7/28/2024, 12:57:07 AM
+info: GET en /js/cart.js- 7/28/2024, 12:57:07 AM
+info: GET en /api/views/products- 7/28/2024, 12:57:08 AM
+info: GET en /api/views/products- 7/28/2024, 12:57:08 AM
+info: GET en /favicon.ico- 7/28/2024, 12:57:09 AM
+info: GET en /favicon.ico- 7/28/2024, 12:57:09 AM
+info: GET en /api/views/product/664b0220bda9e82892bdbcb8- 7/28/2024, 12:57:35 AM
+info: GET en /api/views/product/664b0220bda9e82892bdbcb8- 7/28/2024, 12:57:35 AM
+info: GET en /favicon.ico- 7/28/2024, 12:57:36 AM
+info: GET en /favicon.ico- 7/28/2024, 12:57:36 AM
+info: GET en /api/views/products- 7/28/2024, 12:57:37 AM
+info: GET en /api/views/products- 7/28/2024, 12:57:37 AM
+info: GET en /api/views/products- 7/28/2024, 12:57:38 AM
+info: GET en /api/views/products- 7/28/2024, 12:57:38 AM
+info: GET en /js/products.js- 7/28/2024, 12:57:38 AM
+info: GET en /js/products.js- 7/28/2024, 12:57:38 AM
+info: GET en /js/cart.js- 7/28/2024, 12:57:38 AM
+info: GET en /js/cart.js- 7/28/2024, 12:57:38 AM
+info: GET en /api/views/products- 7/28/2024, 12:57:38 AM
+info: GET en /api/views/products- 7/28/2024, 12:57:38 AM
+info: GET en /favicon.ico- 7/28/2024, 12:57:39 AM
+info: GET en /favicon.ico- 7/28/2024, 12:57:39 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0207bda9e82892bdbcae- 7/28/2024, 12:57:39 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0207bda9e82892bdbcae- 7/28/2024, 12:57:39 AM
+info: GET en /api/sessions/logout- 7/28/2024, 12:58:01 AM
+info: GET en /api/sessions/logout- 7/28/2024, 12:58:01 AM
+info: GET en /- 7/28/2024, 12:58:01 AM
+info: GET en /- 7/28/2024, 12:58:01 AM
+info: GET en /js/login.js- 7/28/2024, 12:58:01 AM
+info: GET en /js/login.js- 7/28/2024, 12:58:01 AM
+info: GET en /favicon.ico- 7/28/2024, 12:58:02 AM
+info: GET en /favicon.ico- 7/28/2024, 12:58:02 AM
+info: POST en /api/sessions/login- 7/28/2024, 12:58:11 AM
+info: POST en /api/sessions/login- 7/28/2024, 12:58:11 AM
+warning: Ingreso un email no valido
+warning: Ingreso un email no valido
+error: undefined {"cause":"Credenciales invalidas","code":2,"name":"Error al iniciar sesion"}
+error: undefined {"cause":"Credenciales invalidas","code":2,"name":"Error al iniciar sesion"}
+info: POST en /api/sessions/login- 7/28/2024, 12:58:15 AM
+info: POST en /api/sessions/login- 7/28/2024, 12:58:15 AM
+info: Inicio sesion correctamente, usuario email : gonzaloismael2@gmail.com
+info: Inicio sesion correctamente, usuario email : gonzaloismael2@gmail.com
+info: GET en /api/views/products- 7/28/2024, 12:58:16 AM
+info: GET en /api/views/products- 7/28/2024, 12:58:16 AM
+info: POST en /api/sessions/login- 7/28/2024, 12:58:16 AM
+info: POST en /api/sessions/login- 7/28/2024, 12:58:16 AM
+info: Inicio sesion correctamente, usuario email : gonzaloismael2@gmail.com
+info: Inicio sesion correctamente, usuario email : gonzaloismael2@gmail.com
+info: GET en /api/views/products- 7/28/2024, 12:58:16 AM
+info: GET en /api/views/products- 7/28/2024, 12:58:16 AM
+info: GET en /api/views/products- 7/28/2024, 12:58:17 AM
+info: GET en /api/views/products- 7/28/2024, 12:58:17 AM
+info: GET en /js/products.js- 7/28/2024, 12:58:17 AM
+info: GET en /js/products.js- 7/28/2024, 12:58:17 AM
+info: GET en /js/cart.js- 7/28/2024, 12:58:17 AM
+info: GET en /js/cart.js- 7/28/2024, 12:58:17 AM
+info: GET en /favicon.ico- 7/28/2024, 12:58:17 AM
+info: GET en /favicon.ico- 7/28/2024, 12:58:17 AM
+info: POST en /api/carts/668cf3c53e902883e00cccd4/product/664b0292bda9e82892bdbcd4- 7/28/2024, 12:58:21 AM
+info: POST en /api/carts/668cf3c53e902883e00cccd4/product/664b0292bda9e82892bdbcd4- 7/28/2024, 12:58:21 AM
+info: POST en /api/carts/668cf3c53e902883e00cccd4/product/664b0220bda9e82892bdbcb8- 7/28/2024, 12:58:27 AM
+info: POST en /api/carts/668cf3c53e902883e00cccd4/product/664b0220bda9e82892bdbcb8- 7/28/2024, 12:58:27 AM
+info: POST en /api/carts/668cf3c53e902883e00cccd4/product/664b0292bda9e82892bdbcd4- 7/28/2024, 1:01:47 AM
+info: POST en /api/carts/668cf3c53e902883e00cccd4/product/664b0292bda9e82892bdbcd4- 7/28/2024, 1:01:47 AM
+info: POST en /api/carts/668cf3c53e902883e00cccd4/product/664b0292bda9e82892bdbcd4- 7/28/2024, 1:06:51 AM
+info: POST en /api/carts/668cf3c53e902883e00cccd4/product/664b0292bda9e82892bdbcd4- 7/28/2024, 1:06:51 AM
+info: POST en /api/carts/668cf3c53e902883e00cccd4/product/664b0220bda9e82892bdbcb8- 7/28/2024, 1:07:17 AM
+info: POST en /api/carts/668cf3c53e902883e00cccd4/product/664b0220bda9e82892bdbcb8- 7/28/2024, 1:07:17 AM
+info: POST en /api/carts/668cf3c53e902883e00cccd4/product/664b0292bda9e82892bdbcd4- 7/28/2024, 1:07:41 AM
+info: POST en /api/carts/668cf3c53e902883e00cccd4/product/664b0292bda9e82892bdbcd4- 7/28/2024, 1:07:41 AM
+info: POST en /api/carts/668cf3c53e902883e00cccd4/product/664b0292bda9e82892bdbcd4- 7/28/2024, 1:08:12 AM
+info: POST en /api/carts/668cf3c53e902883e00cccd4/product/664b0292bda9e82892bdbcd4- 7/28/2024, 1:08:12 AM
+info: POST en /api/carts/668cf3c53e902883e00cccd4/product/664b0292bda9e82892bdbcd4- 7/28/2024, 1:08:30 AM
+info: POST en /api/carts/668cf3c53e902883e00cccd4/product/664b0292bda9e82892bdbcd4- 7/28/2024, 1:08:30 AM
+info: POST en /api/carts/668cf3c53e902883e00cccd4/product/664b0292bda9e82892bdbcd4- 7/28/2024, 1:10:29 AM
+info: POST en /api/carts/668cf3c53e902883e00cccd4/product/664b0292bda9e82892bdbcd4- 7/28/2024, 1:10:29 AM
+info: GET en /api/views/products- 7/28/2024, 1:10:37 AM
+info: GET en /api/views/products- 7/28/2024, 1:10:37 AM
+info: GET en /js/products.js- 7/28/2024, 1:10:37 AM
+info: GET en /js/products.js- 7/28/2024, 1:10:37 AM
+info: GET en /js/cart.js- 7/28/2024, 1:10:37 AM
+info: GET en /js/cart.js- 7/28/2024, 1:10:37 AM
+info: GET en /api/views/products- 7/28/2024, 1:10:38 AM
+info: GET en /api/views/products- 7/28/2024, 1:10:38 AM
+info: GET en /favicon.ico- 7/28/2024, 1:10:38 AM
+info: GET en /favicon.ico- 7/28/2024, 1:10:38 AM
+info: DELETE en /api/carts/668cf3c53e902883e00cccd4/product/664b0207bda9e82892bdbcb4- 7/28/2024, 1:10:41 AM
+info: DELETE en /api/carts/668cf3c53e902883e00cccd4/product/664b0207bda9e82892bdbcb4- 7/28/2024, 1:10:41 AM
+info: DELETE en /api/carts/668cf3c53e902883e00cccd4/product/664b0220bda9e82892bdbcb8- 7/28/2024, 1:10:45 AM
+info: DELETE en /api/carts/668cf3c53e902883e00cccd4/product/664b0220bda9e82892bdbcb8- 7/28/2024, 1:10:45 AM
+info: POST en /api/carts/668cf3c53e902883e00cccd4/product/664b0292bda9e82892bdbcd4- 7/28/2024, 1:10:48 AM
+info: POST en /api/carts/668cf3c53e902883e00cccd4/product/664b0292bda9e82892bdbcd4- 7/28/2024, 1:10:48 AM
+info: GET en /api/views/product/664b0220bda9e82892bdbcb8- 7/28/2024, 1:10:51 AM
+info: GET en /api/views/product/664b0220bda9e82892bdbcb8- 7/28/2024, 1:10:51 AM
+info: GET en /favicon.ico- 7/28/2024, 1:10:52 AM
+info: GET en /favicon.ico- 7/28/2024, 1:10:52 AM
+info: GET en /api/views/products- 7/28/2024, 1:10:54 AM
+info: GET en /api/views/products- 7/28/2024, 1:10:54 AM
+info: GET en /api/views/products- 7/28/2024, 1:10:54 AM
+info: GET en /api/views/products- 7/28/2024, 1:10:54 AM
+info: GET en /js/products.js- 7/28/2024, 1:10:54 AM
+info: GET en /js/products.js- 7/28/2024, 1:10:54 AM
+info: GET en /js/cart.js- 7/28/2024, 1:10:54 AM
+info: GET en /js/cart.js- 7/28/2024, 1:10:54 AM
+info: GET en /favicon.ico- 7/28/2024, 1:10:55 AM
+info: GET en /favicon.ico- 7/28/2024, 1:10:55 AM
+info: POST en /api/carts/668cf3c53e902883e00cccd4/product/664b0220bda9e82892bdbcb8- 7/28/2024, 1:10:56 AM
+info: POST en /api/carts/668cf3c53e902883e00cccd4/product/664b0220bda9e82892bdbcb8- 7/28/2024, 1:10:56 AM
+info: POST en /api/carts/668cf3c53e902883e00cccd4/product/664b0220bda9e82892bdbcb8- 7/28/2024, 1:11:01 AM
+info: POST en /api/carts/668cf3c53e902883e00cccd4/product/664b0220bda9e82892bdbcb8- 7/28/2024, 1:11:01 AM
+info: GET en /api/sessions/logout- 7/28/2024, 1:11:04 AM
+info: GET en /api/sessions/logout- 7/28/2024, 1:11:04 AM
+info: GET en /- 7/28/2024, 1:11:04 AM
+info: GET en /- 7/28/2024, 1:11:04 AM
+info: GET en /js/login.js- 7/28/2024, 1:11:04 AM
+info: GET en /js/login.js- 7/28/2024, 1:11:04 AM
+info: GET en /favicon.ico- 7/28/2024, 1:11:05 AM
+info: GET en /favicon.ico- 7/28/2024, 1:11:05 AM
+info: POST en /api/sessions/login- 7/28/2024, 1:11:12 AM
+info: POST en /api/sessions/login- 7/28/2024, 1:11:12 AM
+info: Inicio sesion correctamente, usuario email : premium@gmail.com
+info: Inicio sesion correctamente, usuario email : premium@gmail.com
+info: GET en /api/views/products- 7/28/2024, 1:11:12 AM
+info: GET en /api/views/products- 7/28/2024, 1:11:12 AM
+info: GET en /api/views/products- 7/28/2024, 1:11:12 AM
+info: GET en /api/views/products- 7/28/2024, 1:11:12 AM
+info: GET en /js/products.js- 7/28/2024, 1:11:12 AM
+info: GET en /js/products.js- 7/28/2024, 1:11:12 AM
+info: GET en /js/cart.js- 7/28/2024, 1:11:12 AM
+info: GET en /js/cart.js- 7/28/2024, 1:11:12 AM
+info: GET en /api/views/products- 7/28/2024, 1:11:13 AM
+info: GET en /api/views/products- 7/28/2024, 1:11:13 AM
+info: GET en /favicon.ico- 7/28/2024, 1:11:13 AM
+info: GET en /favicon.ico- 7/28/2024, 1:11:13 AM
+info: GET en /api/views/admin/products- 7/28/2024, 1:20:16 AM
+info: GET en /api/views/admin/products- 7/28/2024, 1:20:16 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 1:20:16 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 1:20:16 AM
+info: GET en /favicon.ico- 7/28/2024, 1:20:16 AM
+info: GET en /favicon.ico- 7/28/2024, 1:20:16 AM
+info: POST en /api/views/products- 7/28/2024, 1:20:51 AM
+info: POST en /api/views/products- 7/28/2024, 1:20:51 AM
+info: GET en /api/views/products- 7/28/2024, 1:21:02 AM
+info: GET en /api/views/products- 7/28/2024, 1:21:02 AM
+info: GET en /js/products.js- 7/28/2024, 1:21:02 AM
+info: GET en /js/products.js- 7/28/2024, 1:21:02 AM
+info: GET en /js/cart.js- 7/28/2024, 1:21:02 AM
+info: GET en /js/cart.js- 7/28/2024, 1:21:02 AM
+info: GET en /api/views/products- 7/28/2024, 1:21:02 AM
+info: GET en /api/views/products- 7/28/2024, 1:21:02 AM
+info: GET en /favicon.ico- 7/28/2024, 1:21:03 AM
+info: GET en /favicon.ico- 7/28/2024, 1:21:03 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0220bda9e82892bdbcb8- 7/28/2024, 1:21:29 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0220bda9e82892bdbcb8- 7/28/2024, 1:21:29 AM
+info: DELETE en /api/carts/66a4b8f9fa14924e6d8e772a- 7/28/2024, 1:21:40 AM
+info: DELETE en /api/carts/66a4b8f9fa14924e6d8e772a- 7/28/2024, 1:21:40 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0220bda9e82892bdbcb8- 7/28/2024, 1:23:47 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0220bda9e82892bdbcb8- 7/28/2024, 1:23:47 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0292bda9e82892bdbcd4- 7/28/2024, 1:24:21 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0292bda9e82892bdbcd4- 7/28/2024, 1:24:21 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0220bda9e82892bdbcb8- 7/28/2024, 1:24:25 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0220bda9e82892bdbcb8- 7/28/2024, 1:24:25 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0292bda9e82892bdbcd4- 7/28/2024, 1:25:30 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0292bda9e82892bdbcd4- 7/28/2024, 1:25:30 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0220bda9e82892bdbcb8- 7/28/2024, 1:25:34 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0220bda9e82892bdbcb8- 7/28/2024, 1:25:34 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0292bda9e82892bdbcd4- 7/28/2024, 1:25:49 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0292bda9e82892bdbcd4- 7/28/2024, 1:25:49 AM
+info: GET en /api/views/admin/products- 7/28/2024, 1:26:11 AM
+info: GET en /api/views/admin/products- 7/28/2024, 1:26:11 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 1:26:11 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 1:26:11 AM
+info: GET en /favicon.ico- 7/28/2024, 1:26:11 AM
+info: GET en /favicon.ico- 7/28/2024, 1:26:11 AM
+info: GET en /api/sessions/logout- 7/28/2024, 1:28:29 AM
+info: GET en /api/sessions/logout- 7/28/2024, 1:28:29 AM
+info: GET en /- 7/28/2024, 1:28:29 AM
+info: GET en /- 7/28/2024, 1:28:29 AM
+info: GET en /js/login.js- 7/28/2024, 1:28:29 AM
+info: GET en /js/login.js- 7/28/2024, 1:28:29 AM
+info: GET en /favicon.ico- 7/28/2024, 1:28:30 AM
+info: GET en /favicon.ico- 7/28/2024, 1:28:30 AM
+info: POST en /api/sessions/login- 7/28/2024, 1:31:19 AM
+info: POST en /api/sessions/login- 7/28/2024, 1:31:19 AM
+info: Inicio sesion correctamente, usuario email : premium@gmail.com
+info: Inicio sesion correctamente, usuario email : premium@gmail.com
+info: GET en /api/views/products- 7/28/2024, 1:31:19 AM
+info: GET en /api/views/products- 7/28/2024, 1:31:19 AM
+info: GET en /js/products.js- 7/28/2024, 1:31:19 AM
+info: GET en /js/products.js- 7/28/2024, 1:31:19 AM
+info: GET en /js/cart.js- 7/28/2024, 1:31:19 AM
+info: GET en /js/cart.js- 7/28/2024, 1:31:19 AM
+info: GET en /api/views/products- 7/28/2024, 1:31:20 AM
+info: GET en /api/views/products- 7/28/2024, 1:31:20 AM
+info: GET en /favicon.ico- 7/28/2024, 1:31:20 AM
+info: GET en /favicon.ico- 7/28/2024, 1:31:20 AM
+info: GET en /api/views/products- 7/28/2024, 1:38:09 AM
+info: GET en /api/views/products- 7/28/2024, 1:38:09 AM
+info: GET en /js/products.js- 7/28/2024, 1:38:10 AM
+info: GET en /js/products.js- 7/28/2024, 1:38:10 AM
+info: GET en /js/cart.js- 7/28/2024, 1:38:10 AM
+info: GET en /js/cart.js- 7/28/2024, 1:38:10 AM
+info: GET en /api/views/products- 7/28/2024, 1:38:10 AM
+info: GET en /api/views/products- 7/28/2024, 1:38:10 AM
+info: GET en /api/views/products- 7/28/2024, 1:38:11 AM
+info: GET en /api/views/products- 7/28/2024, 1:38:11 AM
+info: GET en /favicon.ico- 7/28/2024, 1:38:11 AM
+info: GET en /favicon.ico- 7/28/2024, 1:38:11 AM
+info: GET en /api/views/products- 7/28/2024, 1:40:31 AM
+info: GET en /api/views/products- 7/28/2024, 1:40:31 AM
+info: GET en /js/products.js- 7/28/2024, 1:40:31 AM
+info: GET en /js/products.js- 7/28/2024, 1:40:31 AM
+info: GET en /js/cart.js- 7/28/2024, 1:40:31 AM
+info: GET en /js/cart.js- 7/28/2024, 1:40:31 AM
+info: GET en /api/views/products- 7/28/2024, 1:40:31 AM
+info: GET en /api/views/products- 7/28/2024, 1:40:31 AM
+info: GET en /api/views/products- 7/28/2024, 1:40:33 AM
+info: GET en /api/views/products- 7/28/2024, 1:40:33 AM
+info: GET en /favicon.ico- 7/28/2024, 1:40:33 AM
+info: GET en /favicon.ico- 7/28/2024, 1:40:33 AM
+info: GET en /api/views/products- 7/28/2024, 2:46:02 AM
+info: GET en /api/views/products- 7/28/2024, 2:46:02 AM
+info: GET en /js/products.js- 7/28/2024, 2:46:02 AM
+info: GET en /js/products.js- 7/28/2024, 2:46:02 AM
+info: GET en /js/cart.js- 7/28/2024, 2:46:02 AM
+info: GET en /js/cart.js- 7/28/2024, 2:46:02 AM
+info: GET en /api/views/products- 7/28/2024, 2:46:02 AM
+info: GET en /api/views/products- 7/28/2024, 2:46:02 AM
+info: GET en /api/views/products- 7/28/2024, 2:46:03 AM
+info: GET en /api/views/products- 7/28/2024, 2:46:03 AM
+info: GET en /favicon.ico- 7/28/2024, 2:46:03 AM
+info: GET en /favicon.ico- 7/28/2024, 2:46:03 AM
+info: GET en /api/views/products- 7/28/2024, 2:46:27 AM
+info: GET en /api/views/products- 7/28/2024, 2:46:27 AM
+info: GET en /api/views/products- 7/28/2024, 2:46:28 AM
+info: GET en /api/views/products- 7/28/2024, 2:46:28 AM
+info: GET en /js/products.js- 7/28/2024, 2:46:28 AM
+info: GET en /js/products.js- 7/28/2024, 2:46:28 AM
+info: GET en /js/cart.js- 7/28/2024, 2:46:28 AM
+info: GET en /js/cart.js- 7/28/2024, 2:46:28 AM
+info: GET en /api/views/products- 7/28/2024, 2:46:28 AM
+info: GET en /api/views/products- 7/28/2024, 2:46:28 AM
+info: GET en /favicon.ico- 7/28/2024, 2:46:29 AM
+info: GET en /favicon.ico- 7/28/2024, 2:46:29 AM
+info: GET en /api/views/products- 7/28/2024, 2:47:14 AM
+info: GET en /api/views/products- 7/28/2024, 2:47:14 AM
+info: GET en /js/products.js- 7/28/2024, 2:47:14 AM
+info: GET en /js/products.js- 7/28/2024, 2:47:14 AM
+info: GET en /js/cart.js- 7/28/2024, 2:47:14 AM
+info: GET en /js/cart.js- 7/28/2024, 2:47:14 AM
+info: GET en /api/views/products- 7/28/2024, 2:47:15 AM
+info: GET en /api/views/products- 7/28/2024, 2:47:15 AM
+info: GET en /favicon.ico- 7/28/2024, 2:47:15 AM
+info: GET en /favicon.ico- 7/28/2024, 2:47:15 AM
+info: GET en /api/views/products- 7/28/2024, 2:50:08 AM
+info: GET en /api/views/products- 7/28/2024, 2:50:08 AM
+info: GET en /js/products.js- 7/28/2024, 2:50:09 AM
+info: GET en /js/products.js- 7/28/2024, 2:50:09 AM
+info: GET en /js/cart.js- 7/28/2024, 2:50:09 AM
+info: GET en /js/cart.js- 7/28/2024, 2:50:09 AM
+info: GET en /api/views/products- 7/28/2024, 2:50:09 AM
+info: GET en /api/views/products- 7/28/2024, 2:50:09 AM
+info: GET en /favicon.ico- 7/28/2024, 2:50:09 AM
+info: GET en /favicon.ico- 7/28/2024, 2:50:09 AM
+info: GET en /api/views/products- 7/28/2024, 2:51:36 AM
+info: GET en /api/views/products- 7/28/2024, 2:51:36 AM
+info: GET en /js/products.js- 7/28/2024, 2:51:37 AM
+info: GET en /js/products.js- 7/28/2024, 2:51:37 AM
+info: GET en /js/cart.js- 7/28/2024, 2:51:37 AM
+info: GET en /js/cart.js- 7/28/2024, 2:51:37 AM
+info: GET en /api/views/products- 7/28/2024, 2:51:37 AM
+info: GET en /api/views/products- 7/28/2024, 2:51:37 AM
+info: GET en /favicon.ico- 7/28/2024, 2:51:37 AM
+info: GET en /favicon.ico- 7/28/2024, 2:51:37 AM
+info: GET en /api/views/products- 7/28/2024, 2:52:00 AM
+info: GET en /api/views/products- 7/28/2024, 2:52:00 AM
+info: GET en /api/views/products- 7/28/2024, 2:52:00 AM
+info: GET en /api/views/products- 7/28/2024, 2:52:00 AM
+info: GET en /js/products.js- 7/28/2024, 2:52:00 AM
+info: GET en /js/products.js- 7/28/2024, 2:52:00 AM
+info: GET en /js/cart.js- 7/28/2024, 2:52:00 AM
+info: GET en /js/cart.js- 7/28/2024, 2:52:00 AM
+info: GET en /api/views/products- 7/28/2024, 2:52:01 AM
+info: GET en /api/views/products- 7/28/2024, 2:52:01 AM
+info: GET en /favicon.ico- 7/28/2024, 2:52:01 AM
+info: GET en /favicon.ico- 7/28/2024, 2:52:01 AM
+info: GET en /api/views/products- 7/28/2024, 2:52:23 AM
+info: GET en /api/views/products- 7/28/2024, 2:52:23 AM
+info: GET en /favicon.ico- 7/28/2024, 2:52:23 AM
+info: GET en /favicon.ico- 7/28/2024, 2:52:23 AM
+info: GET en /api/views/products- 7/28/2024, 2:52:32 AM
+info: GET en /api/views/products- 7/28/2024, 2:52:32 AM
+info: GET en /js/cart.js- 7/28/2024, 2:52:32 AM
+info: GET en /js/cart.js- 7/28/2024, 2:52:32 AM
+info: GET en /js/products.js- 7/28/2024, 2:52:32 AM
+info: GET en /js/products.js- 7/28/2024, 2:52:32 AM
+info: GET en /api/views/products- 7/28/2024, 2:52:33 AM
+info: GET en /api/views/products- 7/28/2024, 2:52:33 AM
+info: GET en /api/views/products- 7/28/2024, 2:52:33 AM
+info: GET en /api/views/products- 7/28/2024, 2:52:33 AM
+info: GET en /favicon.ico- 7/28/2024, 2:52:33 AM
+info: GET en /favicon.ico- 7/28/2024, 2:52:33 AM
+info: GET en /api/views/products- 7/28/2024, 2:52:53 AM
+info: GET en /api/views/products- 7/28/2024, 2:52:53 AM
+info: GET en /api/views/products- 7/28/2024, 2:52:54 AM
+info: GET en /api/views/products- 7/28/2024, 2:52:54 AM
+info: GET en /js/products.js- 7/28/2024, 2:52:54 AM
+info: GET en /js/products.js- 7/28/2024, 2:52:54 AM
+info: GET en /js/cart.js- 7/28/2024, 2:52:54 AM
+info: GET en /js/cart.js- 7/28/2024, 2:52:54 AM
+info: GET en /api/views/products- 7/28/2024, 2:52:56 AM
+info: GET en /api/views/products- 7/28/2024, 2:52:56 AM
+info: GET en /favicon.ico- 7/28/2024, 2:52:57 AM
+info: GET en /favicon.ico- 7/28/2024, 2:52:57 AM
+info: GET en /api/views/products- 7/28/2024, 2:53:44 AM
+info: GET en /api/views/products- 7/28/2024, 2:53:44 AM
+info: GET en /js/products.js- 7/28/2024, 2:53:45 AM
+info: GET en /js/products.js- 7/28/2024, 2:53:45 AM
+info: GET en /js/cart.js- 7/28/2024, 2:53:45 AM
+info: GET en /js/cart.js- 7/28/2024, 2:53:45 AM
+info: GET en /api/views/products- 7/28/2024, 2:53:45 AM
+info: GET en /api/views/products- 7/28/2024, 2:53:45 AM
+info: GET en /api/views/products- 7/28/2024, 2:53:47 AM
+info: GET en /api/views/products- 7/28/2024, 2:53:47 AM
+info: GET en /favicon.ico- 7/28/2024, 2:53:47 AM
+info: GET en /favicon.ico- 7/28/2024, 2:53:47 AM
+info: GET en /api/views/products- 7/28/2024, 2:57:16 AM
+info: GET en /api/views/products- 7/28/2024, 2:57:16 AM
+info: GET en /favicon.ico- 7/28/2024, 2:57:16 AM
+info: GET en /favicon.ico- 7/28/2024, 2:57:16 AM
+info: GET en /api/views/products- 7/28/2024, 2:57:23 AM
+info: GET en /api/views/products- 7/28/2024, 2:57:23 AM
+info: GET en /favicon.ico- 7/28/2024, 2:57:23 AM
+info: GET en /favicon.ico- 7/28/2024, 2:57:23 AM
+info: GET en /api/views/products- 7/28/2024, 2:57:41 AM
+info: GET en /api/views/products- 7/28/2024, 2:57:41 AM
+info: GET en /favicon.ico- 7/28/2024, 2:57:41 AM
+info: GET en /favicon.ico- 7/28/2024, 2:57:41 AM
+info: GET en /api/views/products- 7/28/2024, 2:57:54 AM
+info: GET en /api/views/products- 7/28/2024, 2:57:54 AM
+info: GET en /favicon.ico- 7/28/2024, 2:57:55 AM
+info: GET en /favicon.ico- 7/28/2024, 2:57:55 AM
+info: GET en /api/views/products- 7/28/2024, 2:58:22 AM
+info: GET en /api/views/products- 7/28/2024, 2:58:22 AM
+info: GET en /js/products.js- 7/28/2024, 2:58:23 AM
+info: GET en /js/products.js- 7/28/2024, 2:58:23 AM
+info: GET en /js/cart.js- 7/28/2024, 2:58:23 AM
+info: GET en /js/cart.js- 7/28/2024, 2:58:23 AM
+info: GET en /api/views/products- 7/28/2024, 2:58:23 AM
+info: GET en /api/views/products- 7/28/2024, 2:58:23 AM
+info: GET en /api/views/products- 7/28/2024, 2:58:24 AM
+info: GET en /api/views/products- 7/28/2024, 2:58:24 AM
+info: GET en /favicon.ico- 7/28/2024, 2:58:24 AM
+info: GET en /favicon.ico- 7/28/2024, 2:58:24 AM
+info: GET en /api/views/products- 7/28/2024, 2:59:00 AM
+info: GET en /api/views/products- 7/28/2024, 2:59:00 AM
+info: GET en /js/products.js- 7/28/2024, 2:59:01 AM
+info: GET en /js/products.js- 7/28/2024, 2:59:01 AM
+info: GET en /js/cart.js- 7/28/2024, 2:59:01 AM
+info: GET en /js/cart.js- 7/28/2024, 2:59:01 AM
+info: GET en /api/views/products- 7/28/2024, 2:59:01 AM
+info: GET en /api/views/products- 7/28/2024, 2:59:01 AM
+info: GET en /api/views/products- 7/28/2024, 2:59:02 AM
+info: GET en /api/views/products- 7/28/2024, 2:59:02 AM
+info: GET en /favicon.ico- 7/28/2024, 2:59:03 AM
+info: GET en /favicon.ico- 7/28/2024, 2:59:03 AM
+info: GET en /api/views/products- 7/28/2024, 3:00:01 AM
+info: GET en /api/views/products- 7/28/2024, 3:00:01 AM
+info: GET en /js/cart.js- 7/28/2024, 3:00:02 AM
+info: GET en /js/cart.js- 7/28/2024, 3:00:02 AM
+info: GET en /js/products.js- 7/28/2024, 3:00:02 AM
+info: GET en /js/products.js- 7/28/2024, 3:00:02 AM
+info: GET en /api/views/products- 7/28/2024, 3:00:02 AM
+info: GET en /api/views/products- 7/28/2024, 3:00:02 AM
+info: GET en /api/views/products- 7/28/2024, 3:00:03 AM
+info: GET en /api/views/products- 7/28/2024, 3:00:03 AM
+info: GET en /favicon.ico- 7/28/2024, 3:00:04 AM
+info: GET en /favicon.ico- 7/28/2024, 3:00:04 AM
+info: GET en /api/users/premium/:uid- 7/28/2024, 3:00:06 AM
+info: GET en /api/users/premium/:uid- 7/28/2024, 3:00:06 AM
+info: GET en /api/users/premium/:uid- 7/28/2024, 3:00:08 AM
+info: GET en /api/users/premium/:uid- 7/28/2024, 3:00:08 AM
+info: GET en /api/users/premium/:uid- 7/28/2024, 3:01:52 AM
+info: GET en /api/users/premium/:uid- 7/28/2024, 3:01:52 AM
+info: GET en /api/views/products- 7/28/2024, 3:02:52 AM
+info: GET en /api/views/products- 7/28/2024, 3:02:52 AM
+info: GET en /js/products.js- 7/28/2024, 3:02:53 AM
+info: GET en /js/products.js- 7/28/2024, 3:02:53 AM
+info: GET en /js/cart.js- 7/28/2024, 3:02:53 AM
+info: GET en /js/cart.js- 7/28/2024, 3:02:53 AM
+info: GET en /api/views/products- 7/28/2024, 3:02:53 AM
+info: GET en /api/views/products- 7/28/2024, 3:02:53 AM
+info: GET en /api/views/products- 7/28/2024, 3:02:54 AM
+info: GET en /api/views/products- 7/28/2024, 3:02:54 AM
+info: GET en /favicon.ico- 7/28/2024, 3:02:54 AM
+info: GET en /favicon.ico- 7/28/2024, 3:02:54 AM
+info: GET en /api/users/premium/:uid- 7/28/2024, 3:02:56 AM
+info: GET en /api/users/premium/:uid- 7/28/2024, 3:02:56 AM
+info: GET en /api/users/premium/:uid- 7/28/2024, 3:03:04 AM
+info: GET en /api/users/premium/:uid- 7/28/2024, 3:03:04 AM
+info: GET en /api/views/products- 7/28/2024, 3:03:05 AM
+info: GET en /api/views/products- 7/28/2024, 3:03:05 AM
+info: GET en /api/views/products- 7/28/2024, 3:03:05 AM
+info: GET en /api/views/products- 7/28/2024, 3:03:05 AM
+info: GET en /js/products.js- 7/28/2024, 3:03:05 AM
+info: GET en /js/products.js- 7/28/2024, 3:03:05 AM
+info: GET en /js/cart.js- 7/28/2024, 3:03:05 AM
+info: GET en /js/cart.js- 7/28/2024, 3:03:05 AM
+info: GET en /api/views/products- 7/28/2024, 3:03:06 AM
+info: GET en /api/views/products- 7/28/2024, 3:03:06 AM
+info: GET en /favicon.ico- 7/28/2024, 3:03:06 AM
+info: GET en /favicon.ico- 7/28/2024, 3:03:06 AM
+info: GET en /api/users/premium/:uid- 7/28/2024, 3:03:35 AM
+info: GET en /api/users/premium/:uid- 7/28/2024, 3:03:35 AM
+info: GET en /api/views/products- 7/28/2024, 3:04:55 AM
+info: GET en /api/views/products- 7/28/2024, 3:04:55 AM
+info: GET en /js/cart.js- 7/28/2024, 3:04:56 AM
+info: GET en /js/cart.js- 7/28/2024, 3:04:56 AM
+info: GET en /js/products.js- 7/28/2024, 3:04:56 AM
+info: GET en /js/products.js- 7/28/2024, 3:04:56 AM
+info: GET en /api/views/products- 7/28/2024, 3:04:56 AM
+info: GET en /api/views/products- 7/28/2024, 3:04:56 AM
+info: GET en /api/views/products- 7/28/2024, 3:04:56 AM
+info: GET en /api/views/products- 7/28/2024, 3:04:56 AM
+info: GET en /favicon.ico- 7/28/2024, 3:04:56 AM
+info: GET en /favicon.ico- 7/28/2024, 3:04:56 AM
+info: GET en /api/users/premium/:uid- 7/28/2024, 3:04:58 AM
+info: GET en /api/users/premium/:uid- 7/28/2024, 3:04:58 AM
+info: GET en /api/users/premium/:uid- 7/28/2024, 3:16:10 AM
+info: GET en /api/users/premium/:uid- 7/28/2024, 3:16:10 AM
+info: GET en /api/users/premium/:uid- 7/28/2024, 3:16:42 AM
+info: GET en /api/users/premium/:uid- 7/28/2024, 3:16:42 AM
+info: GET en /api/views/products- 7/28/2024, 3:16:43 AM
+info: GET en /api/views/products- 7/28/2024, 3:16:43 AM
+info: GET en /js/products.js- 7/28/2024, 3:16:44 AM
+info: GET en /js/products.js- 7/28/2024, 3:16:44 AM
+info: GET en /js/cart.js- 7/28/2024, 3:16:44 AM
+info: GET en /js/cart.js- 7/28/2024, 3:16:44 AM
+info: GET en /api/views/products- 7/28/2024, 3:16:44 AM
+info: GET en /api/views/products- 7/28/2024, 3:16:44 AM
+info: GET en /api/views/products- 7/28/2024, 3:16:45 AM
+info: GET en /api/views/products- 7/28/2024, 3:16:45 AM
+info: GET en /favicon.ico- 7/28/2024, 3:16:46 AM
+info: GET en /favicon.ico- 7/28/2024, 3:16:46 AM
+info: GET en /api/views/products- 7/28/2024, 3:17:25 AM
+info: GET en /api/views/products- 7/28/2024, 3:17:25 AM
+info: GET en /js/products.js- 7/28/2024, 3:17:25 AM
+info: GET en /js/products.js- 7/28/2024, 3:17:25 AM
+info: GET en /js/cart.js- 7/28/2024, 3:17:25 AM
+info: GET en /js/cart.js- 7/28/2024, 3:17:25 AM
+info: GET en /api/views/products- 7/28/2024, 3:17:26 AM
+info: GET en /api/views/products- 7/28/2024, 3:17:26 AM
+info: GET en /api/views/products- 7/28/2024, 3:17:27 AM
+info: GET en /api/views/products- 7/28/2024, 3:17:27 AM
+info: GET en /favicon.ico- 7/28/2024, 3:17:28 AM
+info: GET en /favicon.ico- 7/28/2024, 3:17:28 AM
+info: GET en /api/views/products- 7/28/2024, 3:17:41 AM
+info: GET en /api/views/products- 7/28/2024, 3:17:41 AM
+info: GET en /api/views/products- 7/28/2024, 3:17:41 AM
+info: GET en /api/views/products- 7/28/2024, 3:17:41 AM
+info: GET en /js/products.js- 7/28/2024, 3:17:41 AM
+info: GET en /js/products.js- 7/28/2024, 3:17:41 AM
+info: GET en /js/cart.js- 7/28/2024, 3:17:41 AM
+info: GET en /js/cart.js- 7/28/2024, 3:17:41 AM
+info: GET en /api/views/products- 7/28/2024, 3:17:43 AM
+info: GET en /api/views/products- 7/28/2024, 3:17:43 AM
+info: GET en /favicon.ico- 7/28/2024, 3:17:44 AM
+info: GET en /favicon.ico- 7/28/2024, 3:17:44 AM
+info: GET en /api/users/premium/66a4b8f9fa14924e6d8e772c- 7/28/2024, 3:17:44 AM
+info: GET en /api/users/premium/66a4b8f9fa14924e6d8e772c- 7/28/2024, 3:17:44 AM
+info: GET en /api/views/products- 7/28/2024, 3:18:47 AM
+info: GET en /api/views/products- 7/28/2024, 3:18:47 AM
+info: GET en /js/products.js- 7/28/2024, 3:18:47 AM
+info: GET en /js/products.js- 7/28/2024, 3:18:47 AM
+info: GET en /js/cart.js- 7/28/2024, 3:18:47 AM
+info: GET en /js/cart.js- 7/28/2024, 3:18:47 AM
+info: GET en /api/views/products- 7/28/2024, 3:18:47 AM
+info: GET en /api/views/products- 7/28/2024, 3:18:47 AM
+info: GET en /api/views/products- 7/28/2024, 3:18:49 AM
+info: GET en /api/views/products- 7/28/2024, 3:18:49 AM
+info: GET en /favicon.ico- 7/28/2024, 3:18:49 AM
+info: GET en /favicon.ico- 7/28/2024, 3:18:49 AM
+info: GET en /api/users/premium/66a4b8f9fa14924e6d8e772c- 7/28/2024, 3:18:49 AM
+info: GET en /api/users/premium/66a4b8f9fa14924e6d8e772c- 7/28/2024, 3:18:49 AM
+info: GET en /api/users/premium/66a4b8f9fa14924e6d8e772c- 7/28/2024, 3:19:03 AM
+info: GET en /api/users/premium/66a4b8f9fa14924e6d8e772c- 7/28/2024, 3:19:03 AM
+info: GET en /api/users/premium/66a4b8f9fa14924e6d8e772c- 7/28/2024, 3:19:32 AM
+info: GET en /api/users/premium/66a4b8f9fa14924e6d8e772c- 7/28/2024, 3:19:32 AM
+info: GET en /api/users/premium/66a4b8f9fa14924e6d8e772c- 7/28/2024, 3:20:08 AM
+info: GET en /api/users/premium/66a4b8f9fa14924e6d8e772c- 7/28/2024, 3:20:08 AM
+info: GET en /api/users/premium/66a4b8f9fa14924e6d8e772c- 7/28/2024, 3:21:57 AM
+info: GET en /api/users/premium/66a4b8f9fa14924e6d8e772c- 7/28/2024, 3:21:57 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:22:00 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:22:00 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:22:00 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:22:00 AM
+info: GET en /favicon.ico- 7/28/2024, 3:22:01 AM
+info: GET en /favicon.ico- 7/28/2024, 3:22:01 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:25:21 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:25:21 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:25:21 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:25:21 AM
+info: GET en /favicon.ico- 7/28/2024, 3:25:21 AM
+info: GET en /favicon.ico- 7/28/2024, 3:25:21 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:25:50 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:25:50 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:25:50 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:25:50 AM
+info: GET en /favicon.ico- 7/28/2024, 3:25:51 AM
+info: GET en /favicon.ico- 7/28/2024, 3:25:51 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:26:03 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:26:03 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:26:03 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:26:03 AM
+info: GET en /favicon.ico- 7/28/2024, 3:26:04 AM
+info: GET en /favicon.ico- 7/28/2024, 3:26:04 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:29:33 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:29:33 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:29:33 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:29:33 AM
+info: GET en /favicon.ico- 7/28/2024, 3:29:33 AM
+info: GET en /favicon.ico- 7/28/2024, 3:29:33 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:36:28 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:36:28 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:36:28 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:36:28 AM
+info: GET en /favicon.ico- 7/28/2024, 3:36:28 AM
+info: GET en /favicon.ico- 7/28/2024, 3:36:28 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:36:44 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:36:44 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:36:44 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:36:44 AM
+info: GET en /favicon.ico- 7/28/2024, 3:36:44 AM
+info: GET en /favicon.ico- 7/28/2024, 3:36:44 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:38:30 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:38:30 AM
+info: GET en /favicon.ico- 7/28/2024, 3:38:31 AM
+info: GET en /favicon.ico- 7/28/2024, 3:38:31 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:38:35 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:38:35 AM
+info: GET en /favicon.ico- 7/28/2024, 3:38:35 AM
+info: GET en /favicon.ico- 7/28/2024, 3:38:35 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:39:24 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:39:24 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:39:24 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:39:24 AM
+info: GET en /favicon.ico- 7/28/2024, 3:39:24 AM
+info: GET en /favicon.ico- 7/28/2024, 3:39:24 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:40:02 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:40:02 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:40:02 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:40:02 AM
+info: GET en /favicon.ico- 7/28/2024, 3:40:03 AM
+info: GET en /favicon.ico- 7/28/2024, 3:40:03 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:40:12 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:40:12 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:40:12 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:40:12 AM
+info: GET en /favicon.ico- 7/28/2024, 3:40:12 AM
+info: GET en /favicon.ico- 7/28/2024, 3:40:12 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:40:34 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:40:34 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:40:35 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:40:35 AM
+info: GET en /favicon.ico- 7/28/2024, 3:40:35 AM
+info: GET en /favicon.ico- 7/28/2024, 3:40:35 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:41:17 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:41:17 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:41:18 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:41:18 AM
+info: GET en /favicon.ico- 7/28/2024, 3:41:18 AM
+info: GET en /favicon.ico- 7/28/2024, 3:41:18 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:42:08 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:42:08 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:42:08 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:42:08 AM
+info: GET en /favicon.ico- 7/28/2024, 3:42:08 AM
+info: GET en /favicon.ico- 7/28/2024, 3:42:08 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:45:11 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:45:11 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:45:11 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:45:11 AM
+info: GET en /favicon.ico- 7/28/2024, 3:45:12 AM
+info: GET en /favicon.ico- 7/28/2024, 3:45:12 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:45:34 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:45:34 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:45:34 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:45:34 AM
+info: GET en /favicon.ico- 7/28/2024, 3:45:35 AM
+info: GET en /favicon.ico- 7/28/2024, 3:45:35 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:45:36 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:45:36 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:45:36 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:45:36 AM
+info: GET en /favicon.ico- 7/28/2024, 3:45:37 AM
+info: GET en /favicon.ico- 7/28/2024, 3:45:37 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:45:55 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:45:55 AM
+info: GET en /favicon.ico- 7/28/2024, 3:45:55 AM
+info: GET en /favicon.ico- 7/28/2024, 3:45:55 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:45:57 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:45:57 AM
+info: GET en /favicon.ico- 7/28/2024, 3:45:57 AM
+info: GET en /favicon.ico- 7/28/2024, 3:45:57 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:45:57 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:45:57 AM
+info: GET en /favicon.ico- 7/28/2024, 3:45:57 AM
+info: GET en /favicon.ico- 7/28/2024, 3:45:57 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:46:16 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:46:16 AM
+info: GET en /favicon.ico- 7/28/2024, 3:46:16 AM
+info: GET en /favicon.ico- 7/28/2024, 3:46:16 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:46:17 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:46:17 AM
+info: GET en /favicon.ico- 7/28/2024, 3:46:17 AM
+info: GET en /favicon.ico- 7/28/2024, 3:46:17 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:46:17 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:46:17 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:46:17 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:46:17 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:46:18 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:46:18 AM
+info: GET en /favicon.ico- 7/28/2024, 3:46:18 AM
+info: GET en /favicon.ico- 7/28/2024, 3:46:18 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:46:26 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:46:26 AM
+info: GET en /favicon.ico- 7/28/2024, 3:46:27 AM
+info: GET en /favicon.ico- 7/28/2024, 3:46:27 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:47:06 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:47:06 AM
+info: GET en /favicon.ico- 7/28/2024, 3:47:06 AM
+info: GET en /favicon.ico- 7/28/2024, 3:47:06 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:47:08 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:47:08 AM
+info: GET en /favicon.ico- 7/28/2024, 3:47:08 AM
+info: GET en /favicon.ico- 7/28/2024, 3:47:08 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:47:15 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:47:15 AM
+info: GET en /favicon.ico- 7/28/2024, 3:47:16 AM
+info: GET en /favicon.ico- 7/28/2024, 3:47:16 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:49:46 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:49:46 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:49:47 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:49:47 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:49:47 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:49:47 AM
+info: GET en /favicon.ico- 7/28/2024, 3:49:47 AM
+info: GET en /favicon.ico- 7/28/2024, 3:49:47 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:50:58 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:50:58 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:50:59 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:50:59 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:50:59 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:50:59 AM
+info: POST en /api/views/products- 7/28/2024, 3:51:46 AM
+info: POST en /api/views/products- 7/28/2024, 3:51:46 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:51:50 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:51:50 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:51:50 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:51:50 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:51:50 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:51:50 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:52:31 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:52:31 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:52:31 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:52:31 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:52:31 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:52:31 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:52:45 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:52:45 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:52:45 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:52:45 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:52:45 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:52:45 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:53:12 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:53:12 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:53:12 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:53:12 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:53:12 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:53:12 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:54:14 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:54:14 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:54:15 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:54:15 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:54:15 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:54:15 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:54:16 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:54:16 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:54:17 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:54:17 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:54:17 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:54:17 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:54:18 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:54:18 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:54:18 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:54:18 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:54:18 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:54:18 AM
+info: GET en /api/views/products- 7/28/2024, 3:55:10 AM
+info: GET en /api/views/products- 7/28/2024, 3:55:10 AM
+info: GET en /api/views/products- 7/28/2024, 3:55:10 AM
+info: GET en /api/views/products- 7/28/2024, 3:55:10 AM
+info: GET en /js/products.js- 7/28/2024, 3:55:10 AM
+info: GET en /js/products.js- 7/28/2024, 3:55:10 AM
+info: GET en /js/cart.js- 7/28/2024, 3:55:10 AM
+info: GET en /js/cart.js- 7/28/2024, 3:55:10 AM
+info: GET en /api/users/premium/66a4b8f9fa14924e6d8e772c- 7/28/2024, 3:55:12 AM
+info: GET en /api/users/premium/66a4b8f9fa14924e6d8e772c- 7/28/2024, 3:55:12 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:55:13 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:55:13 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:55:13 AM
+info: GET en /api/views/admin/products- 7/28/2024, 3:55:13 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:55:13 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 3:55:13 AM
+info: GET en /api/views/products- 7/28/2024, 3:55:19 AM
+info: GET en /api/views/products- 7/28/2024, 3:55:19 AM
+info: GET en /api/views/products- 7/28/2024, 3:55:19 AM
+info: GET en /api/views/products- 7/28/2024, 3:55:19 AM
+info: GET en /js/products.js- 7/28/2024, 3:55:19 AM
+info: GET en /js/products.js- 7/28/2024, 3:55:19 AM
+info: GET en /js/cart.js- 7/28/2024, 3:55:19 AM
+info: GET en /js/cart.js- 7/28/2024, 3:55:19 AM
+info: GET en /api/sessions/logout- 7/28/2024, 3:55:21 AM
+info: GET en /api/sessions/logout- 7/28/2024, 3:55:21 AM
+info: GET en /- 7/28/2024, 3:55:21 AM
+info: GET en /- 7/28/2024, 3:55:21 AM
+info: GET en /js/login.js- 7/28/2024, 3:55:21 AM
+info: GET en /js/login.js- 7/28/2024, 3:55:21 AM
+info: POST en /api/sessions/login- 7/28/2024, 3:55:37 AM
+info: POST en /api/sessions/login- 7/28/2024, 3:55:37 AM
+info: Inicio sesion correctamente, usuario email : gonzaloismael2@gmail.com
+info: Inicio sesion correctamente, usuario email : gonzaloismael2@gmail.com
+info: GET en /api/views/products- 7/28/2024, 3:55:37 AM
+info: GET en /api/views/products- 7/28/2024, 3:55:37 AM
+info: GET en /api/views/products- 7/28/2024, 3:55:37 AM
+info: GET en /api/views/products- 7/28/2024, 3:55:37 AM
+info: GET en /js/cart.js- 7/28/2024, 3:55:38 AM
+info: GET en /js/cart.js- 7/28/2024, 3:55:38 AM
+info: GET en /js/products.js- 7/28/2024, 3:55:38 AM
+info: GET en /js/products.js- 7/28/2024, 3:55:38 AM
+info: GET en /api/users/premium/668cf3c53e902883e00cccd6- 7/28/2024, 3:55:41 AM
+info: GET en /api/users/premium/668cf3c53e902883e00cccd6- 7/28/2024, 3:55:41 AM
+info: GET en /api/sessions/logout- 7/28/2024, 3:55:53 AM
+info: GET en /api/sessions/logout- 7/28/2024, 3:55:53 AM
+info: GET en /- 7/28/2024, 3:55:53 AM
+info: GET en /- 7/28/2024, 3:55:53 AM
+info: GET en /js/login.js- 7/28/2024, 3:55:54 AM
+info: GET en /js/login.js- 7/28/2024, 3:55:54 AM
+info: POST en /api/sessions/login- 7/28/2024, 3:56:00 AM
+info: POST en /api/sessions/login- 7/28/2024, 3:56:00 AM
+info: Inicio sesion correctamente, usuario email : premium@gmail.com
+info: Inicio sesion correctamente, usuario email : premium@gmail.com
+info: GET en /api/views/products- 7/28/2024, 3:56:00 AM
+info: GET en /api/views/products- 7/28/2024, 3:56:00 AM
+info: GET en /api/views/products- 7/28/2024, 3:56:01 AM
+info: GET en /api/views/products- 7/28/2024, 3:56:01 AM
+info: GET en /js/products.js- 7/28/2024, 3:56:01 AM
+info: GET en /js/products.js- 7/28/2024, 3:56:01 AM
+info: GET en /js/cart.js- 7/28/2024, 3:56:01 AM
+info: GET en /js/cart.js- 7/28/2024, 3:56:01 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0292bda9e82892bdbcd4- 7/28/2024, 3:56:03 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0292bda9e82892bdbcd4- 7/28/2024, 3:56:03 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0220bda9e82892bdbcb8- 7/28/2024, 3:56:04 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0220bda9e82892bdbcb8- 7/28/2024, 3:56:04 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0207bda9e82892bdbcaf- 7/28/2024, 3:56:06 AM
+info: POST en /api/carts/66a4b8f9fa14924e6d8e772a/product/664b0207bda9e82892bdbcaf- 7/28/2024, 3:56:06 AM
+info: GET en /api/views/purchase- 7/28/2024, 3:56:11 AM
+info: GET en /api/views/purchase- 7/28/2024, 3:56:11 AM
+info: GET en /api/views/purchase- 7/28/2024, 3:56:50 AM
+info: GET en /api/views/purchase- 7/28/2024, 3:56:50 AM
+info: GET en /api/views/purchase- 7/28/2024, 3:56:52 AM
+info: GET en /api/views/purchase- 7/28/2024, 3:56:52 AM
+info: GET en /api/views/purchase- 7/28/2024, 3:56:52 AM
+info: GET en /api/views/purchase- 7/28/2024, 3:56:52 AM
+info: GET en /api/views/purchase- 7/28/2024, 3:56:52 AM
+info: GET en /api/views/purchase- 7/28/2024, 3:56:52 AM
+info: GET en /api/views/purchase- 7/28/2024, 3:56:52 AM
+info: GET en /api/views/purchase- 7/28/2024, 3:56:52 AM
+info: GET en /api/views/purchase- 7/28/2024, 3:57:14 AM
+info: GET en /api/views/purchase- 7/28/2024, 3:57:14 AM
+info: GET en /js/ticket.js- 7/28/2024, 3:57:15 AM
+info: GET en /js/ticket.js- 7/28/2024, 3:57:15 AM
+info: GET en /api/views/purchase- 7/28/2024, 4:00:00 AM
+info: GET en /api/views/purchase- 7/28/2024, 4:00:00 AM
+info: GET en /js/ticket.js- 7/28/2024, 4:00:01 AM
+info: GET en /js/ticket.js- 7/28/2024, 4:00:01 AM
+info: GET en /api/views/products- 7/28/2024, 4:00:12 AM
+info: GET en /api/views/products- 7/28/2024, 4:00:12 AM
+info: GET en /js/products.js- 7/28/2024, 4:00:12 AM
+info: GET en /js/products.js- 7/28/2024, 4:00:12 AM
+info: GET en /js/cart.js- 7/28/2024, 4:00:12 AM
+info: GET en /js/cart.js- 7/28/2024, 4:00:12 AM
+info: GET en /api/views/products- 7/28/2024, 4:00:12 AM
+info: GET en /api/views/products- 7/28/2024, 4:00:12 AM
+info: GET en /api/users/premium/66a4b8f9fa14924e6d8e772c- 7/28/2024, 4:00:17 AM
+info: GET en /api/users/premium/66a4b8f9fa14924e6d8e772c- 7/28/2024, 4:00:17 AM
+info: GET en /api/views/admin/products- 7/28/2024, 4:00:19 AM
+info: GET en /api/views/admin/products- 7/28/2024, 4:00:19 AM
+info: GET en /api/views/admin/products- 7/28/2024, 4:00:19 AM
+info: GET en /api/views/admin/products- 7/28/2024, 4:00:19 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 4:00:19 AM
+info: GET en /js/admin/adminProducts.js- 7/28/2024, 4:00:19 AM
+info: GET en /api/views/products- 7/28/2024, 4:00:21 AM
+info: GET en /api/views/products- 7/28/2024, 4:00:21 AM
+info: GET en /js/products.js- 7/28/2024, 4:00:21 AM
+info: GET en /js/products.js- 7/28/2024, 4:00:21 AM
+info: GET en /js/cart.js- 7/28/2024, 4:00:21 AM
+info: GET en /js/cart.js- 7/28/2024, 4:00:21 AM
+info: GET en /api/views/products- 7/28/2024, 4:00:21 AM
+info: GET en /api/views/products- 7/28/2024, 4:00:21 AM
+info: GET en /api/views/purchase- 7/28/2024, 4:00:25 AM
+info: GET en /api/views/purchase- 7/28/2024, 4:00:25 AM
+info: GET en /js/ticket.js- 7/28/2024, 4:00:26 AM
+info: GET en /js/ticket.js- 7/28/2024, 4:00:26 AM
+info: POST en /api/carts/purchase- 7/28/2024, 4:00:57 AM
+info: POST en /api/carts/purchase- 7/28/2024, 4:00:57 AM
+info: GET en /- 7/28/2024, 4:01:01 AM
+info: GET en /- 7/28/2024, 4:01:01 AM
+info: GET en /api/views/products- 7/28/2024, 4:01:01 AM
+info: GET en /api/views/products- 7/28/2024, 4:01:01 AM
+info: GET en /js/cart.js- 7/28/2024, 4:01:01 AM
+info: GET en /js/cart.js- 7/28/2024, 4:01:01 AM
+info: GET en /js/products.js- 7/28/2024, 4:01:01 AM
+info: GET en /js/products.js- 7/28/2024, 4:01:01 AM
+info: GET en /api/views/products- 7/28/2024, 4:01:01 AM
+info: GET en /api/views/products- 7/28/2024, 4:01:01 AM
+info: GET en /api/sessions/logout- 7/28/2024, 4:01:07 AM
+info: GET en /api/sessions/logout- 7/28/2024, 4:01:07 AM
+info: GET en /- 7/28/2024, 4:01:07 AM
+info: GET en /- 7/28/2024, 4:01:07 AM
+info: GET en /api/views/products- 7/28/2024, 4:01:07 AM
+info: GET en /api/views/products- 7/28/2024, 4:01:07 AM
+info: GET en /api/views/products- 7/28/2024, 4:01:07 AM
+info: GET en /api/views/products- 7/28/2024, 4:01:07 AM
+info: GET en /js/products.js- 7/28/2024, 4:01:07 AM
+info: GET en /js/products.js- 7/28/2024, 4:01:07 AM
+info: GET en /js/cart.js- 7/28/2024, 4:01:07 AM
+info: GET en /js/cart.js- 7/28/2024, 4:01:07 AM

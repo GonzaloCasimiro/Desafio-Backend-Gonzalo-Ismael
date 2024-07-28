@@ -1,7 +1,9 @@
 const CartDaoMongo = require("../dao/MONGO/CartDao.mongo");
 const UserDaoMongo = require("../dao/MONGO/UserDao.mongo");
 const { cartService, userService } = require("../service/service");
+const CustomError = require("../utils/errors/CustomError");
 const { createError } = require("../utils/errors/CustomError");
+const EError = require("../utils/errors/enum");
 const { generateUserError } = require("../utils/errors/info");
 UserDaoMongo
 CartDaoMongo
@@ -77,6 +79,27 @@ class UserController{
             }    
         } catch (error) {
             res.status(500).send({status:"error",message:error.message})
+        }
+    }
+    buttonPremium=async(req,res,next)=>{
+
+        try {
+            const {uid}=req.params
+            if(req.session.user)req.user=req.session.user;
+            const user=req.user;
+            if(user.role!=="premium"){
+                CustomError.createError({
+                    name:"Error al activar premium",
+                    cause:"No eres usuario premium",
+                    message:"Error al activar premium",
+                    code:EError.NOT_ALLOWED_ERROR
+                })
+            }else{
+                return res.send({status:'success',message:"exito"})
+            }
+        }catch(error){
+            console.error(error)
+            next(error)
         }
     }
 }

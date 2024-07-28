@@ -10,6 +10,7 @@ const { createError } = require('../utils/errors/CustomError.js');
 const CustomError = require('../utils/errors/CustomError.js');
 const EError = require('../utils/errors/enum.js');
 const Product = require('../models/productSchema.js');
+const { decodePasswordToken } = require('../utils/jsonwebtoken.js');
 
 const nuevoChatManger=new MessagesDaoMongo();
 class viewController{
@@ -18,7 +19,6 @@ class viewController{
         try {
             const {pid}=req.params;
             let product=await productService.getProduct(pid);
-            console.log(product)
             product=product.toJSON()
             let image="https://via.placeholder.com/400x300?text=Imagen+2";
             if(!product.mid){
@@ -46,7 +46,7 @@ class viewController{
                 const cartProducts=cart.products
                     if(req.user.role && req.user.role==="admin")return res.render('product',{product:product,admin:req.user,cid:req.user.cid,pid:req.user.id,cartProducts,image,messages:boxMessages.toObject(),mid:mid,username:`${req.user.name} ${req.user.lastname}`})
                     if(req.user.role && req.user.role==="user")return res.render('product',{product:product,user:req.user,cid:req.user.cid,uid:req.user.id,pid:pid,cartProducts,image,messages:boxMessages.toObject(),mid:mid,username:`${req.user.name} ${req.user.lastname}`})
-
+                    if(req.user.role && req.user.role==="premium")return res.render('product',{product:product,user:req.user,cid:req.user.cid,uid:req.user.id,pid:pid,cartProducts,image,messages:boxMessages.toObject(),mid:mid,username:`${req.user.name} ${req.user.lastname}`})   
             }
             if(boxMessages.length===0)boxMessages=[{user:"Vacio",message:"Se el primero en comentar"}]
             res.render('product',{product:product,image,messages:boxMessages})
@@ -59,7 +59,6 @@ class viewController{
     viewProducts= async (req, res) => {
         try {
             if(req.session.user)req.user=req.session.user
-            console.log(req.user)
             const { limits,pageNumber,sort,category,stock } = req.query;
             const data={}
             if(stock){data.stock=parseInt(stock)}
@@ -69,7 +68,8 @@ class viewController{
             if(req.user){
                 const user=req.user
                 let cart=await cartService.getCart(user.cid);
-                console.log(cart)
+                let premium=false;
+                if(user.role==="premium") premium=true;
             if(cart){
                     
                 for(let i=0;i<cart.products.length;i++){
@@ -82,35 +82,38 @@ class viewController{
                 }
                 cart= cart.toJSON()
             }
-
                 const cartProducts=cart.products
+                const {id}=req.user
                 if(category){
+                    
                     const products=await productService.getProductsByCategory(data.limits,data.page,data.sort,category,data.stock)
                     const{docs,hasPrevPage,hasNextPage,prevPage,nextPage,page}=products
-                    res.render('index', { products:docs,hasPrevPage,hasNextPage,prevPage,nextPage,page,user:user,cartProducts });
+                    res.render('index', { uid:id,products:docs,hasPrevPage,hasNextPage,prevPage,nextPage,page,user:user,cartProducts,premium });
                 }else{
                     const products=await productService.getProducts(data.limits,data.page,data.sort,stock);
                     const{docs,hasPrevPage,hasNextPage,prevPage,nextPage,page}=products           
-                    res.render('index', { products:docs,hasPrevPage,hasNextPage,prevPage,nextPage,page,user:user,cartProducts });  
+                    res.render('index', {uid:id, products:docs,hasPrevPage,hasNextPage,prevPage,nextPage,page,user:user,cartProducts,premium });  
                 }
             }else{
                 if(category){
                     const products=await productService.getProductsByCategory(data.limits,data.page,data.sort,category,data.stock)
                     const{docs,hasPrevPage,hasNextPage,prevPage,nextPage,page}=products
-                    res.render('index', { products:docs,hasPrevPage,hasNextPage,prevPage,nextPage,page });
+                    res.render('index', { products:docs,hasPrevPage,hasNextPage,prevPage,nextPage,page,premium });
                 }else{
                     const products=await productService.getProducts(data.limits,data.page,data.sort,stock);
                     const{docs,hasPrevPage,hasNextPage,prevPage,nextPage,page}=products           
-                    res.render('index', { products:docs,hasPrevPage,hasNextPage,prevPage,nextPage,page });  
+                    res.render('index', { products:docs,hasPrevPage,hasNextPage,prevPage,nextPage,page ,premium});  
                 }
             }
         }catch (error) {
+            console.log(error)
             res.send(error);
         }
     }
     postProduct=async (req,res,next) => {
         try {
-            let { title, description, price, thumbnail, code, stock, category,brand } = req.body;
+            let { title, description, price, thumbnail, code, stock, category,brand,owner } = req.body;
+            console.log(owner)
             if(!title||!description||!price||!code||!stock||!category){
                 CustomError.createError({
                     name:"Error al registrar producto",
@@ -138,7 +141,8 @@ class viewController{
                     code,
                     stock:parseInt(stock),
                     category,
-                    brand
+                    brand,
+                    owner
                 }
                 const result=await productService.createProduct(producto)
                 if(result.status){
@@ -180,6 +184,7 @@ class viewController{
             res.send(error)
         }
     }
+      
     getChats=async(req,res)=>{
         try {
             const messages=await nuevoChatManger.getAllMessages()
@@ -211,11 +216,26 @@ class viewController{
     }
     admin=async(req,res)=>{
         try {
-            console.log(req.user)
             const products=await productService.getProducts()
-            console.log(products)
             res.render('adminMenu',{products:products.docs})
         } catch (error) {
+            res.send(error)
+        }
+    }
+    editPerfil=async(req,res)=>{
+        try{
+            const user=req.user
+            res.render('editPerfil',{user:user})
+        }catch (error) {
+            res.send(error)
+        }
+    }
+    resetPassword=async(req,res)=>{
+        try{
+            const {token}=req.params
+            const email=decodePasswordToken(token);
+            res.render('resetPassword',{email})
+        }catch (error) {
             res.send(error)
         }
     }

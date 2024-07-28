@@ -17,8 +17,9 @@ form.addEventListener('submit', e => {
         code: code,
         stock: stock,
         category: category,
-        brand:category
+        brand:category,
     };
+    if(document.getElementById('owner'))data.owner=document.getElementById('owner').value
     fetch('/api/views/products', {
         method: 'POST',
         headers: {
@@ -68,14 +69,17 @@ const deleteProduct=document.getElementById("deleteProduct")
 
 deleteProduct.addEventListener("submit",e=>{
     e.preventDefault();
-        const pid=document.getElementById("pid-delete").value
-    console.log(pid)
+        const data={
+            pid:document.getElementById("pid-delete").value,
+
+        }
+        if(document.getElementById("premiumDelete")) data.email=document.getElementById('premiumDelete').value
     fetch('/products',{
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({pid})
+        body: JSON.stringify(data)
     }).then(response => {
         if (response.ok) {
             return response.json();

@@ -70,7 +70,7 @@ app.use(session({
     resave:true,      // session activa aun que este inactiva
     saveUninitialized:true    //permite almacenar sesiones aunque no tengan valor
 }))*/
-const htppServer = app.listen(port, error => {
+let htppServer = app.listen(port, error => {
     console.log(`escuchando servidor ${port}`);
 }).on("error", function (err) {
     process.once("SIGUSR2", function () {
@@ -80,7 +80,17 @@ const htppServer = app.listen(port, error => {
         process.kill(process.pid, "SIGINT");
     });
 });
-
+const getServer=()=> htppServer = app.listen(port, error => {
+    console.log(`escuchando servidor ${port}`);
+}).on("error", function (err) {
+    process.once("SIGUSR2", function () {
+        process.kill(process.pid, "SIGUSR2");
+    });
+    process.on("SIGINT", function () {
+        process.kill(process.pid, "SIGINT");
+    });
+});
+module.exports=getServer;
 const io = new Server(htppServer);
 app.use(productsSocket(io));
 
@@ -134,9 +144,11 @@ app.get('/', passportCall('jwt'),(req, res) => {
     if(req.session.user){
         if(req.session.user.role==="admin") res.redirect('/api/views/admin')
         if(req.session.user.role==="user") res.redirect('/api/views/products')
+            if(req.session.user.role==="premium") res.redirect('/api/views/products')
     }else if(req.user){
         if(req.user.role==="admin") res.redirect('/api/views/admin')
         if(req.user.role==="user") res.redirect('/api/views/products')
+        if(req.user.role==="premium") res.redirect('/api/views/products')
     }else{
         res.render('login')
     }

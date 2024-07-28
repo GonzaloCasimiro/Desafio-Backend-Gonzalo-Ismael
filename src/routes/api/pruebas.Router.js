@@ -1,8 +1,22 @@
 const {Router} =require("express");
+const jwt=require("jsonwebtoken");
 const {auth} = require("../../middlewares/auth.middleware.js");
 const { passportCall } = require("../../middlewares/passportCall.middelware.js");
+const { sendMail, rePassword } = require("../../utils/sendEmail.js");
+const Product = require("../../models/productSchema.js");
+const { productService } = require("../../service/service.js");
 const pruebasRouter=Router();
 
+pruebasRouter.get('/mail',async(req,res)=>{
+try {
+     rePassword("gonzaloismaelcasimiro@gmail.com")
+    res.send("Email enviado")
+
+}
+catch(error){
+    res.send(error.message)
+}
+})
 pruebasRouter.get('/log',(req,res)=>{
     req.logger.fatal('Alerta!!!')
     res.send('logs')

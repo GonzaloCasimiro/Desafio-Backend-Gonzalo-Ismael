@@ -1,3 +1,4 @@
+const { default: mongoose } = require("mongoose");
 const ProductDaoMongo = require("../dao/MONGO/ProductDao.mongo");
 const { productService } = require("../service/service");
 const CustomError = require("../utils/errors/CustomError");
@@ -49,17 +50,50 @@ class ProductController{
             res.status(501).send({status:"error",message:error.message});
         }
     }
-    updateProduct=async (req, res) => {
+    updateProduct=async (req, res,next) => {
         try {
-            const {pid,key,value}=req.body
-            const result=await productService.updateProduct(pid,key,value)
-            if(!result){
-                return res.send({status:"error",message:"no existe producto con ese id"})
-            }else{
-                return res.send({status:'succes',message:"producto actualizado",updateData:{key,value}})
+            const {pid,key,value,owner}=req.body
+            const product=await productService.getProduct(pid);     
+            if(owner){
+                if(owner!==product.owner){
+                    req.logger.info('No es propietario del producto que intenta actualizar')
+                    CustomError.createError({
+                        name:"Error al actualizar producto",
+                        cause:"No puedes actualizar un producto que no ha sido creado por ti.",
+                        message:'Error al actualizar producto',
+                        code:EError.NOT_ALLOWED_ERROR,
+                    })
+                }else{
+                    const result=await productService.updateProduct(pid,key,value)
+                if(!result){
+                    return res.send({status:"error",message:"no existe producto con ese id"})
+                }else{
+                    req.logger.info('Producto actualizado',result)
+                    return res.send({status:'succes',message:"producto actualizado",updateData:{key,value}})
+                }
+                }
             }
+            if(product.owner!=="admin"){
+                req.logger.info('Producto de un usuario premium,un admin no puede actualizarlo')
+                CustomError.createError({
+                    name:"Error al actualizar producto",
+                    cause:"Este producto pertenece a un usuario premium, no puedes actualizarlo.",
+                    message:'Error al actualizar producto',
+                    code:EError.NOT_ALLOWED_ERROR,
+                })
+            }else{
+                const result=await productService.updateProduct(pid,key,value)
+                if(!result){
+                    return res.send({status:"error",message:"no existe producto con ese id"})
+                }else{
+                    req.logger.info('Producto actualizado',result)
+                    return res.send({status:'succes',message:"producto actualizado",updateData:{key,value}})
+                }
+            }
+            
         } catch (error) {
-            console.error(error)
+            req.logger.info(error)
+            next(error)
         }
     }
     addProduct=async (req, res) => {
@@ -82,19 +116,51 @@ class ProductController{
     }
     deleteProduct=async (req, res,next) => {
         try {
-            const { pid } = req.body
-            const result = await productService.deleteProduct(pid);
-            if(!result){
+            const { pid,email } = req.body
+
+            if(!mongoose.Types.ObjectId.isValid(pid)){
+                req.logger.info('No ha ingresado un id valido')
                 CustomError.createError({
                     name:"Error al eliminar producto",
                     cause:"Id incorrecto",
                     message:"error al eliminar producto",
                     code:EError.INVALID_TYPES
                 })
-            }else{
-                return res.send({message:"producto eliminado",status:"succes",pid})
             }
+            let product=await productService.getProduct(pid)       
+            if(email){
+                if(email!==product.owner){
+                    req.logger.info('No es propietario del producto que intenta eliminar')
+                    CustomError.createError({
+                        name:"Error al eliminar producto",
+                        cause:"No puedes eliminar un producto que no ha sido creado por ti.",
+                        message:'Error al eliminar producto',
+                        code:EError.NOT_ALLOWED_ERROR,
+                    })
+                }else{
+                    const result=await productService.deleteProduct(pid)
+                    if(!result){
+                        return res.send({status:"error",message:"no existe producto con ese id"})
+                    }else{
+                        req.logger.info('Producto eliminado',result)
+                        return res.send({status:'succes',message:"producto eliminado",pid})
+                    }
+                }
+            }/*
+            if(product.owner!=="admin"){
+                req.logger.info('Producto de un usuario premium, un admin no puede eliminarlo')
+                CustomError.createError({
+                    name:"Error al eliminar producto",
+                    cause:"Este producto pertenece a un usuario premium, no puedes eliminarlo.",
+                    message:'Error al eliminar producto',
+                    code:EError.NOT_ALLOWED_ERROR,
+                })
+            }*/
+            const result = await productService.deleteProduct(pid);           
+            return res.send({message:"producto eliminado",status:"succes",pid})
+            
         } catch (error) {
+            console.error(error)
             next(error)
         }
     }

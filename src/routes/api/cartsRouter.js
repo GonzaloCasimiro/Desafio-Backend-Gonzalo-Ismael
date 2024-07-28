@@ -6,7 +6,7 @@ const cartRouter = Router();
 
 const {createCart,updateCart,cleanCart,getCart,removeProduct,addProduct,deleteCart,createTicket}=new CartController()
 //AGREGAR PRODUCTO AL CART
-cartRouter.post("/:cid/product/:pid",passportCall("jwt"),addProduct);
+cartRouter.post("/:cid/product/:pid", passportCall('jwt'),addProduct);
 //REMOVER PRODUCTO DEL CART
 cartRouter.delete('/:cid/product/:pid',removeProduct );
 //TRAER CART CON SUS PRODUCTOS
