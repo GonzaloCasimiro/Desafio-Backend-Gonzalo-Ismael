@@ -128,6 +128,21 @@ io.on('connection', (socket) => {
         io.emit("remuevanProducto",pid)
     })
 });
+//swagger importacion
+const swaggerJsDocs=require('swagger-jsdoc')
+const swaggerUiExpress=require('swagger-ui-express')
+const swaggerOptions={
+    definition:{
+        openapi:'3.0.1',
+        info:{
+            title:'Documentacion de  Ecommerce app',
+            description:'APO para documentar el ecommerce'
+        }
+    },
+    apis:[`${__dirname}/docs/**/*.yaml`]
+}
+const specs=swaggerJsDocs(swaggerOptions)
+app.use('/apidocs',swaggerUiExpress.serve, swaggerUiExpress.setup(specs))
 
 //CONFIG HANDLEBARS
 app.use(express.static(__dirname + '/public'));

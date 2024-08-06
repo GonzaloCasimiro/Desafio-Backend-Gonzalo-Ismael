@@ -37,6 +37,14 @@ class ProductController{
             res.send(error);
         }
     }
+    getAllProducts=async(req,res)=>{
+        try {
+            const products=await productService.getProducts();
+            res.send({status:"success",products})
+        } catch (error) {
+            res.send(error);
+        }
+    }
     getProduct=async (req, res) => {
         const {pid}=req.params
         try {
@@ -99,7 +107,8 @@ class ProductController{
     addProduct=async (req, res) => {
         try {
             const { title, description, price, thumbnail, code, stock, category } = req.body;
-            const result = await productService.createProduct(title, description, price, code, stock, category, thumbnail);
+            console.log(req.body)
+            const result = await productService.createProduct({title,description,price,thumbnail,code,stock,category});
             if(result.status){
                 if(result.staus===400){
                     return res.status(400).send({status:"error",message:result.message})
@@ -111,6 +120,7 @@ class ProductController{
                 res.status(200).send({ status: "success", payload: result });
             }  
         } catch (error) {
+            console.error(error)
             res.send(`${error}`);
         }
     }

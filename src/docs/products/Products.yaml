@@ -1,0 +1,173 @@
+paths:
+  /products/:
+    delete:
+      summary: Borra un producto
+      tags:
+        - Product
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/deleteProduct'
+      responses:
+        '200':
+          description: Producto eliminado correctamente
+        '404':
+          description: Producto no encontrado
+        '500':
+          description: Error interno del servidor, usualmente generado por query defectuosa o fallo en la base de datos
+  /products/{pid}:
+    get:
+      summary: Obtiene producto por ID
+      tags:
+        - Product
+      parameters:
+        - name: pid
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID del producto a obtener
+      responses:
+        '200':
+          description: El producto ha sido obtenido de la base de datos
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        '404':
+          description: Producto no encontrado
+        '500':
+          description: Error interno del servidor, usualmente generado por query defectuosa o fallo en la base de datos
+  /products/getAll:
+    get:
+      summary: Obtiene todos los productos
+      tags:
+        - Product
+      responses:
+        '200':
+          description: Los productos han sido obtenidos de la base de datos
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Product'
+        '500':
+          description: Error interno del servidor, usualmente generado por query defectuosa o fallo en la base de datos
+  /products/createProduct:
+    post:
+      summary: Crea un nuevo producto
+      tags:
+        - Product
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/createProduct'
+      responses:
+        '201':
+          description: El producto ha sido creado con exito        
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        _id:
+          type: string
+          format: uuid
+          description: ID generado de MongoDB
+        title:
+          type: string
+          description: Nombre del producto
+          required: true
+        price:
+          type: number
+          description: Precio del producto
+          required: true
+        code:
+          type: string
+          description: Código del producto
+          required: true
+        owner:
+          type: string
+          description: Propietario del producto
+          required: true
+        stock:
+          type: number
+          description: Cantidad en stock del producto
+          required: true
+        category:
+          type: string
+          description: Categoría del producto
+          required: true
+        description:
+          type: string
+          description: Descripción del producto
+      example:
+        _id: "60a367b65856c855f2e9b0f9"
+        title: "Titulo de producto"
+        price: 19.99
+        code: "ABC123"
+        owner: "Jose Perez"
+        stock: 100
+        category: "Samsung"
+        description: "descripcion descriptiva que describe descriptivamente el producto"
+
+  requestBodies:
+    deleteProduct:
+      type: Object
+      properties:
+        pid:
+          type: string
+          description: ID del producto a eliminar
+          required: true
+        email:
+          type: string
+          description: Email del usuario que elimina el producto
+          required: true
+      example:
+        pid: "60a367b65856c855f2e9b0f9"
+        email: "jose.perez@gmail.com"
+    createProduct:
+      type: Object
+      properties:
+        title:
+          type: string
+          description: Nombre del producto
+          required: true
+        price:
+          type: number
+          description: Precio del producto
+          required: true
+        code:
+          type: string
+          description: Código del producto
+          required: true
+        owner:
+          type: string
+          description: Propietario del producto
+          required: true
+        stock:
+          type: number
+          description: Cantidad en stock del producto
+          required: true
+        category:
+          type: string
+          description: Categoría del producto
+          required: true
+        description:
+          type: string
+          description: Descripción del producto
+      example:
+        title: "Titulo de producto"
+        price: 19.99
+        code: ABC123456789
+        owner: "Jose Perez"
+        stock: 100
+        category: "samsung"
+        description: "descripcion descriptiva que describe descriptivamente el producto"
+
+          
