@@ -67,7 +67,7 @@ const deletedProduct=async(email)=>{
         </div>`
     })
 }
-const purchasedTicket = async (email, productos,total) => {
+const purchasedTicket = async (email, productos) => {
     console.log(productos,"desde el purhcase")
     const productListHTML = productos.map(producto => `
         <tr>
