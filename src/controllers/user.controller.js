@@ -1,10 +1,12 @@
 const CartDaoMongo = require("../dao/MONGO/CartDao.mongo");
 const UserDaoMongo = require("../dao/MONGO/UserDao.mongo");
+const { usersDto, usersStatus } = require("../dtos/users.dto");
 const { cartService, userService } = require("../service/service");
 const CustomError = require("../utils/errors/CustomError");
 const { createError } = require("../utils/errors/CustomError");
 const EError = require("../utils/errors/enum");
 const { generateUserError } = require("../utils/errors/info");
+const { deletedAccount } = require("../utils/sendEmail");
 UserDaoMongo
 CartDaoMongo
 
@@ -14,8 +16,22 @@ class UserController{
     getUsers=async(req,res)=>{
         try {
             const result=await userService.getUsers();
-            res.send(result)
+            let users=usersDto(result)
+            res.send(users)
         } catch (error) {
+            res.send(error)
+        }
+    }
+    deleteUsers=async(req,res)=>{
+        try{
+            const result=await userService.getUsers();
+            let {inactives,actives}=usersStatus(result)
+            for(const user of inactives){                   
+                    await userService.deleteUser(user.email)
+                    await deletedAccount(user.email)             
+            }
+            res.send({status: 'success',message:'Usuarios inactivos eliminados correctamente'})
+            }catch(error){
             res.send(error)
         }
     }
@@ -46,8 +62,8 @@ class UserController{
                     const newCart = await cartService.createCart();
                     const cid=newCart._id
                     const newUser=await userService.createUser({name,lastname,password,email,cid})
-                    console.log(newUser)
-                    res.send(newUser)
+                    console.log(newUser,"desde el create")
+                    res.send({status:'success',message:'usuario registrado'})
                 }
             }
         } catch (error) {

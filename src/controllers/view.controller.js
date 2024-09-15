@@ -4,13 +4,14 @@ const { authorization } = require('../middlewares/authorization.middleware.js');
 const Message = require('../models/messageSchema.js');
 const MessagesDaoMongo = require('../dao/MONGO/ChatDao.mongo.js');
 const messages=new MessagesDaoMongo(Message)
-const { cartService, productService } = require('../service/service.js');
+const { cartService, productService, userService } = require('../service/service.js');
 const { productError } = require('../utils/errors/info.js');
 const { createError } = require('../utils/errors/CustomError.js');
 const CustomError = require('../utils/errors/CustomError.js');
 const EError = require('../utils/errors/enum.js');
 const Product = require('../models/productSchema.js');
 const { decodePasswordToken } = require('../utils/jsonwebtoken.js');
+const { usersStatus } = require('../dtos/users.dto.js');
 
 const nuevoChatManger=new MessagesDaoMongo();
 class viewController{
@@ -61,14 +62,15 @@ class viewController{
             if(req.session.user)req.user=req.session.user
             const { limits,pageNumber,sort,category,stock } = req.query;
             const data={}
+            let premium=false;
             if(stock){data.stock=parseInt(stock)}
             if(sort && (sort===1 || sort===-1)){data.sort=parseInt(sort)}
             if(limits){data.limits=parseInt(limits)}
             if(pageNumber){data.page=parseInt(pageNumber)}
+
             if(req.user){
                 const user=req.user
                 let cart=await cartService.getCart(user.cid);
-                let premium=false;
                 if(user.role==="premium") premium=true;
             if(cart){
                     
@@ -236,6 +238,18 @@ class viewController{
             const email=decodePasswordToken(token);
             res.render('resetPassword',{email})
         }catch (error) {
+            res.send(error)
+        }
+    }
+    usersStatus=async(req,res)=>{
+        try{
+            const result=await userService.getUsers()
+            let {actives,inactives,admins}=usersStatus(result)
+            let arrayEmpty=null
+            if(inactives.length>0) arrayEmpty=true;
+            res.render('users',{actives,inactives,admins,arrayEmpty})
+        }catch (error) {
+            console.log(error)
             res.send(error)
         }
     }

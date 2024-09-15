@@ -45,4 +45,64 @@ const rePassword=async(email,token)=>{
         `
     })
 }
-module.exports={sendMail,rePassword}
+const deletedAccount=async(email)=>{
+    return await transport.sendMail({
+        from:'Coder Ecommerce <ecommerc>',
+        to:email,
+        subject:'Tu cuenta ha sido eliminado por inactividad',
+        html:`<div>
+            <h1>Tu cuenta ha sido eliminada por inactividad</h1>
+            <p>Si no estas conforme con esta accion, contacta a un administrador para más detalles.</p>
+        </div>`
+    })
+}
+const deletedProduct=async(email)=>{
+    return await transport.sendMail({
+        from:'Coder Ecommerce <ecommerc>',
+        to:email,
+        subject:'Tu producto ha sido eliminado del ecommerce, contaca con un administrador para más detalles',
+        html:`<div>
+            <h1>Tu producto ha sido eliminado</h1>
+            <p>Si no estas conforme con esta accion, contacta a un administrador para más detalles.</p>
+        </div>`
+    })
+}
+const purchasedTicket = async (email, productos) => {
+    console.log(productos,"desde el purhcase")
+    const productListHTML = productos.map(producto => `
+        <tr>
+            <td>${producto.product}</td>
+            <td>${producto.quantity}</td>
+        </tr>
+    `).join('');
+
+    const total = productos.reduce((acc, producto) => acc + (producto.price * producto.quantity), 0);
+
+    return await transport.sendMail({
+        from: 'Coder Ecommerce <ecommerce>',
+        to: email,
+        subject: 'Tu compra ha sido exitosa',
+        html: `
+            <div>
+                <h1>Tu compra ha sido exitosa</h1>
+                <p>Si tienes alguna duda o consulta, contacta con un administrador.</p>
+                <h2>Detalles de tu compra:</h2>
+                <table border="1" cellpadding="5" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${productListHTML}
+                    </tbody>
+                </table>
+                <p><strong>Total: </strong>$${total.toFixed(2)}</p>
+            </div>
+        `
+    });
+}
+
+module.exports={sendMail,rePassword,deletedAccount,deletedProduct,purchasedTicket}

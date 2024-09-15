@@ -8,13 +8,16 @@ const userSchema = new mongoose.Schema({
     },
     lastname:{
         type:String,
+        required:true,
     },
     password:{
         type:String,
+        required:true
     },
     email:{
         type:String,
-        unique:true
+        unique:true,
+        required:true
     },
     cid:{
         type:mongoose.Schema.Types.ObjectId,
@@ -24,6 +27,10 @@ const userSchema = new mongoose.Schema({
         type:String,
         default:'user',
         enum:["user","admin","premium"]
+    },
+    lastConnection:{
+        type:String,
+        required:true
     }
 });
 

@@ -23,9 +23,7 @@ class UserDaoMongo{
         return validate
     }
     async create(data){
-        console.log(data)
         const newUser=await this.model.create(data)
-        console.log(newUser)
         return newUser
     }
     async update({key,value,email}={}){

@@ -3,6 +3,7 @@ const productRouter = Router();
 const ProductController = require("../../controllers/product.controller.js");
 const editProductMid = require('../../middlewares/editProductMidleware.js');
 const { authorization } = require('../../middlewares/authorization.middleware.js');
+const { passportCall } = require('../../middlewares/passportCall.middelware.js');
 const {getProducts,getProduct,updateProduct,addProduct,deleteProduct,getByCode,getAllProducts}=new ProductController()
 productRouter.get('/getAll', getAllProducts)
 productRouter.get('/',getProducts );
@@ -15,6 +16,6 @@ productRouter.put('/' ,editProductMid, updateProduct );
 
 productRouter.post('/',authorization('admin'),addProduct );
 
-productRouter.delete('/',deleteProduct );
+productRouter.delete('/',passportCall('jwt'),deleteProduct );
 
 module.exports = productRouter;

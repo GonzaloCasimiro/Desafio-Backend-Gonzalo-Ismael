@@ -1,8 +1,9 @@
 const { default: mongoose } = require("mongoose");
 const ProductDaoMongo = require("../dao/MONGO/ProductDao.mongo");
-const { productService } = require("../service/service");
+const { productService, userService } = require("../service/service");
 const CustomError = require("../utils/errors/CustomError");
 const EError = require("../utils/errors/enum");
+const { deletedProduct } = require("../utils/sendEmail");
 class ProductController{
     constructor(){}
     getByCode=async(req,res)=>{
@@ -126,8 +127,8 @@ class ProductController{
     }
     deleteProduct=async (req, res,next) => {
         try {
-            const { pid,email } = req.body
-
+            const { pid } = req.body
+            const {email}=req.user
             if(!mongoose.Types.ObjectId.isValid(pid)){
                 req.logger.info('No ha ingresado un id valido')
                 CustomError.createError({
@@ -137,7 +138,7 @@ class ProductController{
                     code:EError.INVALID_TYPES
                 })
             }
-            let product=await productService.getProduct(pid)       
+            let product=await productService.getProduct(pid)     
             if(email){
                 if(email!==product.owner){
                     req.logger.info('No es propietario del producto que intenta eliminar')
@@ -148,6 +149,12 @@ class ProductController{
                         code:EError.NOT_ALLOWED_ERROR,
                     })
                 }else{
+                    const owner=await userService.getUser(email)
+                    if(owner){
+                    if(owner.role==="premium"){
+                    await deletedProduct(email)
+                    }  
+                    }
                     const result=await productService.deleteProduct(pid)
                     if(!result){
                         return res.send({status:"error",message:"no existe producto con ese id"})
@@ -156,7 +163,9 @@ class ProductController{
                         return res.send({status:'succes',message:"producto eliminado",pid})
                     }
                 }
-            }/*
+            }
+            
+            /*
             if(product.owner!=="admin"){
                 req.logger.info('Producto de un usuario premium, un admin no puede eliminarlo')
                 CustomError.createError({
@@ -166,7 +175,16 @@ class ProductController{
                     code:EError.NOT_ALLOWED_ERROR,
                 })
             }*/
-            const result = await productService.deleteProduct(pid);           
+            const user=await userService.getUser(email)
+            console.log(user)
+            //console.log(result,"desde el result")
+            /*if(owner){
+              if(owner.role==="premium"){
+                await deletedProduct(email)
+            }  
+            }*/
+            
+            //const result = await productService.deleteProduct(pid);           
             return res.send({message:"producto eliminado",status:"succes",pid})
             
         } catch (error) {

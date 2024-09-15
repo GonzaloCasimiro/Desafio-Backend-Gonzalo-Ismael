@@ -1,0 +1,71 @@
+{{>adminHeader}}
+<body class="bg-gray-100 text-gray-800">
+  <div class="container mx-auto p-4">
+    <h1 class="text-3xl font-bold mb-6">Usuarios</h1>
+
+    <!-- Lista de usuarios inactivos -->
+    <div class="bg-white shadow-md rounded-lg p-4 mb-6">
+      <h2 class="text-2xl font-semibold mb-4">Usuarios Inactivos</h2>
+      <ul class="list-disc list-inside mb-4">
+        {{#each inactives}}
+          <li class="mb-2">
+            {{name}} {{lastname}} - {{email}} ({{role}})
+          </li>
+        {{/each}}
+      </ul>
+      {{#if arrayEmpty}}
+      <button id="delete-inactives" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">
+         Eliminar Cuentas Inactivas
+      </button>
+      {{else}}
+      <p class="text-gray-500 text-sm">No hay usuarios inactivos.</p>
+      {{/if}}
+      
+    </div>
+
+    <!-- Lista de administradores -->
+    <div class="bg-white shadow-md rounded-lg p-4 mb-6">
+      <h2 class="text-2xl font-semibold mb-4">Administradores</h2>
+      <ul class="list-disc list-inside">
+        {{#each admins}}
+          <li class="mb-2">
+            {{name}} {{lastname}} - {{email}} ({{role}})
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+
+    <!-- Lista de usuarios activos -->
+    <div class="bg-white shadow-md rounded-lg p-4">
+      <h2 class="text-2xl font-semibold mb-4">Usuarios Activos</h2>
+      <ul class="list-disc list-inside">
+        {{#each actives}}
+          <li class="mb-2">
+            {{name}} {{lastname}} - {{email}} ({{role}})
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</body>
+<script>
+    // Función para eliminar cuentas inactivas
+    const deleteInactivesButton = document.getElementById('delete-inactives');
+   deleteInactivesButton.addEventListener('click', function() {
+        // Mostrar confirmación antes de eliminar
+        if (confirm('¿Estás seguro de que deseas eliminar las cuentas inactivas?')) {
+            fetch('/api/users/deleteUsers', {
+                method: 'DELETE',
+                headers: { 'Content-Type': 'application/json' },  // Corrección: 'headers' y cierre de comillas
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);  // Mostrar mensaje de éxito
+                window.location.reload();  // Recargar la página para actualizar la lista
+            })
+            .catch(error => {
+                console.error('Error:', error);  // Mostrar error en consola
+            });
+        }
+    });
+</script>

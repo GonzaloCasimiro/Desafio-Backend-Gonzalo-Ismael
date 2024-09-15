@@ -10,8 +10,9 @@ const {mapProductsDto,setProductsInCart, stock} = require('../../dtos/cartsDto.j
 const { verifyPasswordToken } = require('../../utils/jsonwebtoken.js');
 const Product = require('../../models/productSchema.js');
 //viewRouter.use(productSocket())
-const{viewProducts,postProduct,deleteProduct,updateProduct,getChats,postMessage,updateCart,admin,getProduct,editPerfil,resetPassword}=new viewController()
+const{viewProducts,postProduct,deleteProduct,updateProduct,getChats,postMessage,updateCart,admin,getProduct,editPerfil,resetPassword,usersStatus}=new viewController()
 viewRouter.get('/products', passportCall('jwt'), viewProducts);
+viewRouter.get('/users',passportCall('jwt'),authorization('admin'),usersStatus)
 
 viewRouter.post('/products',postProduct );
 viewRouter.get('/product/:pid',passportCall('jwt'),getProduct)
@@ -24,15 +25,7 @@ viewRouter.post("/message", postMessage)
 //cart
 viewRouter.put('/:cid/product/:pid', updateCart);
 
-viewRouter.get('/admin',passportCall('jwt'),authorization("admin") ,admin/*async(req,res)=>{
-    try {
-        const products=await nuevoProductManager.getProducts()
-        console.log(products)
-        res.render('adminMenu',{products:products.docs})
-    } catch (error) {
-        res.send(error)
-    }
-}*/)
+viewRouter.get('/admin',passportCall('jwt'),authorization("admin") ,admin)
 
 viewRouter.get('/admin/products',passportCall('jwt'),productAuth(),async(req,res)=>{
     try {

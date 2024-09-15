@@ -3,6 +3,7 @@ const {default:mongoose}=require('mongoose');
 const { cartService, productService, ticketService } = require("../service/service.js");
 const CustomError = require('../utils/errors/CustomError.js');
 const EError = require('../utils/errors/enum.js');
+const { purchasedTicket } = require('../utils/sendEmail.js');
 
 class CartController{
     constructor(){}
@@ -162,16 +163,14 @@ class CartController{
             }
             if(inStock.length>0){
                 const ticket = await ticketService.createTicket({name,lastname,city,adress,amount:total,products:inStock,email})
-                console.log(ticket,"ticket")
                 if(ticket){
                 for(let i=0;i<inStock.length;i++){
-                    console.log(inStock[i].pid)
-                    console.log(inStock[i].quantity)
                     await cartService.updateCart(cid,inStock[i].pid,inStock[i].quantity*-1)
+                    const cart=await cartService.getCart(cid);
+                    console.log(cart,"despues del ticket")
                 }
             }
             }
-            
             res.send({status:"succes",message:`Ticket creado y enviado al email ${email}`})
         } catch (error) {
             console.error(error)

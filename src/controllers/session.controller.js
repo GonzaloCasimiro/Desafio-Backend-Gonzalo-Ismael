@@ -9,6 +9,8 @@ const CustomError = require('../utils/errors/CustomError');
 const { generateUserError } = require('../utils/errors/info');
 const EError = require('../utils/errors/enum');
 const { rePassword } = require('../utils/sendEmail');
+const lastConnection = require('../dtos/setLastConnection');
+const lastConnectionDto = require('../dtos/setLastConnection');
 const newUserManager=new UserDaoMongo();
 class SessionController{
     constructor(){}
@@ -33,11 +35,12 @@ class SessionController{
                 code:EError.INVALID_TYPES
             })
         }else{
-            role="premium"
             const newCart = await cartService.createCart();
             const cid=newCart._id
             password=createHash(password)
-            const newUser=await userService.createUser({name,lastname,password,email,cid,role})
+            let fecha= new Date()
+            let lastConnection=lastConnectionDto(fecha)
+            const newUser=await userService.createUser({name,lastname,password,email,cid,role,lastConnection})
             const token=generateToken({
                 id:newUser._id,
                 cid,
@@ -85,6 +88,10 @@ class SessionController{
                 return res.status(401).send({status:'error',message:"Password incorrecto"})
             }
                 req.logger.info(`Inicio sesion correctamente, usuario email : ${email}`)
+                let fecha= new Date()
+                console.log(fecha)
+                let newConnection= lastConnectionDto(fecha)
+                let updateConnection=await userService.updateUser({key:"lastConnection",value:newConnection,email})
             const token=generateToken({
                 id:user._id,
                 cid:user.cid,
@@ -157,7 +164,6 @@ class SessionController{
     resetPassword=async(req,res,next)=>{
         try{
             let {password,email}=req.body;
-            console.log(password,email)
             if(!password){
                 req.logger.info('No ingreso Contraseña');
                 CustomError.createError({
